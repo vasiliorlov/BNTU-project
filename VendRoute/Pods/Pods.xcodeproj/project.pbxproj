@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03176D4A114B38CEC4E225250A52BD7C /* SideNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725ACD73A7D13B166BF7591AF7E092DB /* SideNavigationController.swift */; };
+		1006ED1B294A40D20106C67F350AE791 /* Pods-VendRoute-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC450BF3679817E6195FDC6F49B53699 /* Pods-VendRoute-dummy.m */; };
+		66D299E14ACE8416447A641E7465AD33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		72DC6DDE81D2EEBE80E6062D62EA214C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		7C9713C97BB295A8035A19BEBBF707F4 /* SideNavigationController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50482D9DBBD7EE666654DB316C0B9976 /* SideNavigationController-dummy.m */; };
+		9D686177C3D22A1ABD81EBDA808523E9 /* SideNavigationController+NestedTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD72C8250A48D3BDE4E089C6DED076 /* SideNavigationController+NestedTypes.swift */; };
+		AC27E59599CBDD2AD795E0B5682FDD61 /* SideNavigationController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0134C6C1AB2FD11919970A6D5E8ABDA /* SideNavigationController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACA5DB35583045C50A93F8830E7A57F7 /* Pods-VendRoute-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2212AF7C9AF7BABE94758AF943624DD2 /* Pods-VendRoute-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEAE3A7C20F276C32FC45185A1B594D6 /* UIViewController+SideNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA4FFFF6E2A67343266755872DEFF3 /* UIViewController+SideNavigationController.swift */; };
+		CAEE40ECC942C597A41BC8D4B9AED7AA /* SideNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = D782C8B0D78B09C0AA72D2C82E70CAA4 /* SideNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2FF96F90B44033C387F31855129950CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C6A844BEADEB06A473790EA4817EA6C;
+			remoteInfo = SideNavigationController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18ECB7AF04CE87DA91115CEE1487E026 /* Pods_VendRoute.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VendRoute.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19F6859CC8F6AF46D5E697DE1B7C2F9D /* Pods-VendRoute-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VendRoute-frameworks.sh"; sourceTree = "<group>"; };
+		1BD8C781DC77A6A7BD0CE7E294B17F1B /* Pods-VendRoute.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VendRoute.debug.xcconfig"; sourceTree = "<group>"; };
+		2212AF7C9AF7BABE94758AF943624DD2 /* Pods-VendRoute-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VendRoute-umbrella.h"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		32AD72C8250A48D3BDE4E089C6DED076 /* SideNavigationController+NestedTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SideNavigationController+NestedTypes.swift"; path = "Sources/SideNavigationController+NestedTypes.swift"; sourceTree = "<group>"; };
+		3E5CF483480C3DC7F1F177C0EAD7E57A /* Pods-VendRoute.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VendRoute.modulemap"; sourceTree = "<group>"; };
+		48C9677188BC3EAB143301258B8A0583 /* SideNavigationController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideNavigationController.xcconfig; sourceTree = "<group>"; };
+		50482D9DBBD7EE666654DB316C0B9976 /* SideNavigationController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideNavigationController-dummy.m"; sourceTree = "<group>"; };
+		725ACD73A7D13B166BF7591AF7E092DB /* SideNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideNavigationController.swift; path = Sources/SideNavigationController.swift; sourceTree = "<group>"; };
+		7AA89B7AF43DF0FCD39DBE6FB920C6A0 /* Pods-VendRoute-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VendRoute-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B621AA31EFCB8F3A9E02D92DCACE346C /* Pods-VendRoute-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VendRoute-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B6C2A83CA97CE0FCB47C19E08B9E5590 /* SideNavigationController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SideNavigationController-Info.plist"; sourceTree = "<group>"; };
+		B6D88FD98CBC28B9D1BD0C0D4D129C08 /* SideNavigationController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SideNavigationController.modulemap; sourceTree = "<group>"; };
+		C0134C6C1AB2FD11919970A6D5E8ABDA /* SideNavigationController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideNavigationController-umbrella.h"; sourceTree = "<group>"; };
+		CC450BF3679817E6195FDC6F49B53699 /* Pods-VendRoute-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VendRoute-dummy.m"; sourceTree = "<group>"; };
+		CDAA4FFFF6E2A67343266755872DEFF3 /* UIViewController+SideNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+SideNavigationController.swift"; path = "Sources/UIViewController+SideNavigationController.swift"; sourceTree = "<group>"; };
+		D4CBBAC7D3D31C73EB18FAD4C2E39675 /* SideNavigationController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SideNavigationController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D782C8B0D78B09C0AA72D2C82E70CAA4 /* SideNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SideNavigationController.h; path = Sources/SideNavigationController.h; sourceTree = "<group>"; };
+		DC85F5478C011ADB58AE851E657CDA22 /* Pods-VendRoute-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VendRoute-Info.plist"; sourceTree = "<group>"; };
+		E4A2ED55CA9F369139ABFBC0C79DF835 /* Pods-VendRoute.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VendRoute.release.xcconfig"; sourceTree = "<group>"; };
+		E68DF906F412B8891986E456EA89CE66 /* SideNavigationController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideNavigationController-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4193E81BCB4B3C7875F5194FB3C530E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D299E14ACE8416447A641E7465AD33 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		732060E3AA172C4113B4A2184568272B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72DC6DDE81D2EEBE80E6062D62EA214C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F3EFA6F6F6596D2A07C6119B5399FC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18ECB7AF04CE87DA91115CEE1487E026 /* Pods_VendRoute.framework */,
+				D4CBBAC7D3D31C73EB18FAD4C2E39675 /* SideNavigationController.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35BBE1A96747C84756CF0966B425C40F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6D88FD98CBC28B9D1BD0C0D4D129C08 /* SideNavigationController.modulemap */,
+				48C9677188BC3EAB143301258B8A0583 /* SideNavigationController.xcconfig */,
+				50482D9DBBD7EE666654DB316C0B9976 /* SideNavigationController-dummy.m */,
+				B6C2A83CA97CE0FCB47C19E08B9E5590 /* SideNavigationController-Info.plist */,
+				E68DF906F412B8891986E456EA89CE66 /* SideNavigationController-prefix.pch */,
+				C0134C6C1AB2FD11919970A6D5E8ABDA /* SideNavigationController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SideNavigationController";
+			sourceTree = "<group>";
+		};
+		443A53BFE031DD479D41C944008334A9 /* SideNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				D782C8B0D78B09C0AA72D2C82E70CAA4 /* SideNavigationController.h */,
+				725ACD73A7D13B166BF7591AF7E092DB /* SideNavigationController.swift */,
+				32AD72C8250A48D3BDE4E089C6DED076 /* SideNavigationController+NestedTypes.swift */,
+				CDAA4FFFF6E2A67343266755872DEFF3 /* UIViewController+SideNavigationController.swift */,
+				35BBE1A96747C84756CF0966B425C40F /* Support Files */,
+			);
+			path = SideNavigationController;
+			sourceTree = "<group>";
+		};
+		A4ED560190722FB8FFE9A7BA595C850D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABC745C26F2B7391BB4282C153EE4EF3 /* Pods-VendRoute */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		ABC745C26F2B7391BB4282C153EE4EF3 /* Pods-VendRoute */ = {
+			isa = PBXGroup;
+			children = (
+				3E5CF483480C3DC7F1F177C0EAD7E57A /* Pods-VendRoute.modulemap */,
+				B621AA31EFCB8F3A9E02D92DCACE346C /* Pods-VendRoute-acknowledgements.markdown */,
+				7AA89B7AF43DF0FCD39DBE6FB920C6A0 /* Pods-VendRoute-acknowledgements.plist */,
+				CC450BF3679817E6195FDC6F49B53699 /* Pods-VendRoute-dummy.m */,
+				19F6859CC8F6AF46D5E697DE1B7C2F9D /* Pods-VendRoute-frameworks.sh */,
+				DC85F5478C011ADB58AE851E657CDA22 /* Pods-VendRoute-Info.plist */,
+				2212AF7C9AF7BABE94758AF943624DD2 /* Pods-VendRoute-umbrella.h */,
+				1BD8C781DC77A6A7BD0CE7E294B17F1B /* Pods-VendRoute.debug.xcconfig */,
+				E4A2ED55CA9F369139ABFBC0C79DF835 /* Pods-VendRoute.release.xcconfig */,
+			);
+			name = "Pods-VendRoute";
+			path = "Target Support Files/Pods-VendRoute";
+			sourceTree = "<group>";
+		};
+		B8D90069A3A2D75DB6657A30DF83630E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				443A53BFE031DD479D41C944008334A9 /* SideNavigationController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				B8D90069A3A2D75DB6657A30DF83630E /* Pods */,
+				0F3EFA6F6F6596D2A07C6119B5399FC3 /* Products */,
+				A4ED560190722FB8FFE9A7BA595C850D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		29DCDFAB870312BD7CBE36DABEF47495 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC27E59599CBDD2AD795E0B5682FDD61 /* SideNavigationController-umbrella.h in Headers */,
+				CAEE40ECC942C597A41BC8D4B9AED7AA /* SideNavigationController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A081C008D847D5FB46B8232D14E71FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACA5DB35583045C50A93F8830E7A57F7 /* Pods-VendRoute-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4C6A844BEADEB06A473790EA4817EA6C /* SideNavigationController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E0F7895D0DE3F8CA0A2359C595D63C5 /* Build configuration list for PBXNativeTarget "SideNavigationController" */;
+			buildPhases = (
+				29DCDFAB870312BD7CBE36DABEF47495 /* Headers */,
+				A300302A05FC1292AEFFE977733FA9E0 /* Sources */,
+				732060E3AA172C4113B4A2184568272B /* Frameworks */,
+				95C641DDC000703270B280D5F0E388DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SideNavigationController;
+			productName = SideNavigationController;
+			productReference = D4CBBAC7D3D31C73EB18FAD4C2E39675 /* SideNavigationController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4E9337DE3497E7C1A3305B7311136B6C /* Pods-VendRoute */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3A4A7BDE6E18769DF099C05B423ACB9 /* Build configuration list for PBXNativeTarget "Pods-VendRoute" */;
+			buildPhases = (
+				6A081C008D847D5FB46B8232D14E71FD /* Headers */,
+				F3F36324690D7AEAD2CAA92A1F9EF19C /* Sources */,
+				4193E81BCB4B3C7875F5194FB3C530E0 /* Frameworks */,
+				71D9667A76A80D46CB08383ED155ADA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2824CFC75B3C9006D167194DB40780D2 /* PBXTargetDependency */,
+			);
+			name = "Pods-VendRoute";
+			productName = "Pods-VendRoute";
+			productReference = 18ECB7AF04CE87DA91115CEE1487E026 /* Pods_VendRoute.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 0F3EFA6F6F6596D2A07C6119B5399FC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E9337DE3497E7C1A3305B7311136B6C /* Pods-VendRoute */,
+				4C6A844BEADEB06A473790EA4817EA6C /* SideNavigationController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71D9667A76A80D46CB08383ED155ADA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95C641DDC000703270B280D5F0E388DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A300302A05FC1292AEFFE977733FA9E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D686177C3D22A1ABD81EBDA808523E9 /* SideNavigationController+NestedTypes.swift in Sources */,
+				7C9713C97BB295A8035A19BEBBF707F4 /* SideNavigationController-dummy.m in Sources */,
+				03176D4A114B38CEC4E225250A52BD7C /* SideNavigationController.swift in Sources */,
+				BEAE3A7C20F276C32FC45185A1B594D6 /* UIViewController+SideNavigationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3F36324690D7AEAD2CAA92A1F9EF19C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1006ED1B294A40D20106C67F350AE791 /* Pods-VendRoute-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2824CFC75B3C9006D167194DB40780D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SideNavigationController;
+			target = 4C6A844BEADEB06A473790EA4817EA6C /* SideNavigationController */;
+			targetProxy = 2FF96F90B44033C387F31855129950CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0C4EDBA9722F2E611634D10173E25ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4A2ED55CA9F369139ABFBC0C79DF835 /* Pods-VendRoute.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VendRoute/Pods-VendRoute-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VendRoute/Pods-VendRoute.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3BD46364AF2E8CA071F949ED0481A512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48C9677188BC3EAB143301258B8A0583 /* SideNavigationController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SideNavigationController/SideNavigationController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SideNavigationController/SideNavigationController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SideNavigationController/SideNavigationController.modulemap";
+				PRODUCT_MODULE_NAME = SideNavigationController;
+				PRODUCT_NAME = SideNavigationController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A4E6C8E04AED8C233757B852CDE0FE22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48C9677188BC3EAB143301258B8A0583 /* SideNavigationController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SideNavigationController/SideNavigationController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SideNavigationController/SideNavigationController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SideNavigationController/SideNavigationController.modulemap";
+				PRODUCT_MODULE_NAME = SideNavigationController;
+				PRODUCT_NAME = SideNavigationController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DE749A3FA52FD23904B6BDF286AB45D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BD8C781DC77A6A7BD0CE7E294B17F1B /* Pods-VendRoute.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VendRoute/Pods-VendRoute-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VendRoute/Pods-VendRoute.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E0F7895D0DE3F8CA0A2359C595D63C5 /* Build configuration list for PBXNativeTarget "SideNavigationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BD46364AF2E8CA071F949ED0481A512 /* Debug */,
+				A4E6C8E04AED8C233757B852CDE0FE22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
+				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3A4A7BDE6E18769DF099C05B423ACB9 /* Build configuration list for PBXNativeTarget "Pods-VendRoute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE749A3FA52FD23904B6BDF286AB45D6 /* Debug */,
+				0C4EDBA9722F2E611634D10173E25ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

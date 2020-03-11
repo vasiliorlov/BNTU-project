@@ -1,0 +1,23 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+class {{ module_info.name }}Presenter: {{ module_info.name }}ModuleInput, {{ module_info.name }}ViewOutput {
+
+    // dependencies
+    weak var view: {{ module_info.name }}ViewInput?
+    var router: {{ module_info.name }}Router
+
+    init(router: {{ module_info.name }}Router, view: {{ module_info.name }}ViewInput) {
+        self.view = view
+        self.router = router
+    }
+
+    func viewIsReady() {
+	view?.setupInitialState()
+    }
+}

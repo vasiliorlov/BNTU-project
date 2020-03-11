@@ -1,0 +1,16 @@
+PODS:
+  - SideNavigationController (2.0.1)
+
+DEPENDENCIES:
+  - SideNavigationController
+
+SPEC REPOS:
+  trunk:
+    - SideNavigationController
+
+SPEC CHECKSUMS:
+  SideNavigationController: 7d215d3f7ad513f6d801a58cb7ad454e4268959a
+
+PODFILE CHECKSUM: 10904b69cd0d294ec23546c6f13ae1dde1d91795
+
+COCOAPODS: 1.8.4

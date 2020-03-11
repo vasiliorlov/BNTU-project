@@ -1,0 +1,32 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+class {{ module_info.name }}ModuleConfigurator {
+
+    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
+
+        if let viewController = viewInput as? {{ module_info.name }}ViewController {
+            configure(viewController: viewController)
+        }
+    }
+
+    private func configure(viewController: {{ module_info.name }}ViewController) {
+
+        let router = {{ module_info.name }}RouterImpl()
+        router.transitionAdapter = viewController
+
+        let presenter = {{ module_info.name }}Presenter(router: router, view: viewController)
+        presenter.view = viewController
+        presenter.router = router
+
+        viewController.presenter = presenter
+    }
+
+}
