@@ -10,6 +10,8 @@ import UIKit
 
 class Container {
     let presentationAsm: PresentationAsm
+    let dataAsm: DataAsm
+    
     static var shared: Container {
         let instance = Container()
         return instance
@@ -17,5 +19,6 @@ class Container {
     
     private init() {
         self.presentationAsm = PresentationAsmProd()
+        self.dataAsm = DataAsmProd()
     }
 }

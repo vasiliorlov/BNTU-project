@@ -9,16 +9,20 @@
 import UIKit
 
 class LoginViewController: UIViewController, LoginViewInput, TransitionAdapter {
-
+    //ui
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPswd: UITextField!
+    @IBOutlet weak var lblVersion: UILabel!
+    //dependency
     var presenter: LoginViewOutput?
-
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewIsReady()
     }
-
-
+    
+    
     // MARK: LoginViewInput
     func setupInitialState() {
     }
