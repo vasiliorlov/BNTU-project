@@ -26,6 +26,8 @@
 		5F419B476F4813978E6511D0 /* PointOfSaleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE10C3BA31AFE8C01B00416 /* PointOfSaleListViewController.swift */; };
 		63461D44DA2DFD716A769280 /* PointOfSaleListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F2C403952B140483E24BDB /* PointOfSaleListViewOutput.swift */; };
 		6B667B579533537532C55536 /* LoginRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2406C4969FC53282675837F2 /* LoginRouterImpl.swift */; };
+		6C42C34424E149F40091A9FE /* PointOfSaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42C34324E149F40091A9FE /* PointOfSaleCell.swift */; };
+		6C42C34624E14E8F0091A9FE /* POSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42C34524E14E8F0091A9FE /* POSViewModel.swift */; };
 		6C62F9FC24CFF7D9003CEAEB /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62F9FB24CFF7D9003CEAEB /* AppSettings.swift */; };
 		6C62F9FE24CFFA08003CEAEB /* DataAsm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62F9FD24CFFA08003CEAEB /* DataAsm.swift */; };
 		6C62FA0124CFFA57003CEAEB /* DataAsmProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62FA0024CFFA57003CEAEB /* DataAsmProd.swift */; };
@@ -92,6 +94,8 @@
 		5CB2F84C87E6C4F87535975B /* PointOfSaleListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListRouter.swift; sourceTree = "<group>"; };
 		5EA3B7C65E15B9BDC0462E0A /* PointOfSaleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleRouter.swift; sourceTree = "<group>"; };
 		624DEBEEF0C9F60F950B08F2 /* LoginViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewInput.swift; sourceTree = "<group>"; };
+		6C42C34324E149F40091A9FE /* PointOfSaleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfSaleCell.swift; sourceTree = "<group>"; };
+		6C42C34524E14E8F0091A9FE /* POSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSViewModel.swift; sourceTree = "<group>"; };
 		6C62F9FB24CFF7D9003CEAEB /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		6C62F9FD24CFFA08003CEAEB /* DataAsm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAsm.swift; sourceTree = "<group>"; };
 		6C62FA0024CFFA57003CEAEB /* DataAsmProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAsmProd.swift; sourceTree = "<group>"; };
@@ -366,6 +370,8 @@
 				B9F2C403952B140483E24BDB /* PointOfSaleListViewOutput.swift */,
 				3AE10C3BA31AFE8C01B00416 /* PointOfSaleListViewController.swift */,
 				5C1FFAA4196672AC14146C28 /* PointOfSaleList.storyboard */,
+				6C42C34324E149F40091A9FE /* PointOfSaleCell.swift */,
+				6C42C34524E14E8F0091A9FE /* POSViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -574,10 +580,12 @@
 				6CE301F62417D8D10023E5CE /* PresentationAsm.swift in Sources */,
 				6CE301E324177ECB0023E5CE /* ViewController.swift in Sources */,
 				6CE301F42417D19C0023E5CE /* Container.swift in Sources */,
+				6C42C34624E14E8F0091A9FE /* POSViewModel.swift in Sources */,
 				6CE301DF24177ECB0023E5CE /* AppDelegate.swift in Sources */,
 				6CE301F82417D9EF0023E5CE /* PresentationAsmProd.swift in Sources */,
 				53A08655B1DB261C7B5FB4F7 /* LoginViewInput.swift in Sources */,
 				6C62FA0124CFFA57003CEAEB /* DataAsmProd.swift in Sources */,
+				6C42C34424E149F40091A9FE /* PointOfSaleCell.swift in Sources */,
 				C4501C962D25F5286F33FB8F /* LoginViewOutput.swift in Sources */,
 				03205480209BACD7A8D52AD9 /* LoginViewController.swift in Sources */,
 				D97EB03A18B0CCD7E447B799 /* LoginModuleInput.swift in Sources */,
