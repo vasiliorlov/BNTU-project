@@ -29,9 +29,22 @@ struct VisitItem: Serving {
     var inv: Int
 }
 
-struct Visit {
+class Visit {
     let id: VisitId
-    var items: [VisitItem]
+    let pos: PointOfSale
     var cash: Double
     var comment: String
+    var itemIds: [VisitItemId]
+    
+    init(id: VisitId, pos: PointOfSale, cash: Double, comment: String, itemIds: [VisitItemId]) {
+        self.id = id
+        self.pos = pos
+        self.cash = cash
+        self.comment = comment
+        self.itemIds = itemIds
+    }
+}
+
+class VisitExt: Visit {
+    var items: [VisitItem] = []
 }

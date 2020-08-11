@@ -28,6 +28,10 @@
 		6B667B579533537532C55536 /* LoginRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2406C4969FC53282675837F2 /* LoginRouterImpl.swift */; };
 		6C42C34424E149F40091A9FE /* PointOfSaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42C34324E149F40091A9FE /* PointOfSaleCell.swift */; };
 		6C42C34624E14E8F0091A9FE /* POSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42C34524E14E8F0091A9FE /* POSViewModel.swift */; };
+		6C42C34A24E314DF0091A9FE /* VendRoute.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C42C34824E314DF0091A9FE /* VendRoute.xcdatamodeld */; };
+		6C42C35024E31A030091A9FE /* PosDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42C34F24E31A030091A9FE /* PosDao.swift */; };
+		6C42C35224E31AA10091A9FE /* VisitDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42C35124E31AA10091A9FE /* VisitDao.swift */; };
+		6C42C35424E31C9F0091A9FE /* ProductDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42C35324E31C9F0091A9FE /* ProductDao.swift */; };
 		6C62F9FC24CFF7D9003CEAEB /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62F9FB24CFF7D9003CEAEB /* AppSettings.swift */; };
 		6C62F9FE24CFFA08003CEAEB /* DataAsm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62F9FD24CFFA08003CEAEB /* DataAsm.swift */; };
 		6C62FA0124CFFA57003CEAEB /* DataAsmProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62FA0024CFFA57003CEAEB /* DataAsmProd.swift */; };
@@ -96,6 +100,10 @@
 		624DEBEEF0C9F60F950B08F2 /* LoginViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewInput.swift; sourceTree = "<group>"; };
 		6C42C34324E149F40091A9FE /* PointOfSaleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfSaleCell.swift; sourceTree = "<group>"; };
 		6C42C34524E14E8F0091A9FE /* POSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSViewModel.swift; sourceTree = "<group>"; };
+		6C42C34924E314DF0091A9FE /* VendRoute.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VendRoute.xcdatamodel; sourceTree = "<group>"; };
+		6C42C34F24E31A030091A9FE /* PosDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosDao.swift; sourceTree = "<group>"; };
+		6C42C35124E31AA10091A9FE /* VisitDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitDao.swift; sourceTree = "<group>"; };
+		6C42C35324E31C9F0091A9FE /* ProductDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDao.swift; sourceTree = "<group>"; };
 		6C62F9FB24CFF7D9003CEAEB /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		6C62F9FD24CFFA08003CEAEB /* DataAsm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAsm.swift; sourceTree = "<group>"; };
 		6C62FA0024CFFA57003CEAEB /* DataAsmProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAsmProd.swift; sourceTree = "<group>"; };
@@ -262,6 +270,44 @@
 			path = RouteMap;
 			sourceTree = "<group>";
 		};
+		6C42C34724E314A60091A9FE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6C42C34B24E319550091A9FE /* VisitProvider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VisitProvider;
+			sourceTree = "<group>";
+		};
+		6C42C34C24E319AE0091A9FE /* ProductDAO */ = {
+			isa = PBXGroup;
+			children = (
+				6C42C35324E31C9F0091A9FE /* ProductDao.swift */,
+			);
+			path = ProductDAO;
+			sourceTree = "<group>";
+		};
+		6C42C34D24E319C60091A9FE /* VisitDAO */ = {
+			isa = PBXGroup;
+			children = (
+				6C42C35124E31AA10091A9FE /* VisitDao.swift */,
+			);
+			path = VisitDAO;
+			sourceTree = "<group>";
+		};
+		6C42C34E24E319DC0091A9FE /* POSDAO */ = {
+			isa = PBXGroup;
+			children = (
+				6C42C34F24E31A030091A9FE /* PosDao.swift */,
+			);
+			path = POSDAO;
+			sourceTree = "<group>";
+		};
 		6C62F9FA24CFF7B6003CEAEB /* ApplicationSettings */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +319,9 @@
 		6C62F9FF24CFFA40003CEAEB /* DL */ = {
 			isa = PBXGroup;
 			children = (
+				6C42C34E24E319DC0091A9FE /* POSDAO */,
+				6C42C34D24E319C60091A9FE /* VisitDAO */,
+				6C42C34C24E319AE0091A9FE /* ProductDAO */,
 				6C62F9FA24CFF7B6003CEAEB /* ApplicationSettings */,
 			);
 			path = DL;
@@ -319,7 +368,9 @@
 				6CE301E224177ECB0023E5CE /* ViewController.swift */,
 				6C62FA0524D1B679003CEAEB /* BusinessEntity */,
 				6CE301E424177ECB0023E5CE /* Main.storyboard */,
+				6C42C34724E314A60091A9FE /* Data */,
 				6CE301E724177ECF0023E5CE /* Assets.xcassets */,
+				6C42C34824E314DF0091A9FE /* VendRoute.xcdatamodeld */,
 				6CE301E924177ECF0023E5CE /* LaunchScreen.storyboard */,
 				6CE301EC24177ECF0023E5CE /* Info.plist */,
 			);
@@ -341,6 +392,7 @@
 		6CE301F92418CD630023E5CE /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				6C42C34B24E319550091A9FE /* VisitProvider */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -585,6 +637,7 @@
 				6CE301F82417D9EF0023E5CE /* PresentationAsmProd.swift in Sources */,
 				53A08655B1DB261C7B5FB4F7 /* LoginViewInput.swift in Sources */,
 				6C62FA0124CFFA57003CEAEB /* DataAsmProd.swift in Sources */,
+				6C42C35424E31C9F0091A9FE /* ProductDao.swift in Sources */,
 				6C42C34424E149F40091A9FE /* PointOfSaleCell.swift in Sources */,
 				C4501C962D25F5286F33FB8F /* LoginViewOutput.swift in Sources */,
 				03205480209BACD7A8D52AD9 /* LoginViewController.swift in Sources */,
@@ -616,15 +669,18 @@
 				96B25068241417E994C4FB13 /* PointOfSaleRouterImpl.swift in Sources */,
 				18B8872CA0B0BBB90C7840FC /* PointOfSaleConfigurator.swift in Sources */,
 				6CE301FB2418F7A00023E5CE /* TransitionAdapter.swift in Sources */,
+				6C42C34A24E314DF0091A9FE /* VendRoute.xcdatamodeld in Sources */,
 				AF0D1DD96AF33AE1B24F3F82 /* PointOfSaleInitializer.swift in Sources */,
 				4FECDADB94A712FD5BAC9826 /* RouteMapViewInput.swift in Sources */,
 				F36DEE2E83C62249F4B6980F /* RouteMapViewOutput.swift in Sources */,
 				0C394EE8711769E9C7C90936 /* RouteMapViewController.swift in Sources */,
 				56CB5F771E1B068B9DA9045D /* RouteMapModuleInput.swift in Sources */,
 				9FD06A4BBF01007165A9BF70 /* RouteMapPresenter.swift in Sources */,
+				6C42C35224E31AA10091A9FE /* VisitDao.swift in Sources */,
 				6C62FA0B24D1B7C8003CEAEB /* Product.swift in Sources */,
 				4D312427AD681123FBBBE294 /* RouteMapRouter.swift in Sources */,
 				6C62F9FC24CFF7D9003CEAEB /* AppSettings.swift in Sources */,
+				6C42C35024E31A030091A9FE /* PosDao.swift in Sources */,
 				2414A71922BCBF706AB29A45 /* RouteMapRouterImpl.swift in Sources */,
 				7ABE07E446755B11CAFD098F /* RouteMapConfigurator.swift in Sources */,
 				ABA9111F3DE7906669D19DA1 /* RouteMapInitializer.swift in Sources */,
@@ -828,6 +884,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6C42C34824E314DF0091A9FE /* VendRoute.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6C42C34924E314DF0091A9FE /* VendRoute.xcdatamodel */,
+			);
+			currentVersion = 6C42C34924E314DF0091A9FE /* VendRoute.xcdatamodel */;
+			path = VendRoute.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6CE301D324177ECB0023E5CE /* Project object */;
 }

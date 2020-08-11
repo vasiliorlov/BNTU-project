@@ -12,7 +12,7 @@ typealias PosId = String
 
 struct PointOfSale {
     let id: PosId
-    let visit: Visit
+    let name: String
     let adress: Adress
     let comment: String
 }

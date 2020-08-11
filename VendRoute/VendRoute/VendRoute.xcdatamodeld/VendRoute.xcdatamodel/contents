@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Adress" representedClassName="CoraAdress" syncable="YES" codeGenerationType="class">
+        <attribute name="attribute" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="postCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="street" optional="YES" attributeType="String"/>
+        <relationship name="pos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="POS" inverseName="adress" inverseEntity="POS"/>
+    </entity>
+    <entity name="Measure" representedClassName="CoraMeasure" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="measureFactor" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="product" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Product" inverseName="measure" inverseEntity="Product"/>
+    </entity>
+    <entity name="POS" representedClassName="CoraPOS" syncable="YES" codeGenerationType="class">
+        <attribute name="comment" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="adress" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Adress" inverseName="pos" inverseEntity="Adress"/>
+        <relationship name="visit" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Visit" inverseName="pos" inverseEntity="Visit"/>
+    </entity>
+    <entity name="Product" representedClassName="CoraProduct" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="measure" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Measure" inverseName="product" inverseEntity="Measure"/>
+        <relationship name="visitItem" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="VisitItem" inverseName="product" inverseEntity="VisitItem"/>
+    </entity>
+    <entity name="Visit" representedClassName="CoraVisit" syncable="YES" codeGenerationType="class">
+        <attribute name="cash" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="comment" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="VisitItem" inverseName="visit" inverseEntity="VisitItem"/>
+        <relationship name="pos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="POS" inverseName="visit" inverseEntity="POS"/>
+    </entity>
+    <entity name="VisitItem" representedClassName="CoraVisitItem" syncable="YES" codeGenerationType="class">
+        <attribute name="add" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="column" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="inv" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="remove" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="row" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="spoiled" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="visitItem" inverseEntity="Product"/>
+        <relationship name="visit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Visit" inverseName="items" inverseEntity="Visit"/>
+    </entity>
+    <elements>
+        <element name="Visit" positionX="-54" positionY="-9" width="128" height="118"/>
+        <element name="Product" positionX="-36" positionY="9" width="128" height="103"/>
+        <element name="POS" positionX="-18" positionY="27" width="128" height="118"/>
+        <element name="Measure" positionX="0" positionY="45" width="128" height="103"/>
+        <element name="VisitItem" positionX="18" positionY="63" width="128" height="178"/>
+        <element name="Adress" positionX="-18" positionY="36" width="128" height="148"/>
+    </elements>
+</model>
