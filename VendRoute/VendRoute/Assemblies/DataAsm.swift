@@ -9,5 +9,8 @@
 import UIKit
 
 protocol DataAsm {
-   var appSettings: AppSettings { get }
+    var appSettings: AppSettings { get }
+    var productDao: ProductDao { get }
+    var posDao: PosDao { get }
+    var visitDao: VisitDao { get }
 }

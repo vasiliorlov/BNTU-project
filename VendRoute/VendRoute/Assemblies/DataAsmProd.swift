@@ -9,5 +9,20 @@
 import UIKit
 
 class DataAsmProd: DataAsm {
-   var appSettings: AppSettings = UserDefaultsAppSettingsImpl()
+    lazy private var coraDataManagerInstance: CoraDataManager = CoraDataManager()
+    lazy private var mapper = CoraMapper(context: coraDataManagerInstance.persistentContainer.viewContext)
+    
+    var appSettings: AppSettings = UserDefaultsAppSettingsImpl()
+    
+    var productDao: ProductDao {
+        return ProductDaoImpl(coraDataManager: coraDataManagerInstance, mapper: mapper)
+    }
+    
+    var posDao: PosDao {
+        return PosDaoImpl(coraDataManager: coraDataManagerInstance, mapper: mapper)
+    }
+    
+    var visitDao: VisitDao {
+        return VisitDaoImpl(coraDataManager: coraDataManagerInstance, mapper: mapper)
+    }
 }

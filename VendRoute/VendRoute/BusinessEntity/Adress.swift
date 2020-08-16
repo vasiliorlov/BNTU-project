@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct gpsCoordinate {
+struct GpsCoordinate {
     let longitude: Double
     let latitude: Double
 }
@@ -16,6 +16,6 @@ struct gpsCoordinate {
 struct Adress {
     let city: String
     let street: String
-    let gps: gpsCoordinate
+    let gps: GpsCoordinate
     let postCode: Int
 }

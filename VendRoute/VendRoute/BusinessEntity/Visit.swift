@@ -8,8 +8,8 @@
 
 import UIKit
 
-typealias VisitItemId = String
-typealias VisitId = String
+typealias VisitItemId = UUID
+typealias VisitId = UUID
 
 protocol Serving {
     var add: Int { get set }
@@ -33,10 +33,10 @@ class Visit {
     let id: VisitId
     let pos: PointOfSale
     var cash: Double
-    var comment: String
+    var comment: String?
     var itemIds: [VisitItemId]
     
-    init(id: VisitId, pos: PointOfSale, cash: Double, comment: String, itemIds: [VisitItemId]) {
+    init(id: VisitId, pos: PointOfSale, cash: Double, comment: String?, itemIds: [VisitItemId]) {
         self.id = id
         self.pos = pos
         self.cash = cash

@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias MeasureId = String
+typealias MeasureId = UUID
 
 struct Measure {
     let id: MeasureId

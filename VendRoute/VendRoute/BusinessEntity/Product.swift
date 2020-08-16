@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias ProductId = String
+typealias ProductId = UUID
 
 struct Product {
     let id: ProductId

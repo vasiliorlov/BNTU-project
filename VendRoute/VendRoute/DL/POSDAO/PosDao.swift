@@ -11,6 +11,6 @@ import UIKit
 protocol PosDao {
     func getAll() -> [PointOfSale]
     func getBy(id: PosId) -> PointOfSale?
-    func save(_poses: [PointOfSale])
+    func save(_ poses: [PointOfSale])
     func removeBy(ids: [PosId])
 }
