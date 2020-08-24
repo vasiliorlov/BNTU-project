@@ -14,4 +14,5 @@ protocol PointOfSaleListViewInput: class {
     */
 
     func setupInitialState()
+    func setup(by data: [POSViewModel])
 }

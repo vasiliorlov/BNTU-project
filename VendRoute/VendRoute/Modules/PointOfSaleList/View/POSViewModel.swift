@@ -10,4 +10,8 @@ import UIKit
 
 struct POSViewModel {
     let posName: String
+    let adress: String
+    var collected: Bool
+    var inventoried: Bool
+    var servised: Bool
 }

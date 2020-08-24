@@ -18,4 +18,8 @@ struct Adress {
     let street: String
     let gps: GpsCoordinate
     let postCode: Int
+    
+    var text: String {
+        return "\(postCode), \(city),  \(street)"
+    }
 }

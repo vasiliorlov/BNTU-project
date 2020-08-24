@@ -21,16 +21,24 @@ class VisitDaoImpl: VisitDao {
     }
     
      //MARK: - VisitDao
-    func getAll() -> [Visit] {
-        return []
+    func getAll() -> [VisitExt] {
+        let context = coraDataManager.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Visit")
+        do {
+            let results = try context.fetch(fetchRequest) as! [CoraVisit]
+            return results.compactMap{ mapper.map($0) }
+        } catch {
+            return []
+        }
     }
     
     func getExtendedBy(id: VisitId) -> VisitExt? {
         return nil
     }
     
-    func save(_ visits: [Visit]) {
-        
+    func save(_ visits: [VisitExt]) {
+        let _ = visits.map { mapper.map($0) }
+        coraDataManager.saveContext()
     }
     
     func removeBy(ids: [VisitId]) {
