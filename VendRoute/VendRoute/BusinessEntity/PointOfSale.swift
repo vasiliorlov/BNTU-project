@@ -19,4 +19,8 @@ struct PointOfSale {
     var isCollect: Bool
     var isInventory: Bool
     var isService: Bool
+    
+    let needCollect: Bool
+    let needInventory: Bool
+    let needService: Bool
 }

@@ -49,12 +49,16 @@ class CoraMapper {
         coraObject.isCollect = pos.isCollect
         coraObject.isInventory = pos.isInventory
         coraObject.isService = pos.isService
+        
+        coraObject.needCollect = pos.needCollect
+        coraObject.needInventory = pos.needInventory
+        coraObject.needService = pos.needService
         return coraObject
     }
     
     func map(_ coraPos: CoraPOS) -> PointOfSale? {
         if let coraAdress = coraPos.adress, let adress = map(coraAdress), let id  = coraPos.id, let name = coraPos.name {
-            return PointOfSale(id: id, name: name, adress: adress, comment: coraPos.comment, isCollect: coraPos.isCollect, isInventory: coraPos.isInventory, isService: coraPos.isService)
+            return PointOfSale(id: id, name: name, adress: adress, comment: coraPos.comment, isCollect: coraPos.isCollect, isInventory: coraPos.isInventory, isService: coraPos.isService, needCollect: coraPos.needCollect, needInventory: coraPos.needInventory, needService: coraPos.needService)
         } else {
             return nil
         }
