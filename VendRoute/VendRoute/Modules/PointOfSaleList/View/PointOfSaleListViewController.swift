@@ -56,4 +56,9 @@ extension PointOfSaleListViewController: UITableViewDelegate, UITableViewDataSou
         }
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellData = data[indexPath.row]
+        presenter?.didSelectModel(with: cellData.id)
+    }
 }

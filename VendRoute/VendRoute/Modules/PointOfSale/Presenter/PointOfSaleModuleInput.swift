@@ -7,5 +7,5 @@
 //
 
 protocol PointOfSaleModuleInput: class {
-
+    var posId: PosId? { get set }
 }

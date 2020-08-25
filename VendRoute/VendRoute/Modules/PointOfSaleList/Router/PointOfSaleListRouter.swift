@@ -11,4 +11,5 @@ import Foundation
 protocol PointOfSaleListRouter {
 
     func openPreviousScreen()
+    func openVisitScreen(for posId: PosId)
 }

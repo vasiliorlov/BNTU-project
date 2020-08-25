@@ -33,6 +33,10 @@ class PointOfSaleListPresenter: PointOfSaleListModuleInput, PointOfSaleListViewO
         }
     }
     
+    func didSelectModel(with id: PosId) {
+        router.openVisitScreen(for: id)
+    }
+    
     //MARK: - private methods
     private func loadData(_ completion: @escaping () -> ()) {
         DispatchQueue.global().async {
@@ -46,6 +50,6 @@ class PointOfSaleListPresenter: PointOfSaleListModuleInput, PointOfSaleListViewO
     }
     //MARK: - mapper methods
     private func map(_ pos: PointOfSale) -> POSViewModel {
-        return POSViewModel(posName: pos.name, adress: pos.adress.text, collected: pos.isCollect, inventoried: pos.isInventory, servised: pos.isService)
+        return POSViewModel(id: pos.id, posName: pos.name, adress: pos.adress.text, collected: pos.isCollect, inventoried: pos.isInventory, servised: pos.isService)
     }
 }

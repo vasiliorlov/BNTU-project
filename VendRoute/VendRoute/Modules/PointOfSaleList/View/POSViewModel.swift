@@ -9,6 +9,7 @@
 import UIKit
 
 struct POSViewModel {
+    let id: PosId
     let posName: String
     let adress: String
     var collected: Bool

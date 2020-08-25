@@ -22,10 +22,8 @@ class ProductDaoImpl: ProductDao {
     
     //MARK: - ProductDao
     func getAll() -> [Product] {
-        let context = coraDataManager.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Product")
         do {
-            let results = try context.fetch(fetchRequest) as! [CoraProduct]
+            let results = try context.fetch(CoraProduct.fetchRequest()) as! [CoraProduct]
             return results.compactMap{ mapper.map($0) }
         } catch {
             return []

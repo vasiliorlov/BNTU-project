@@ -14,4 +14,5 @@ protocol PointOfSaleListViewOutput {
     */
 
     func viewIsReady()
+    func didSelectModel(with id: PosId)
 }

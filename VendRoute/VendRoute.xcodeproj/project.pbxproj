@@ -287,13 +287,6 @@
 			path = RouteMap;
 			sourceTree = "<group>";
 		};
-		6C0FDA0124E92B5C0081AE3D /* CoraEntity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CoraEntity;
-			sourceTree = "<group>";
-		};
 		6C42C34724E314A60091A9FE /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,7 +341,6 @@
 			children = (
 				6C0FDA0424E92CFA0081AE3D /* CoraDataManager.swift */,
 				6C0FDA0C24E999A30081AE3D /* CoraMapper.swift */,
-				6C0FDA0124E92B5C0081AE3D /* CoraEntity */,
 				6C42C34E24E319DC0091A9FE /* POSDAO */,
 				6C42C34D24E319C60091A9FE /* VisitDAO */,
 				6C42C34C24E319AE0091A9FE /* ProductDAO */,

@@ -12,10 +12,15 @@ class PointOfSaleViewController: UIViewController, PointOfSaleViewInput, Transit
     
     var presenter: PointOfSaleViewOutput?
     //UI
+    @IBOutlet weak var lblPosName: UILabel!
+    
     @IBOutlet weak var btnCollect: UIButton!
     @IBOutlet weak var btnInventoty: UIButton!
     @IBOutlet weak var btnService: UIButton!
     
+    
+    @IBOutlet weak var lblCash: UILabel!
+    @IBOutlet weak var txtCash: UITextField!
     //data
     private var posModel: PosDetailViewModel?
     
@@ -31,28 +36,48 @@ class PointOfSaleViewController: UIViewController, PointOfSaleViewInput, Transit
     }
     
     func setupBy(posModel: PosDetailViewModel) {
-        if let isCollect = posModel.isCollect {
-            btnCollect.isEnabled = true
-            btnCollect.setImage(isCollect ? UIImage(systemName: "checkmark.square"): UIImage(systemName: "app"), for: .normal)
-            btnCollect.imageEdgeInsets.left = -50.0
-        } else {
-            btnCollect.isEnabled = true
+        DispatchQueue.main.async {
+            self.lblPosName.text = posModel.name
+            let checkImage = UIImage(systemName: "checkmark.square")?.withRenderingMode(.alwaysTemplate)
+            let uncheckImage = UIImage(systemName: "app")?.withRenderingMode(.alwaysTemplate)
+            
+            if let isCollect = posModel.isCollect {
+                self.btnCollect.isEnabled = true
+                self.btnCollect.setImage(isCollect ? checkImage : uncheckImage, for: .normal)
+                self.btnCollect.imageEdgeInsets.left = -20.0
+                self.btnCollect.tintColor = #colorLiteral(red: 0.1442646384, green: 0.7079803348, blue: 0.2932031453, alpha: 1)
+            } else {
+                self.btnCollect.isEnabled = false
+            }
+            
+            if let isInventory = posModel.isInventory {
+                self.btnInventoty.isEnabled = true
+                self.btnInventoty.setImage(isInventory ? checkImage : uncheckImage, for: .normal)
+                self.btnInventoty.imageEdgeInsets.left = -20.0
+                self.btnInventoty.tintColor = #colorLiteral(red: 0.2962264717, green: 0.7031357884, blue: 0.8908132911, alpha: 1)
+            } else {
+                self.btnInventoty.isEnabled = true
+            }
+            
+            if let isService = posModel.isService {
+                self.btnService.isEnabled = false
+                self.btnService.setImage(isService ? checkImage : uncheckImage, for: .normal)
+                self.btnService.imageEdgeInsets.left = -20.0
+                self.btnService.tintColor = #colorLiteral(red: 0.9028488994, green: 0.7228065729, blue: 0, alpha: 1)
+            } else {
+                self.btnService.isEnabled = false
+            }
         }
-        
-        if let isInventory = posModel.isInventory {
-            btnInventoty.isEnabled = true
-            btnInventoty.setImage(isInventory ? UIImage(systemName: "checkmark.square"): UIImage(systemName: "app"), for: .normal)
-            btnInventoty.imageEdgeInsets.left = -50.0
-        } else {
-            btnInventoty.isEnabled = true
-        }
-        
-        if let isService = posModel.isService {
-            btnService.isEnabled = true
-            btnService.setImage(isService ? UIImage(systemName: "checkmark.square"): UIImage(systemName: "app"), for: .normal)
-            btnService.imageEdgeInsets.left = -50.0
-        } else {
-            btnService.isEnabled = true
-        }
+    }
+    
+    //MARK: - user action
+    
+    @IBAction func didBtnBackTouchIn(_ sender: Any) {
+    }
+    @IBAction func didBtnCollectTouchIn(_ sender: Any) {
+    }
+    @IBAction func didBtnInventoryTouchIn(_ sender: Any) {
+    }
+    @IBAction func didBtnSrviceTouchIn(_ sender: Any) {
     }
 }

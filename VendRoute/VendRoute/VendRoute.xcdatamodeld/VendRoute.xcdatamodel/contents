@@ -25,7 +25,7 @@
         <attribute name="needInventory" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="needService" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <relationship name="adress" maxCount="1" deletionRule="Cascade" destinationEntity="Adress" inverseName="pos" inverseEntity="Adress"/>
-        <relationship name="visit" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Visit" inverseName="pos" inverseEntity="Visit"/>
+        <relationship name="visit" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Visit" inverseName="pos" inverseEntity="Visit"/>
     </entity>
     <entity name="Product" representedClassName="CoraProduct" syncable="YES" codeGenerationType="class">
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
@@ -54,9 +54,9 @@
     <elements>
         <element name="Adress" positionX="-18" positionY="36" width="128" height="133"/>
         <element name="Measure" positionX="0" positionY="45" width="128" height="103"/>
-        <element name="POS" positionX="-18" positionY="27" width="128" height="208"/>
         <element name="Product" positionX="-36" positionY="9" width="128" height="103"/>
         <element name="Visit" positionX="-54" positionY="-9" width="128" height="118"/>
         <element name="VisitItem" positionX="18" positionY="63" width="128" height="178"/>
+        <element name="POS" positionX="-9" positionY="27" width="128" height="208"/>
     </elements>
 </model>

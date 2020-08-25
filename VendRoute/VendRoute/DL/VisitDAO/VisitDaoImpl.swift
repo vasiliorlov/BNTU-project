@@ -22,10 +22,8 @@ class VisitDaoImpl: VisitDao {
     
      //MARK: - VisitDao
     func getAll() -> [VisitExt] {
-        let context = coraDataManager.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Visit")
         do {
-            let results = try context.fetch(fetchRequest) as! [CoraVisit]
+            let results = try context.fetch(CoraVisit.fetchRequest()) as! [CoraVisit]
             return results.compactMap{ mapper.map($0) }
         } catch {
             return []
