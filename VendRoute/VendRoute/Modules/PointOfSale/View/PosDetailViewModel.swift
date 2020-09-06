@@ -9,8 +9,7 @@
 import UIKit
 
 struct PosDetailViewModel {
-    let name: String
-    
+    let name: String    
     var isCollect: Bool?
     var isInventory: Bool?
     var isService: Bool?
