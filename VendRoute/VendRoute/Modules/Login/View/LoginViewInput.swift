@@ -14,4 +14,6 @@ protocol LoginViewInput: class {
     */
 
     func setupInitialState()
+    func showLoading(_ isActive: Bool)
+    func showMessage(title: String, message: String)
 }

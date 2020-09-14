@@ -14,4 +14,5 @@ protocol PointOfSaleViewOutput {
     */
 
     func viewIsReady()
+    func requireCloseScreen()
 }

@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
         container = Container.shared
+        
+        
        /*
         let productDao = container?.dataAsm.productDao
         let posDao = container?.dataAsm.posDao

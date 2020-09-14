@@ -36,6 +36,10 @@ class PointOfSalePresenter: PointOfSaleModuleInput, PointOfSaleViewOutput {
         }
     }
     
+    func requireCloseScreen() {
+        router.openPreviousScreen()
+    }
+    
     //MARK: - private methods
     private func loadData(_ completion: @escaping () -> ()) {
         DispatchQueue.global().async {

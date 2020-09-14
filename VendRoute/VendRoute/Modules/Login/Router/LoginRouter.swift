@@ -11,4 +11,6 @@ import Foundation
 protocol LoginRouter {
 
     func openPreviousScreen()
+    func openCalendarScreen()
+    func openPosListScreen()
 }

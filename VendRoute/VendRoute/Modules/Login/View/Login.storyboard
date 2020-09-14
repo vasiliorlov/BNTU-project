@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Ex-Mm-EWm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Ex-Mm-EWm">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -42,21 +42,38 @@
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qd-os-Ll5">
+                                <rect key="frame" x="48" y="433.5" width="279" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.77569979430000002" blue="0.67073410749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="K56-LF-mkf"/>
+                                </constraints>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSignInToiucnedIn:" destination="2Ex-Mm-EWm" eventType="touchUpInside" id="z5s-ba-fVe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WTJ-lX-neW" firstAttribute="top" secondItem="Iba-JR-swW" secondAttribute="centerY" constant="16" id="5Vf-NK-nOJ"/>
                             <constraint firstItem="bX4-nQ-dv4" firstAttribute="centerX" secondItem="Iba-JR-swW" secondAttribute="centerX" id="8Zc-Yh-BwB"/>
+                            <constraint firstItem="0Qd-os-Ll5" firstAttribute="trailing" secondItem="f2N-2l-OkC" secondAttribute="trailing" id="BDU-Ii-PmZ"/>
                             <constraint firstItem="f2N-2l-OkC" firstAttribute="top" secondItem="WTJ-lX-neW" secondAttribute="bottom" constant="8" id="FFy-Ol-Ule"/>
                             <constraint firstItem="bX4-nQ-dv4" firstAttribute="bottom" secondItem="Iba-JR-swW" secondAttribute="centerY" constant="-32" id="Fvz-ZT-udW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="f2N-2l-OkC" secondAttribute="trailing" constant="32" id="Ln4-O9-bEy"/>
                             <constraint firstItem="WTJ-lX-neW" firstAttribute="leading" secondItem="Iba-JR-swW" secondAttribute="leadingMargin" constant="32" id="R99-st-cJP"/>
                             <constraint firstItem="f2N-2l-OkC" firstAttribute="leading" secondItem="Iba-JR-swW" secondAttribute="leadingMargin" constant="32" id="Sr3-mz-3pb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WTJ-lX-neW" secondAttribute="trailing" constant="32" id="YfY-PZ-jrA"/>
+                            <constraint firstItem="0Qd-os-Ll5" firstAttribute="top" secondItem="f2N-2l-OkC" secondAttribute="bottom" constant="8" id="nkr-DO-G7c"/>
+                            <constraint firstItem="0Qd-os-Ll5" firstAttribute="leading" secondItem="f2N-2l-OkC" secondAttribute="leading" id="s6N-Me-tKX"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
+                        <outlet property="btnSignIn" destination="0Qd-os-Ll5" id="pgY-ku-uwZ"/>
                         <outlet property="lblVersion" destination="5Y4-ed-GAw" id="73J-Gz-O4O"/>
                         <outlet property="txtEmail" destination="WTJ-lX-neW" id="L61-RR-jmT"/>
                         <outlet property="txtPswd" destination="f2N-2l-OkC" id="Ii3-hu-0sD"/>

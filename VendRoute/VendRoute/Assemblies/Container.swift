@@ -11,6 +11,7 @@ import UIKit
 class Container {
     let presentationAsm: PresentationAsm
     let dataAsm: DataAsm
+    let domainAsm: DomainAsm
     
     static var shared: Container {
         let instance = Container()
@@ -20,6 +21,7 @@ class Container {
     private init() {
         self.presentationAsm = PresentationAsmProd()
         self.dataAsm = DataAsmProd()
+        self.domainAsm = DomainAsmProd()
     }
     
 }
