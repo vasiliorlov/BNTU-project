@@ -21,12 +21,14 @@ PODS:
     - Amplify (= 1.1.1)
     - AWSCore (~> 2.15.0)
     - AWSMobileClient (~> 2.15.0)
+  - CalendarFoundation (0.0.4)
   - MBProgressHUD (1.2.0)
   - SideNavigationController (2.0.1)
 
 DEPENDENCIES:
   - Amplify
   - AmplifyPlugins/AWSCognitoAuthPlugin
+  - CalendarFoundation
   - MBProgressHUD (~> 1.2.0)
   - SideNavigationController
 
@@ -40,6 +42,7 @@ SPEC REPOS:
     - AWSCore
     - AWSMobileClient
     - AWSPluginsCore
+    - CalendarFoundation
     - MBProgressHUD
     - SideNavigationController
 
@@ -52,9 +55,10 @@ SPEC CHECKSUMS:
   AWSCore: 5a8f9d7461dbe5ea6a5473c41cf113b687e19136
   AWSMobileClient: 5c29678413764ee3bcd528421331deb0a35b72fb
   AWSPluginsCore: 4e98e284fff7763470ef94f7538449f20d891f70
+  CalendarFoundation: 4d4ee111ae9d34ea09d5809a867414a099719b23
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SideNavigationController: 7d215d3f7ad513f6d801a58cb7ad454e4268959a
 
-PODFILE CHECKSUM: 242af69f180edf90c7b83300364603904d80d578
+PODFILE CHECKSUM: 94d61f4fde31f3d65b29179287b2938c86f34cbf
 
 COCOAPODS: 1.8.4

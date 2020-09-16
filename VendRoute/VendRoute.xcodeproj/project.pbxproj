@@ -51,6 +51,8 @@
 		6C7D433F250FA18E008FFAA9 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7D433E250FA18E008FFAA9 /* AuthManager.swift */; };
 		6C7D4341250FA297008FFAA9 /* DomainAsm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7D4340250FA297008FFAA9 /* DomainAsm.swift */; };
 		6C7D4343250FA2AF008FFAA9 /* DomainAsmProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7D4342250FA2AF008FFAA9 /* DomainAsmProd.swift */; };
+		6C7D434C251208FC008FFAA9 /* FlowNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7D434B251208FC008FFAA9 /* FlowNavigator.swift */; };
+		6C7D434E2512093B008FFAA9 /* FlowNavigatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7D434D2512093B008FFAA9 /* FlowNavigatorImpl.swift */; };
 		6CAD84342502744300E4FC02 /* PosItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD84332502744300E4FC02 /* PosItemViewModel.swift */; };
 		6CAD84362502758900E4FC02 /* EditPosItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CAD84352502758900E4FC02 /* EditPosItemView.xib */; };
 		6CAD843825027FC000E4FC02 /* EditPosItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD843725027FC000E4FC02 /* EditPosItemView.swift */; };
@@ -152,6 +154,8 @@
 		6C7D433E250FA18E008FFAA9 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		6C7D4340250FA297008FFAA9 /* DomainAsm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainAsm.swift; sourceTree = "<group>"; };
 		6C7D4342250FA2AF008FFAA9 /* DomainAsmProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainAsmProd.swift; sourceTree = "<group>"; };
+		6C7D434B251208FC008FFAA9 /* FlowNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowNavigator.swift; sourceTree = "<group>"; };
+		6C7D434D2512093B008FFAA9 /* FlowNavigatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowNavigatorImpl.swift; sourceTree = "<group>"; };
 		6CAD84332502744300E4FC02 /* PosItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosItemViewModel.swift; sourceTree = "<group>"; };
 		6CAD84352502758900E4FC02 /* EditPosItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditPosItemView.xib; sourceTree = "<group>"; };
 		6CAD843725027FC000E4FC02 /* EditPosItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPosItemView.swift; sourceTree = "<group>"; };
@@ -435,6 +439,15 @@
 			path = AuthProvider;
 			sourceTree = "<group>";
 		};
+		6C7D434A25120899008FFAA9 /* FlowNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				6C7D434B251208FC008FFAA9 /* FlowNavigator.swift */,
+				6C7D434D2512093B008FFAA9 /* FlowNavigatorImpl.swift */,
+			);
+			path = FlowNavigator;
+			sourceTree = "<group>";
+		};
 		6CAD843D2504AE4A00E4FC02 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,12 +478,12 @@
 		6CE301DD24177ECB0023E5CE /* VendRoute */ = {
 			isa = PBXGroup;
 			children = (
+				6CE301F22417D1510023E5CE /* Assemblies */,
 				6CAD843D2504AE4A00E4FC02 /* Extension */,
 				6CE301DE24177ECB0023E5CE /* AppDelegate.swift */,
 				6C62F9FF24CFFA40003CEAEB /* DL */,
 				6CE301F92418CD630023E5CE /* Domain */,
 				2557F730F5376D89A6660F85 /* Modules */,
-				6CE301F22417D1510023E5CE /* Assemblies */,
 				6CE301E224177ECB0023E5CE /* ViewController.swift */,
 				6CFB248224F3D0EF00FFCE32 /* UI */,
 				6C62FA0524D1B679003CEAEB /* BusinessEntity */,
@@ -491,9 +504,9 @@
 				6C62F9FD24CFFA08003CEAEB /* DataAsm.swift */,
 				6C62FA0024CFFA57003CEAEB /* DataAsmProd.swift */,
 				6CE301F52417D8D10023E5CE /* PresentationAsm.swift */,
+				6CE301F72417D9EF0023E5CE /* PresentationAsmProd.swift */,
 				6C7D4340250FA297008FFAA9 /* DomainAsm.swift */,
 				6C7D4342250FA2AF008FFAA9 /* DomainAsmProd.swift */,
-				6CE301F72417D9EF0023E5CE /* PresentationAsmProd.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -501,6 +514,7 @@
 		6CE301F92418CD630023E5CE /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				6C7D434A25120899008FFAA9 /* FlowNavigator */,
 				6C7D433D250FA16B008FFAA9 /* AuthProvider */,
 				6C42C34B24E319550091A9FE /* VisitProvider */,
 			);
@@ -790,6 +804,7 @@
 				6CE301F62417D8D10023E5CE /* PresentationAsm.swift in Sources */,
 				6CE301E324177ECB0023E5CE /* ViewController.swift in Sources */,
 				6CE301F42417D19C0023E5CE /* Container.swift in Sources */,
+				6C7D434C251208FC008FFAA9 /* FlowNavigator.swift in Sources */,
 				6CAD843A2504A2D200E4FC02 /* NoPastedTextField.swift in Sources */,
 				6C42C34624E14E8F0091A9FE /* POSViewModel.swift in Sources */,
 				6CFB248824F3D8B500FFCE32 /* PosDetailViewModel.swift in Sources */,
@@ -853,6 +868,7 @@
 				6C42C35224E31AA10091A9FE /* VisitDao.swift in Sources */,
 				6CAD84342502744300E4FC02 /* PosItemViewModel.swift in Sources */,
 				6C62FA0B24D1B7C8003CEAEB /* Product.swift in Sources */,
+				6C7D434E2512093B008FFAA9 /* FlowNavigatorImpl.swift in Sources */,
 				4D312427AD681123FBBBE294 /* RouteMapRouter.swift in Sources */,
 				6C62F9FC24CFF7D9003CEAEB /* AppSettings.swift in Sources */,
 				6C42C35024E31A030091A9FE /* PosDao.swift in Sources */,

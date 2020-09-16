@@ -10,7 +10,8 @@ import UIKit
 import SideNavigationController
 
 class PresentationAsmProd: PresentationAsm {
-   lazy var navigationController: SideNavigationController = createNavigationController()
+    lazy var navigationController: SideNavigationController = createNavigationController()
+    lazy var flowNavigatorInstance: FlowNavigator = FlowNavigatorImpl(navigationVC: navigationController)
     
     init() {
         self.navigationController = SideNavigationController()
@@ -24,5 +25,9 @@ class PresentationAsmProd: PresentationAsm {
         }
         
         return sideNavigationController
+    }
+    
+    var flowNavigator: FlowNavigator {
+        return flowNavigatorInstance
     }
 }

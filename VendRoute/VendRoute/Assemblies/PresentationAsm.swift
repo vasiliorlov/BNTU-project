@@ -11,4 +11,5 @@ import SideNavigationController
 
 protocol PresentationAsm {
     var navigationController: SideNavigationController { get }
+    var flowNavigator: FlowNavigator { get }
 }

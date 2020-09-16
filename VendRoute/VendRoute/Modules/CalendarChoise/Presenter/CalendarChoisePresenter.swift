@@ -20,4 +20,8 @@ class CalendarChoisePresenter: CalendarChoiseModuleInput, CalendarChoiseViewOutp
     func viewIsReady() {
 	view?.setupInitialState()
     }
+    
+    func selectedServiceDate(_ date: Date) {
+        
+    }
 }
