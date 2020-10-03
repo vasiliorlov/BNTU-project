@@ -11,7 +11,8 @@ import SideNavigationController
 
 class PresentationAsmProd: PresentationAsm {
     lazy var navigationController: SideNavigationController = createNavigationController()
-    lazy var flowNavigatorInstance: FlowNavigator = FlowNavigatorImpl(navigationVC: navigationController)
+    lazy var flowNavigatorInstance: FlowNavigator = FlowNavigatorImpl(navigationVC: navigationController,
+                                                                      appSettings: Container.shared.dataAsm.appSettings)
     
     init() {
         self.navigationController = SideNavigationController()

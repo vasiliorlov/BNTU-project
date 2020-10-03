@@ -28,10 +28,15 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput {
     //MARK: - LoginViewOutput
     func viewIsReady() {
         view?.setupInitialState()
+        
+        if authManager.userState == .signedIn {
+            router.openCalendarScreen()
+        }
     }
     
     func requireSignIn(user: UserModel) {
-        
+        let request = SignInRequest(username: user.email, password: user.password)
+        authManager.signIn(request)
     }
 }
 
