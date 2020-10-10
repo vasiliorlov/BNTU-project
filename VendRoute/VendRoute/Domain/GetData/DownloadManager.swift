@@ -1,5 +1,5 @@
 //
-//  DownloadMamager.swift
+//  DownloadManager.swift
 //  VendRoute
 //
 //  Created by Vasili Orlov on 03/10/20.
@@ -10,6 +10,6 @@ import UIKit
 
 typealias DownloadPosCallback = (Result<[Visit], Error>) -> Void
 
-protocol DownloadMamager {
+protocol DownloadManager {
     func loadVisits(for serviceDate: Date, completion: DownloadPosCallback )
 }

@@ -28,7 +28,7 @@ class CalendarChoiseViewController: UIViewController, CalendarChoiseViewInput, T
         DispatchQueue.main.async {
             let calendarVC = CalendarViewController(dateSelectedBlock: { [weak self] date in
                 if let date = date {
-                    presenter?.selectedServiceDate(date)
+                    self?.presenter?.selectedServiceDate(date)
                 } else {
                     // user selected option "Remove date" = `date` is `nil`
                 }

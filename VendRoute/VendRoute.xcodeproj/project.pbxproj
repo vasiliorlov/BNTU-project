@@ -33,6 +33,10 @@
 		6C0FDA0924E976BB0081AE3D /* PosDaoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FDA0824E976BB0081AE3D /* PosDaoImpl.swift */; };
 		6C0FDA0B24E992AE0081AE3D /* VisitDaoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FDA0A24E992AE0081AE3D /* VisitDaoImpl.swift */; };
 		6C0FDA0D24E999A30081AE3D /* CoraMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FDA0C24E999A30081AE3D /* CoraMapper.swift */; };
+		6C323DF12531A5490009DD2F /* ServiceAsm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C323DF02531A5490009DD2F /* ServiceAsm.swift */; };
+		6C323DF42531A57F0009DD2F /* ServiceAsmProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C323DF32531A57F0009DD2F /* ServiceAsmProd.swift */; };
+		6C323DF82531A6150009DD2F /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C323DF72531A6150009DD2F /* DownloadService.swift */; };
+		6C323DFC2531A6430009DD2F /* DownloadServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C323DFB2531A6430009DD2F /* DownloadServiceImpl.swift */; };
 		6C42C34424E149F40091A9FE /* PointOfSaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42C34324E149F40091A9FE /* PointOfSaleCell.swift */; };
 		6C42C34624E14E8F0091A9FE /* POSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42C34524E14E8F0091A9FE /* POSViewModel.swift */; };
 		6C42C34A24E314DF0091A9FE /* VendRoute.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C42C34824E314DF0091A9FE /* VendRoute.xcdatamodeld */; };
@@ -59,7 +63,7 @@
 		6CAD843A2504A2D200E4FC02 /* NoPastedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD84392504A2D200E4FC02 /* NoPastedTextField.swift */; };
 		6CAD843C2504ABAC00E4FC02 /* PosItemCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD843B2504ABAC00E4FC02 /* PosItemCollectionCell.swift */; };
 		6CAD843F2504AE6200E4FC02 /* UIView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD843E2504AE6200E4FC02 /* UIView+ext.swift */; };
-		6CC4C04B25286A3600FA386A /* DownloadMamager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC4C04A25286A3600FA386A /* DownloadMamager.swift */; };
+		6CC4C04B25286A3600FA386A /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC4C04A25286A3600FA386A /* DownloadManager.swift */; };
 		6CC4C04F25286A5600FA386A /* DownloadManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC4C04E25286A5600FA386A /* DownloadManagerImpl.swift */; };
 		6CC4C05525286CB600FA386A /* PosApiEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC4C05425286CB600FA386A /* PosApiEntity.swift */; };
 		6CC4C059252870D600FA386A /* ProductApiEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC4C058252870D600FA386A /* ProductApiEntity.swift */; };
@@ -142,6 +146,10 @@
 		6C0FDA0824E976BB0081AE3D /* PosDaoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosDaoImpl.swift; sourceTree = "<group>"; };
 		6C0FDA0A24E992AE0081AE3D /* VisitDaoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitDaoImpl.swift; sourceTree = "<group>"; };
 		6C0FDA0C24E999A30081AE3D /* CoraMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraMapper.swift; sourceTree = "<group>"; };
+		6C323DF02531A5490009DD2F /* ServiceAsm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAsm.swift; sourceTree = "<group>"; };
+		6C323DF32531A57F0009DD2F /* ServiceAsmProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAsmProd.swift; sourceTree = "<group>"; };
+		6C323DF72531A6150009DD2F /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
+		6C323DFB2531A6430009DD2F /* DownloadServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadServiceImpl.swift; sourceTree = "<group>"; };
 		6C42C34324E149F40091A9FE /* PointOfSaleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfSaleCell.swift; sourceTree = "<group>"; };
 		6C42C34524E14E8F0091A9FE /* POSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSViewModel.swift; sourceTree = "<group>"; };
 		6C42C34924E314DF0091A9FE /* VendRoute.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VendRoute.xcdatamodel; sourceTree = "<group>"; };
@@ -168,7 +176,7 @@
 		6CAD84392504A2D200E4FC02 /* NoPastedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoPastedTextField.swift; sourceTree = "<group>"; };
 		6CAD843B2504ABAC00E4FC02 /* PosItemCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosItemCollectionCell.swift; sourceTree = "<group>"; };
 		6CAD843E2504AE6200E4FC02 /* UIView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ext.swift"; sourceTree = "<group>"; };
-		6CC4C04A25286A3600FA386A /* DownloadMamager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadMamager.swift; sourceTree = "<group>"; };
+		6CC4C04A25286A3600FA386A /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		6CC4C04E25286A5600FA386A /* DownloadManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManagerImpl.swift; sourceTree = "<group>"; };
 		6CC4C05425286CB600FA386A /* PosApiEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosApiEntity.swift; sourceTree = "<group>"; };
 		6CC4C058252870D600FA386A /* ProductApiEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductApiEntity.swift; sourceTree = "<group>"; };
@@ -369,6 +377,15 @@
 			path = RouteMap;
 			sourceTree = "<group>";
 		};
+		6C323DF62531A5C20009DD2F /* GetData */ = {
+			isa = PBXGroup;
+			children = (
+				6CC4C04A25286A3600FA386A /* DownloadManager.swift */,
+				6CC4C04E25286A5600FA386A /* DownloadManagerImpl.swift */,
+			);
+			path = GetData;
+			sourceTree = "<group>";
+		};
 		6C42C34724E314A60091A9FE /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,9 +496,9 @@
 		6CC4C049252869C700FA386A /* get */ = {
 			isa = PBXGroup;
 			children = (
+				6C323DF72531A6150009DD2F /* DownloadService.swift */,
+				6C323DFB2531A6430009DD2F /* DownloadServiceImpl.swift */,
 				6CC4C05325286C7A00FA386A /* ApiEntities */,
-				6CC4C04A25286A3600FA386A /* DownloadMamager.swift */,
-				6CC4C04E25286A5600FA386A /* DownloadManagerImpl.swift */,
 			);
 			path = get;
 			sourceTree = "<group>";
@@ -549,6 +566,8 @@
 				6CE301F72417D9EF0023E5CE /* PresentationAsmProd.swift */,
 				6C7D4340250FA297008FFAA9 /* DomainAsm.swift */,
 				6C7D4342250FA2AF008FFAA9 /* DomainAsmProd.swift */,
+				6C323DF02531A5490009DD2F /* ServiceAsm.swift */,
+				6C323DF32531A57F0009DD2F /* ServiceAsmProd.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -556,6 +575,7 @@
 		6CE301F92418CD630023E5CE /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				6C323DF62531A5C20009DD2F /* GetData */,
 				6C7D434A25120899008FFAA9 /* FlowNavigator */,
 				6C7D433D250FA16B008FFAA9 /* AuthProvider */,
 				6C42C34B24E319550091A9FE /* VisitProvider */,
@@ -853,6 +873,7 @@
 				6CFB248824F3D8B500FFCE32 /* PosDetailViewModel.swift in Sources */,
 				6CE301DF24177ECB0023E5CE /* AppDelegate.swift in Sources */,
 				6CE301F82417D9EF0023E5CE /* PresentationAsmProd.swift in Sources */,
+				6C323DF42531A57F0009DD2F /* ServiceAsmProd.swift in Sources */,
 				6C7D433C250F9D26008FFAA9 /* UserModel.swift in Sources */,
 				53A08655B1DB261C7B5FB4F7 /* LoginViewInput.swift in Sources */,
 				6CFB248424F3D19700FFCE32 /* UnderlinedTextField.swift in Sources */,
@@ -889,6 +910,7 @@
 				6C62FA0F24D1BAD3003CEAEB /* PointOfSale.swift in Sources */,
 				B9056CCEEBB67306D12B262D /* PointOfSaleModuleInput.swift in Sources */,
 				6C62FA0724D1B694003CEAEB /* Adress.swift in Sources */,
+				6C323DFC2531A6430009DD2F /* DownloadServiceImpl.swift in Sources */,
 				2884DBA8D4A7D30E24F95D74 /* PointOfSalePresenter.swift in Sources */,
 				6CFB248624F3D1A800FFCE32 /* CheckBox.swift in Sources */,
 				C8B379C3BB776F12DBB211E5 /* PointOfSaleRouter.swift in Sources */,
@@ -904,8 +926,10 @@
 				6C7D433F250FA18E008FFAA9 /* AuthManager.swift in Sources */,
 				4FECDADB94A712FD5BAC9826 /* RouteMapViewInput.swift in Sources */,
 				F36DEE2E83C62249F4B6980F /* RouteMapViewOutput.swift in Sources */,
+				6C323DF12531A5490009DD2F /* ServiceAsm.swift in Sources */,
 				6CAD843F2504AE6200E4FC02 /* UIView+ext.swift in Sources */,
 				0C394EE8711769E9C7C90936 /* RouteMapViewController.swift in Sources */,
+				6C323DF82531A6150009DD2F /* DownloadService.swift in Sources */,
 				56CB5F771E1B068B9DA9045D /* RouteMapModuleInput.swift in Sources */,
 				6C0FDA0924E976BB0081AE3D /* PosDaoImpl.swift in Sources */,
 				9FD06A4BBF01007165A9BF70 /* RouteMapPresenter.swift in Sources */,
@@ -926,7 +950,7 @@
 				A65E14A65372E1576D71299F /* CalendarChoiseViewOutput.swift in Sources */,
 				F624E7F8F96F07CF3B955496 /* CalendarChoiseViewController.swift in Sources */,
 				8F50EC907EDC013FC5CEDD63 /* CalendarChoiseModuleInput.swift in Sources */,
-				6CC4C04B25286A3600FA386A /* DownloadMamager.swift in Sources */,
+				6CC4C04B25286A3600FA386A /* DownloadManager.swift in Sources */,
 				2BECB937E3CA427041788B65 /* CalendarChoisePresenter.swift in Sources */,
 				B8BE77D89D55C827817A4A09 /* CalendarChoiseRouter.swift in Sources */,
 				B675959D195399B2B8C67324 /* CalendarChoiseRouterImpl.swift in Sources */,

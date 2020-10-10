@@ -89,8 +89,10 @@ class AdressApiEntity: NSObject, Codable {
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(longitude, forKey: .longitude)
-        try container.encode(latitude, forKey: .latitude)
+        try container.encode(city, forKey: .city)
+        try container.encode(street, forKey: .street)
+        try container.encode(gps, forKey: .gps)
+        try container.encode(postCode, forKey: .postCode)
     }
 }
 

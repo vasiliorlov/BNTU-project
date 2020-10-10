@@ -12,6 +12,7 @@ class Container {
     let presentationAsm: PresentationAsm
     let dataAsm: DataAsm
     let domainAsm: DomainAsm
+    let serviceAsm: ServiceAsm
     
     static var shared: Container {
         let instance = Container()
@@ -22,6 +23,7 @@ class Container {
         self.presentationAsm = PresentationAsmProd()
         self.dataAsm = DataAsmProd()
         self.domainAsm = DomainAsmProd()
+        self.serviceAsm = ServiceAsmProd()
     }
     
 }
