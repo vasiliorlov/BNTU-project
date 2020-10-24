@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Amplify
+import AmplifyPlugins
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         container = Container.shared
         
+        amplifyConfigure()
         
        /*
         let productDao = container?.dataAsm.productDao
@@ -52,11 +55,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let products = productDao?.getAll()
  */
         
-        let logInVC = PointOfSaleListModuleInitializer.createModule { input in
+        let logInVC = StartFlowModuleInitializer.createModule { _ in
         }
         navigationViewController.pushViewController(logInVC, animated: false)
         return true
     }
     
+    private func amplifyConfigure() {
+        do {
+                try Amplify.add(plugin: AWSCognitoAuthPlugin())
+                try Amplify.add(plugin: AWSAPIPlugin())
+                try Amplify.configure()
+                print("Amplify configured with API and Auth plugin")
+            } catch {
+                print("Failed to initialize Amplify with \(error)")
+            }
+    }
 }
 

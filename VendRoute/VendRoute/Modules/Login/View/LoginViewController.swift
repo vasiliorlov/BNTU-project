@@ -27,6 +27,9 @@ class LoginViewController: UIViewController, LoginViewInput, TransitionAdapter {
     
     // MARK: LoginViewInput
     func setupInitialState() {
+        txtEmail.layer.cornerRadius = 8.0
+        txtPswd.layer.cornerRadius = 8.0
+        btnSignIn.layer.cornerRadius = 8.0
     }
     
     func showLoading(_ isActive: Bool) {
@@ -55,6 +58,10 @@ class LoginViewController: UIViewController, LoginViewInput, TransitionAdapter {
            }
        }
     // MARK: - user Action
+    
+    @IBAction func tapOnScreen(_ sender: Any) {
+        view.endEditing(true)
+    }
     
     @IBAction func btnSignInToiucnedIn(_ sender: Any) {
         let user = UserModel(email: txtEmail.text ?? "", password: txtPswd.text ?? "")

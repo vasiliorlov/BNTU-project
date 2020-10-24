@@ -18,10 +18,16 @@ class LoginRouterImpl: LoginRouter {
     }
     
     func openCalendarScreen() {
-        
+        DispatchQueue.main.async {
+            let calendarVC = CalendarChoiseModuleInitializer.createModule { _ in }
+            self.transitionAdapter?.navigationController?.pushViewController(calendarVC, animated: true)
+        }
     }
     
     func openPosListScreen() {
-        
+        DispatchQueue.main.async {
+            let posListVC = PointOfSaleListModuleInitializer.createModule { _ in }
+            self.transitionAdapter?.navigationController?.pushViewController(posListVC, animated: true)
+        }
     }
 }

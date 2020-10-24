@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-vendroute-dev-184922-authRole",
+            "UnauthRoleArn": "arn:aws:iam::659460436723:role/amplify-vendroute-dev-184922-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::659460436723:role/amplify-vendroute-dev-184922-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-vendroute-dev-184922-deployment",
+            "UnauthRoleName": "amplify-vendroute-dev-184922-unauthRole",
+            "StackName": "amplify-vendroute-dev-184922",
+            "StackId": "arn:aws:cloudformation:us-east-2:659460436723:stack/amplify-vendroute-dev-184922/8035c0a0-1159-11eb-b920-06c54738e514",
+            "AmplifyAppId": "d68069o4i7fmc"
+        },
+        "categories": {
+            "auth": {
+                "cognito76f610ce": {}
+            }
+        }
+    }
+}

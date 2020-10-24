@@ -10,7 +10,9 @@ import UIKit
 import CalendarFoundation
 
 class CalendarChoiseViewController: UIViewController, CalendarChoiseViewInput, TransitionAdapter {
-    
+    //ui
+    @IBOutlet weak var btnLoad: UIButton!
+    //dependency
     var presenter: CalendarChoiseViewOutput?
     
     // MARK: Life cycle
@@ -22,6 +24,7 @@ class CalendarChoiseViewController: UIViewController, CalendarChoiseViewInput, T
     
     // MARK: CalendarChoiseViewInput
     func setupInitialState() {
+        btnLoad.layer.cornerRadius = btnLoad.frame.height / 2.0
     }
     
     func showDatePicker() {

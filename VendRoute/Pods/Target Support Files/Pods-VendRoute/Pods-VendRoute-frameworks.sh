@@ -169,9 +169,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AWSPluginsCore/AWSPluginsCore.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Amplify/Amplify.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AmplifyPlugins/AmplifyPlugins.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AppSyncRealTimeClient/AppSyncRealTimeClient.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CalendarFoundation/CalendarFoundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SideNavigationController/SideNavigationController.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework"
@@ -182,9 +185,12 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AWSPluginsCore/AWSPluginsCore.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Amplify/Amplify.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AmplifyPlugins/AmplifyPlugins.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AppSyncRealTimeClient/AppSyncRealTimeClient.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CalendarFoundation/CalendarFoundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SideNavigationController/SideNavigationController.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

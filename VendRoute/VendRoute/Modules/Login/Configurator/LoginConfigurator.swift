@@ -23,10 +23,12 @@ class LoginModuleConfigurator {
         router.transitionAdapter = viewController
         
         let domainAsm = Container.shared.domainAsm
+        let dataAsm = Container.shared.dataAsm
 
         let presenter = LoginPresenter(router: router,
                                        view: viewController,
-                                       authManager: domainAsm.authManager)
+                                       authManager: domainAsm.authManager,
+                                       appSettings: dataAsm.appSettings)
         presenter.view = viewController
         presenter.router = router
 

@@ -17,11 +17,13 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput {
     weak var view: LoginViewInput?
     var router: LoginRouter
     private var authManager: AuthManager
+    private var appSettings: AppSettings
     
-    init(router: LoginRouter, view: LoginViewInput, authManager: AuthManager) {
+    init(router: LoginRouter, view: LoginViewInput, authManager: AuthManager, appSettings: AppSettings) {
         self.view = view
         self.router = router
         self.authManager = authManager
+        self.appSettings = appSettings
         self.authManager.output = self
     }
     
@@ -47,7 +49,9 @@ extension LoginPresenter: AuthManagerOutput {
     func didSuccessfully(_ operation: AuthOperation) {
         view?.showLoading(false)
         switch operation {
-        case .signIn : router.openCalendarScreen()
+        case .signIn :
+            appSettings.isLogged = true
+            router.openCalendarScreen()
         default: return
         }
     }

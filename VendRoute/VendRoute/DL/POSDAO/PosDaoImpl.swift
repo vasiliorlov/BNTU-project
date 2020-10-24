@@ -30,7 +30,7 @@ class PosDaoImpl: PosDao {
     
     func getBy(id: PosId) -> PointOfSale? {
         let fetchRequest = NSFetchRequest<CoraPOS>(entityName: "POS")
-        fetchRequest.predicate = NSPredicate(format: "%K = %@", #keyPath(CoraPOS.id), id as CVarArg)
+        fetchRequest.predicate = NSPredicate(format: "id = %@", id as CVarArg)
         do {
             let results = try context.fetch(fetchRequest)
             if let coreResult = results.first {

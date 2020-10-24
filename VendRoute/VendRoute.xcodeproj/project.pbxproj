@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		03205480209BACD7A8D52AD9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062D9CED5F114F728238E5BE /* LoginViewController.swift */; };
+		037DD52B7075272E72A0A372 /* StartFlowViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1CDE220518F44AACB3350 /* StartFlowViewOutput.swift */; };
 		0C394EE8711769E9C7C90936 /* RouteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEADDEDFDD5BD908AF785E5A /* RouteMapViewController.swift */; };
 		1219D1B3CD6DCDEA23ECC086 /* CalendarChoiseConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C396EC263DEC4BC08D3AF /* CalendarChoiseConfigurator.swift */; };
 		18B8872CA0B0BBB90C7840FC /* PointOfSaleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1CF860B186A8DDFDCAEE7F /* PointOfSaleConfigurator.swift */; };
+		1E6D70CB1F5E3115C7CA9834 /* StartFlowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B09732935275DF88872072 /* StartFlowPresenter.swift */; };
+		1F5940FC8769C0FB0A0352C4 /* StartFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AA3640BA8D96C59D80140 /* StartFlowRouter.swift */; };
 		2414A71922BCBF706AB29A45 /* RouteMapRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AEC5D99F8137321C20898F /* RouteMapRouterImpl.swift */; };
 		25AF5C89D5E8377543CD67C8 /* PointOfSaleListInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3466165B88704474C3B42443 /* PointOfSaleListInitializer.swift */; };
 		2881DD6FA0E74F4684F2EAD4 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346F7D4CDA427EEF412DA4DA /* LoginRouter.swift */; };
@@ -22,6 +25,7 @@
 		3D974D4D72765D4ED5C79349 /* PointOfSaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21DC2EE07DC2C3192FCA215 /* PointOfSaleViewController.swift */; };
 		4D312427AD681123FBBBE294 /* RouteMapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F45201E1480B4CC02F5D2D /* RouteMapRouter.swift */; };
 		4FECDADB94A712FD5BAC9826 /* RouteMapViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839E2E5840D837416B26B69F /* RouteMapViewInput.swift */; };
+		50BA29990AFF17B8A2742570 /* StartFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95694D33B0BAFF3323CC8FAC /* StartFlowViewController.swift */; };
 		53A08655B1DB261C7B5FB4F7 /* LoginViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624DEBEEF0C9F60F950B08F2 /* LoginViewInput.swift */; };
 		56C9A0AC39B0BDB620272B9C /* PointOfSaleListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA040564EF4C090D902B3E2 /* PointOfSaleListPresenter.swift */; };
 		56CB5F771E1B068B9DA9045D /* RouteMapModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C3CAB5197F2CB671A53678 /* RouteMapModuleInput.swift */; };
@@ -51,12 +55,13 @@
 		6C62FA0B24D1B7C8003CEAEB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62FA0A24D1B7C8003CEAEB /* Product.swift */; };
 		6C62FA0D24D1B83F003CEAEB /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62FA0C24D1B83F003CEAEB /* Measure.swift */; };
 		6C62FA0F24D1BAD3003CEAEB /* PointOfSale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62FA0E24D1BAD3003CEAEB /* PointOfSale.swift */; };
+		6C6807A125441710002281E4 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C68079F2544170F002281E4 /* awsconfiguration.json */; };
+		6C6807A225441710002281E4 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C6807A025441710002281E4 /* amplifyconfiguration.json */; };
+		6C6807A525441717002281E4 /* amplify.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C6807A425441717002281E4 /* amplify.json */; };
 		6C7D433C250F9D26008FFAA9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7D433B250F9D26008FFAA9 /* UserModel.swift */; };
 		6C7D433F250FA18E008FFAA9 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7D433E250FA18E008FFAA9 /* AuthManager.swift */; };
 		6C7D4341250FA297008FFAA9 /* DomainAsm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7D4340250FA297008FFAA9 /* DomainAsm.swift */; };
 		6C7D4343250FA2AF008FFAA9 /* DomainAsmProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7D4342250FA2AF008FFAA9 /* DomainAsmProd.swift */; };
-		6C7D434C251208FC008FFAA9 /* FlowNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7D434B251208FC008FFAA9 /* FlowNavigator.swift */; };
-		6C7D434E2512093B008FFAA9 /* FlowNavigatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7D434D2512093B008FFAA9 /* FlowNavigatorImpl.swift */; };
 		6CAD84342502744300E4FC02 /* PosItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD84332502744300E4FC02 /* PosItemViewModel.swift */; };
 		6CAD84362502758900E4FC02 /* EditPosItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CAD84352502758900E4FC02 /* EditPosItemView.xib */; };
 		6CAD843825027FC000E4FC02 /* EditPosItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD843725027FC000E4FC02 /* EditPosItemView.swift */; };
@@ -87,27 +92,33 @@
 		89378444D6E5D7A7946E5963 /* Pods_VendRoute.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BD1F8770A458D898DD3409 /* Pods_VendRoute.framework */; };
 		8AB95EBC7FB023784C03045F /* CalendarChoiseInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750E5B733E552B5CC805143E /* CalendarChoiseInitializer.swift */; };
 		8F50EC907EDC013FC5CEDD63 /* CalendarChoiseModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC8B195DBCA8193C6BDC10C /* CalendarChoiseModuleInput.swift */; };
+		94403DE01A7AF5FB4D63FAFD /* StartFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B7B25B42558645184935DA /* StartFlow.storyboard */; };
 		96A0521CE3C27D2B3129F774 /* PointOfSaleListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2F84C87E6C4F87535975B /* PointOfSaleListRouter.swift */; };
 		96B25068241417E994C4FB13 /* PointOfSaleRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A92A2881D65290F5DFDDC0 /* PointOfSaleRouterImpl.swift */; };
 		98FA95E80816523AE1B9C7C8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6E807B7B18F0EE7A490D2E /* Login.storyboard */; };
 		9FD06A4BBF01007165A9BF70 /* RouteMapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF7CF89203DBFC8BE5ADDCA /* RouteMapPresenter.swift */; };
 		A0BDD9553C45C340FF136455 /* LoginInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D06E78712E33AA8C40B62F /* LoginInitializer.swift */; };
 		A10D2BBE1587B7B9F93D8AD6 /* PointOfSaleListModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712CEFB3942971B406B37957 /* PointOfSaleListModuleInput.swift */; };
+		A28D97EE5211C02086CEF338 /* StartFlowViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467BD5394E90B35B13C015F4 /* StartFlowViewInput.swift */; };
+		A2D03C957521518EA8B1959C /* StartFlowInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419FE4E2C9264E915462D4F /* StartFlowInitializer.swift */; };
 		A65E14A65372E1576D71299F /* CalendarChoiseViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2735A1F16D441BE7AF92DDC /* CalendarChoiseViewOutput.swift */; };
 		A944476B3D023B25CF776E38 /* PointOfSale.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DA346988C870C1D43F6700 /* PointOfSale.storyboard */; };
 		ABA9111F3DE7906669D19DA1 /* RouteMapInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEFE17ED6BC77608DB9248 /* RouteMapInitializer.swift */; };
 		AF0D1DD96AF33AE1B24F3F82 /* PointOfSaleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EE64B5E538F979E85418FA /* PointOfSaleInitializer.swift */; };
+		B2852B9A4BEDF2BA45B79821 /* StartFlowModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5145ADC40089CD77A0CEDB55 /* StartFlowModuleInput.swift */; };
 		B521B4C4A3CF4BFE3D54D6F8 /* RouteMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E8EA1F48D877903ED5A3E /* RouteMap.storyboard */; };
 		B675959D195399B2B8C67324 /* CalendarChoiseRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0A0A8FA1184653AD1A0556 /* CalendarChoiseRouterImpl.swift */; };
 		B8BE77D89D55C827817A4A09 /* CalendarChoiseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409CE718987C2F2632E52B19 /* CalendarChoiseRouter.swift */; };
 		B9056CCEEBB67306D12B262D /* PointOfSaleModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F29DD7968DCC417C7AFF0 /* PointOfSaleModuleInput.swift */; };
 		C4501C962D25F5286F33FB8F /* LoginViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE6C03E3BA0C6689676387 /* LoginViewOutput.swift */; };
 		C8B379C3BB776F12DBB211E5 /* PointOfSaleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3B7C65E15B9BDC0462E0A /* PointOfSaleRouter.swift */; };
+		CD3B5D1F5972AEC31F8D574A /* StartFlowRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E0B738DB9684E5DFBC5B2B /* StartFlowRouterImpl.swift */; };
 		D672A8DF36AA6992E27F35C3 /* PointOfSaleListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D9C8273D07667EC1640884 /* PointOfSaleListViewInput.swift */; };
 		D97EB03A18B0CCD7E447B799 /* LoginModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C021A49EFFB09A0F2D1F7 /* LoginModuleInput.swift */; };
 		DE813A382E2C53C9D5438CE1 /* PointOfSaleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1FFAA4196672AC14146C28 /* PointOfSaleList.storyboard */; };
 		E07BCAA94E08221D5024ECFA /* PointOfSaleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CAF0C5178CD1AD71CA38AA /* PointOfSaleViewOutput.swift */; };
 		EC6DD1D939B7EEFAC75F011E /* CalendarChoise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D1F8CA420A4BE441D67EB74 /* CalendarChoise.storyboard */; };
+		EEF6DFF4FDDC80441FD1E1D1 /* StartFlowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB47D4E118593964A4AA4035 /* StartFlowConfigurator.swift */; };
 		F00101E31263F80B810CC9BA /* PointOfSaleViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB160DCA977C3EA40444422 /* PointOfSaleViewInput.swift */; };
 		F36DEE2E83C62249F4B6980F /* RouteMapViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A847588386A221945280 /* RouteMapViewOutput.swift */; };
 		F624E7F8F96F07CF3B955496 /* CalendarChoiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF6FA02E07021567D198C0 /* CalendarChoiseViewController.swift */; };
@@ -118,6 +129,7 @@
 		062D9CED5F114F728238E5BE /* LoginViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0A6E807B7B18F0EE7A490D2E /* Login.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0D1F8CA420A4BE441D67EB74 /* CalendarChoise.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = CalendarChoise.storyboard; sourceTree = "<group>"; };
+		19B7B25B42558645184935DA /* StartFlow.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = StartFlow.storyboard; sourceTree = "<group>"; };
 		1B5E8EA1F48D877903ED5A3E /* RouteMap.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = RouteMap.storyboard; sourceTree = "<group>"; };
 		1EA040564EF4C090D902B3E2 /* PointOfSaleListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListPresenter.swift; sourceTree = "<group>"; };
 		2406C4969FC53282675837F2 /* LoginRouterImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouterImpl.swift; sourceTree = "<group>"; };
@@ -130,13 +142,18 @@
 		38D06E78712E33AA8C40B62F /* LoginInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInitializer.swift; sourceTree = "<group>"; };
 		3AE10C3BA31AFE8C01B00416 /* PointOfSaleListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListViewController.swift; sourceTree = "<group>"; };
 		3C1CF860B186A8DDFDCAEE7F /* PointOfSaleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleConfigurator.swift; sourceTree = "<group>"; };
+		3CA1CDE220518F44AACB3350 /* StartFlowViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowViewOutput.swift; sourceTree = "<group>"; };
 		409CE718987C2F2632E52B19 /* CalendarChoiseRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoiseRouter.swift; sourceTree = "<group>"; };
+		40B09732935275DF88872072 /* StartFlowPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowPresenter.swift; sourceTree = "<group>"; };
 		438136FA421B752AB7662C7C /* CalendarChoisePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoisePresenter.swift; sourceTree = "<group>"; };
+		467BD5394E90B35B13C015F4 /* StartFlowViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowViewInput.swift; sourceTree = "<group>"; };
 		46D9C8273D07667EC1640884 /* PointOfSaleListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListViewInput.swift; sourceTree = "<group>"; };
 		49BD1F8770A458D898DD3409 /* Pods_VendRoute.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VendRoute.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDE6C03E3BA0C6689676387 /* LoginViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewOutput.swift; sourceTree = "<group>"; };
 		4E6B2ADFAA2BD7B2516E92D1 /* Pods-VendRoute.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VendRoute.release.xcconfig"; path = "Target Support Files/Pods-VendRoute/Pods-VendRoute.release.xcconfig"; sourceTree = "<group>"; };
+		5145ADC40089CD77A0CEDB55 /* StartFlowModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowModuleInput.swift; sourceTree = "<group>"; };
 		53A92A2881D65290F5DFDDC0 /* PointOfSaleRouterImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleRouterImpl.swift; sourceTree = "<group>"; };
+		57E0B738DB9684E5DFBC5B2B /* StartFlowRouterImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowRouterImpl.swift; sourceTree = "<group>"; };
 		5C1FFAA4196672AC14146C28 /* PointOfSaleList.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = PointOfSaleList.storyboard; sourceTree = "<group>"; };
 		5CB2F84C87E6C4F87535975B /* PointOfSaleListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListRouter.swift; sourceTree = "<group>"; };
 		5EA3B7C65E15B9BDC0462E0A /* PointOfSaleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleRouter.swift; sourceTree = "<group>"; };
@@ -164,12 +181,13 @@
 		6C62FA0A24D1B7C8003CEAEB /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		6C62FA0C24D1B83F003CEAEB /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 		6C62FA0E24D1BAD3003CEAEB /* PointOfSale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfSale.swift; sourceTree = "<group>"; };
+		6C68079F2544170F002281E4 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		6C6807A025441710002281E4 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
+		6C6807A425441717002281E4 /* amplify.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplify.json; sourceTree = SOURCE_ROOT; };
 		6C7D433B250F9D26008FFAA9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		6C7D433E250FA18E008FFAA9 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		6C7D4340250FA297008FFAA9 /* DomainAsm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainAsm.swift; sourceTree = "<group>"; };
 		6C7D4342250FA2AF008FFAA9 /* DomainAsmProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainAsmProd.swift; sourceTree = "<group>"; };
-		6C7D434B251208FC008FFAA9 /* FlowNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowNavigator.swift; sourceTree = "<group>"; };
-		6C7D434D2512093B008FFAA9 /* FlowNavigatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowNavigatorImpl.swift; sourceTree = "<group>"; };
 		6CAD84332502744300E4FC02 /* PosItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosItemViewModel.swift; sourceTree = "<group>"; };
 		6CAD84352502758900E4FC02 /* EditPosItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditPosItemView.xib; sourceTree = "<group>"; };
 		6CAD843725027FC000E4FC02 /* EditPosItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPosItemView.swift; sourceTree = "<group>"; };
@@ -204,6 +222,7 @@
 		8C0A0A8FA1184653AD1A0556 /* CalendarChoiseRouterImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoiseRouterImpl.swift; sourceTree = "<group>"; };
 		8DAEFE17ED6BC77608DB9248 /* RouteMapInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapInitializer.swift; sourceTree = "<group>"; };
 		8FCA09B6E4FBBB57BA2DB2CE /* PointOfSaleListConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListConfigurator.swift; sourceTree = "<group>"; };
+		95694D33B0BAFF3323CC8FAC /* StartFlowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowViewController.swift; sourceTree = "<group>"; };
 		9D7F29DD7968DCC417C7AFF0 /* PointOfSaleModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleModuleInput.swift; sourceTree = "<group>"; };
 		A0DA346988C870C1D43F6700 /* PointOfSale.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = PointOfSale.storyboard; sourceTree = "<group>"; };
 		A1AEC5D99F8137321C20898F /* RouteMapRouterImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapRouterImpl.swift; sourceTree = "<group>"; };
@@ -211,16 +230,19 @@
 		AF19D589EF95AF71EA017A9E /* Pods-VendRoute.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VendRoute.debug.xcconfig"; path = "Target Support Files/Pods-VendRoute/Pods-VendRoute.debug.xcconfig"; sourceTree = "<group>"; };
 		B2735A1F16D441BE7AF92DDC /* CalendarChoiseViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoiseViewOutput.swift; sourceTree = "<group>"; };
 		B9F2C403952B140483E24BDB /* PointOfSaleListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListViewOutput.swift; sourceTree = "<group>"; };
+		BE4AA3640BA8D96C59D80140 /* StartFlowRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowRouter.swift; sourceTree = "<group>"; };
 		BFF7CF89203DBFC8BE5ADDCA /* RouteMapPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapPresenter.swift; sourceTree = "<group>"; };
 		CAF37F05AA61302E240B2CE8 /* CalendarChoiseViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoiseViewInput.swift; sourceTree = "<group>"; };
 		D074A847588386A221945280 /* RouteMapViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapViewOutput.swift; sourceTree = "<group>"; };
 		D8E67D240C9B733528FC3339 /* RouteMapConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapConfigurator.swift; sourceTree = "<group>"; };
 		E21DC2EE07DC2C3192FCA215 /* PointOfSaleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleViewController.swift; sourceTree = "<group>"; };
+		E419FE4E2C9264E915462D4F /* StartFlowInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowInitializer.swift; sourceTree = "<group>"; };
 		EEADDEDFDD5BD908AF785E5A /* RouteMapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapViewController.swift; sourceTree = "<group>"; };
 		EEC8B195DBCA8193C6BDC10C /* CalendarChoiseModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoiseModuleInput.swift; sourceTree = "<group>"; };
 		EF0FE77ABF94FA5E13153F1E /* PointOfSalePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSalePresenter.swift; sourceTree = "<group>"; };
 		F8AF6FA02E07021567D198C0 /* CalendarChoiseViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoiseViewController.swift; sourceTree = "<group>"; };
 		FA4C396EC263DEC4BC08D3AF /* CalendarChoiseConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoiseConfigurator.swift; sourceTree = "<group>"; };
+		FB47D4E118593964A4AA4035 /* StartFlowConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowConfigurator.swift; sourceTree = "<group>"; };
 		FFB160DCA977C3EA40444422 /* PointOfSaleViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleViewInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -236,6 +258,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0516F75F7CA66D939F972A5D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BE4AA3640BA8D96C59D80140 /* StartFlowRouter.swift */,
+				57E0B738DB9684E5DFBC5B2B /* StartFlowRouterImpl.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		090AB2396C8331C005370F07 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				FB47D4E118593964A4AA4035 /* StartFlowConfigurator.swift */,
+				E419FE4E2C9264E915462D4F /* StartFlowInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		1747AD4F30128C25769DBCE6 /* PointOfSale */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +319,7 @@
 		2557F730F5376D89A6660F85 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				ABD28B05BB469B8978669D3E /* StartFlow */,
 				6CE301FA2418F7A00023E5CE /* TransitionAdapter.swift */,
 				9DB27A154E230E3556EE3880 /* CalendarChoise */,
 				AF4E2C1C34D1512C1B785D74 /* Login */,
@@ -298,6 +339,15 @@
 				1B5E8EA1F48D877903ED5A3E /* RouteMap.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4438686A09250E6278C0D61D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5145ADC40089CD77A0CEDB55 /* StartFlowModuleInput.swift */,
+				40B09732935275DF88872072 /* StartFlowPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		54A8CFC9507357D558B2C881 /* View */ = {
@@ -468,15 +518,6 @@
 			path = AuthProvider;
 			sourceTree = "<group>";
 		};
-		6C7D434A25120899008FFAA9 /* FlowNavigator */ = {
-			isa = PBXGroup;
-			children = (
-				6C7D434B251208FC008FFAA9 /* FlowNavigator.swift */,
-				6C7D434D2512093B008FFAA9 /* FlowNavigatorImpl.swift */,
-			);
-			path = FlowNavigator;
-			sourceTree = "<group>";
-		};
 		6CAD843D2504AE4A00E4FC02 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +577,9 @@
 		6CE301DD24177ECB0023E5CE /* VendRoute */ = {
 			isa = PBXGroup;
 			children = (
+				6C6807A425441717002281E4 /* amplify.json */,
+				6C6807A025441710002281E4 /* amplifyconfiguration.json */,
+				6C68079F2544170F002281E4 /* awsconfiguration.json */,
 				6CE301F22417D1510023E5CE /* Assemblies */,
 				6CAD843D2504AE4A00E4FC02 /* Extension */,
 				6CE301DE24177ECB0023E5CE /* AppDelegate.swift */,
@@ -576,7 +620,6 @@
 			isa = PBXGroup;
 			children = (
 				6C323DF62531A5C20009DD2F /* GetData */,
-				6C7D434A25120899008FFAA9 /* FlowNavigator */,
 				6C7D433D250FA16B008FFAA9 /* AuthProvider */,
 				6C42C34B24E319550091A9FE /* VisitProvider */,
 			);
@@ -678,6 +721,17 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		ABD28B05BB469B8978669D3E /* StartFlow */ = {
+			isa = PBXGroup;
+			children = (
+				E30D853A0D430D3A4002DBBB /* View */,
+				4438686A09250E6278C0D61D /* Presenter */,
+				0516F75F7CA66D939F972A5D /* Router */,
+				090AB2396C8331C005370F07 /* Configurator */,
+			);
+			path = StartFlow;
+			sourceTree = "<group>";
+		};
 		AF4E2C1C34D1512C1B785D74 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -714,6 +768,17 @@
 				3466165B88704474C3B42443 /* PointOfSaleListInitializer.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		E30D853A0D430D3A4002DBBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				467BD5394E90B35B13C015F4 /* StartFlowViewInput.swift */,
+				3CA1CDE220518F44AACB3350 /* StartFlowViewOutput.swift */,
+				95694D33B0BAFF3323CC8FAC /* StartFlowViewController.swift */,
+				19B7B25B42558645184935DA /* StartFlow.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E4BE01D4F120ADE2A53C26A6 /* Router */ = {
@@ -807,10 +872,14 @@
 				6CE301E624177ECB0023E5CE /* Main.storyboard in Resources */,
 				98FA95E80816523AE1B9C7C8 /* Login.storyboard in Resources */,
 				DE813A382E2C53C9D5438CE1 /* PointOfSaleList.storyboard in Resources */,
+				6C6807A125441710002281E4 /* awsconfiguration.json in Resources */,
 				A944476B3D023B25CF776E38 /* PointOfSale.storyboard in Resources */,
+				6C6807A225441710002281E4 /* amplifyconfiguration.json in Resources */,
 				6CAD84362502758900E4FC02 /* EditPosItemView.xib in Resources */,
 				B521B4C4A3CF4BFE3D54D6F8 /* RouteMap.storyboard in Resources */,
+				6C6807A525441717002281E4 /* amplify.json in Resources */,
 				EC6DD1D939B7EEFAC75F011E /* CalendarChoise.storyboard in Resources */,
+				94403DE01A7AF5FB4D63FAFD /* StartFlow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,7 +936,6 @@
 				6CC4C059252870D600FA386A /* ProductApiEntity.swift in Sources */,
 				6CE301E324177ECB0023E5CE /* ViewController.swift in Sources */,
 				6CE301F42417D19C0023E5CE /* Container.swift in Sources */,
-				6C7D434C251208FC008FFAA9 /* FlowNavigator.swift in Sources */,
 				6CAD843A2504A2D200E4FC02 /* NoPastedTextField.swift in Sources */,
 				6C42C34624E14E8F0091A9FE /* POSViewModel.swift in Sources */,
 				6CFB248824F3D8B500FFCE32 /* PosDetailViewModel.swift in Sources */,
@@ -937,7 +1005,6 @@
 				6C42C35224E31AA10091A9FE /* VisitDao.swift in Sources */,
 				6CAD84342502744300E4FC02 /* PosItemViewModel.swift in Sources */,
 				6C62FA0B24D1B7C8003CEAEB /* Product.swift in Sources */,
-				6C7D434E2512093B008FFAA9 /* FlowNavigatorImpl.swift in Sources */,
 				4D312427AD681123FBBBE294 /* RouteMapRouter.swift in Sources */,
 				6CC4C04F25286A5600FA386A /* DownloadManagerImpl.swift in Sources */,
 				6C62F9FC24CFF7D9003CEAEB /* AppSettings.swift in Sources */,
@@ -957,6 +1024,15 @@
 				6CC4C05F25287D3400FA386A /* VisitApiEntity.swift in Sources */,
 				1219D1B3CD6DCDEA23ECC086 /* CalendarChoiseConfigurator.swift in Sources */,
 				8AB95EBC7FB023784C03045F /* CalendarChoiseInitializer.swift in Sources */,
+				A28D97EE5211C02086CEF338 /* StartFlowViewInput.swift in Sources */,
+				037DD52B7075272E72A0A372 /* StartFlowViewOutput.swift in Sources */,
+				50BA29990AFF17B8A2742570 /* StartFlowViewController.swift in Sources */,
+				B2852B9A4BEDF2BA45B79821 /* StartFlowModuleInput.swift in Sources */,
+				1E6D70CB1F5E3115C7CA9834 /* StartFlowPresenter.swift in Sources */,
+				1F5940FC8769C0FB0A0352C4 /* StartFlowRouter.swift in Sources */,
+				CD3B5D1F5972AEC31F8D574A /* StartFlowRouterImpl.swift in Sources */,
+				EEF6DFF4FDDC80441FD1E1D1 /* StartFlowConfigurator.swift in Sources */,
+				A2D03C957521518EA8B1959C /* StartFlowInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

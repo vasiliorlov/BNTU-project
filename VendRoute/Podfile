@@ -11,4 +11,5 @@ target 'VendRoute' do
   pod 'Amplify'
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'AmplifyPlugins/AWSCognitoAuthPlugin'
+  pod 'AmplifyPlugins/AWSAPIPlugin'
 end
