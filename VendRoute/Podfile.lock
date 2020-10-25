@@ -30,9 +30,9 @@ PODS:
     - AWSCore (~> 2.15.0)
     - AWSMobileClient (~> 2.15.0)
   - CalendarFoundation (0.0.4)
+  - iOS-Slide-Menu (1.5)
   - MBProgressHUD (1.2.0)
   - ReachabilitySwift (5.0.0)
-  - SideNavigationController (2.0.1)
   - Starscream (3.1.1)
 
 DEPENDENCIES:
@@ -40,8 +40,8 @@ DEPENDENCIES:
   - AmplifyPlugins/AWSAPIPlugin
   - AmplifyPlugins/AWSCognitoAuthPlugin
   - CalendarFoundation
+  - iOS-Slide-Menu
   - MBProgressHUD (~> 1.2.0)
-  - SideNavigationController
 
 SPEC REPOS:
   trunk:
@@ -55,9 +55,9 @@ SPEC REPOS:
     - AWSMobileClient
     - AWSPluginsCore
     - CalendarFoundation
+    - iOS-Slide-Menu
     - MBProgressHUD
     - ReachabilitySwift
-    - SideNavigationController
     - Starscream
 
 SPEC CHECKSUMS:
@@ -71,11 +71,11 @@ SPEC CHECKSUMS:
   AWSMobileClient: 5c29678413764ee3bcd528421331deb0a35b72fb
   AWSPluginsCore: 4e98e284fff7763470ef94f7538449f20d891f70
   CalendarFoundation: 4d4ee111ae9d34ea09d5809a867414a099719b23
+  iOS-Slide-Menu: 40b0cbd8916c42afc755f0869793cd09e7a32102
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
-  SideNavigationController: 7d215d3f7ad513f6d801a58cb7ad454e4268959a
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: 5826ec35a9edd7fa91b5f0299cfdf72c7ac1684a
+PODFILE CHECKSUM: 15df903646124ddd6329cce03e6b88205da1deef
 
 COCOAPODS: 1.8.4

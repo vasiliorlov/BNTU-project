@@ -37,6 +37,10 @@ class PointOfSaleListPresenter: PointOfSaleListModuleInput, PointOfSaleListViewO
         router.openVisitScreen(for: id)
     }
     
+    func requireOpenUserProfile() {
+        router.openUserProfileScreen(output: self)
+    }
+    
     //MARK: - private methods
     private func loadData(_ completion: @escaping () -> ()) {
         DispatchQueue.global().async {
@@ -52,4 +56,9 @@ class PointOfSaleListPresenter: PointOfSaleListModuleInput, PointOfSaleListViewO
     private func map(_ pos: PointOfSale) -> POSViewModel {
         return POSViewModel(id: pos.id, posName: pos.name, adress: pos.adress.text, collected: pos.isCollect, inventoried: pos.isInventory, servised: pos.isService)
     }
+}
+
+//MARK: - UserProfileModuleOutput
+extension PointOfSaleListPresenter: UserProfileModuleOutput {
+    
 }

@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import SideNavigationController
+import iOS_Slide_Menu
 
 protocol PresentationAsm {
-    var navigationController: SideNavigationController { get }
+    var navigationController: SlideNavigationController { get }
 }

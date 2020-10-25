@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02859D3A7E7FF00C4A7D82DA /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399551D9F870C9DCC5DD6CF1 /* UserProfileViewController.swift */; };
 		03205480209BACD7A8D52AD9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062D9CED5F114F728238E5BE /* LoginViewController.swift */; };
 		037DD52B7075272E72A0A372 /* StartFlowViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1CDE220518F44AACB3350 /* StartFlowViewOutput.swift */; };
 		0C394EE8711769E9C7C90936 /* RouteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEADDEDFDD5BD908AF785E5A /* RouteMapViewController.swift */; };
@@ -15,6 +16,7 @@
 		1E6D70CB1F5E3115C7CA9834 /* StartFlowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B09732935275DF88872072 /* StartFlowPresenter.swift */; };
 		1F5940FC8769C0FB0A0352C4 /* StartFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AA3640BA8D96C59D80140 /* StartFlowRouter.swift */; };
 		2414A71922BCBF706AB29A45 /* RouteMapRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AEC5D99F8137321C20898F /* RouteMapRouterImpl.swift */; };
+		24B42757F305F76DCA0AC0F5 /* UserProfileRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B7D3C743E0B99BBE6C1B90 /* UserProfileRouterImpl.swift */; };
 		25AF5C89D5E8377543CD67C8 /* PointOfSaleListInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3466165B88704474C3B42443 /* PointOfSaleListInitializer.swift */; };
 		2881DD6FA0E74F4684F2EAD4 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346F7D4CDA427EEF412DA4DA /* LoginRouter.swift */; };
 		2884DBA8D4A7D30E24F95D74 /* PointOfSalePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FE77ABF94FA5E13153F1E /* PointOfSalePresenter.swift */; };
@@ -30,7 +32,9 @@
 		56C9A0AC39B0BDB620272B9C /* PointOfSaleListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA040564EF4C090D902B3E2 /* PointOfSaleListPresenter.swift */; };
 		56CB5F771E1B068B9DA9045D /* RouteMapModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C3CAB5197F2CB671A53678 /* RouteMapModuleInput.swift */; };
 		5F419B476F4813978E6511D0 /* PointOfSaleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE10C3BA31AFE8C01B00416 /* PointOfSaleListViewController.swift */; };
+		60119DD7D36CC6A0B8218130 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA84947414B39E36BBEE5D3 /* UserProfile.storyboard */; };
 		63461D44DA2DFD716A769280 /* PointOfSaleListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F2C403952B140483E24BDB /* PointOfSaleListViewOutput.swift */; };
+		66DAACABB7EA69972D96E694 /* UserProfileViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E292ACE205E75B8F4F888 /* UserProfileViewInput.swift */; };
 		6B667B579533537532C55536 /* LoginRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2406C4969FC53282675837F2 /* LoginRouterImpl.swift */; };
 		6C0FDA0324E92BB50081AE3D /* ProductDaoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FDA0224E92BB50081AE3D /* ProductDaoImpl.swift */; };
 		6C0FDA0524E92CFA0081AE3D /* CoraDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FDA0424E92CFA0081AE3D /* CoraDataManager.swift */; };
@@ -58,6 +62,7 @@
 		6C6807A125441710002281E4 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C68079F2544170F002281E4 /* awsconfiguration.json */; };
 		6C6807A225441710002281E4 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C6807A025441710002281E4 /* amplifyconfiguration.json */; };
 		6C6807A525441717002281E4 /* amplify.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C6807A425441717002281E4 /* amplify.json */; };
+		6C6807AE25454DEB002281E4 /* SlideNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C6807AD25454DEB002281E4 /* SlideNavigationController.storyboard */; };
 		6C7D433C250F9D26008FFAA9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7D433B250F9D26008FFAA9 /* UserModel.swift */; };
 		6C7D433F250FA18E008FFAA9 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7D433E250FA18E008FFAA9 /* AuthManager.swift */; };
 		6C7D4341250FA297008FFAA9 /* DomainAsm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7D4340250FA297008FFAA9 /* DomainAsm.swift */; };
@@ -87,15 +92,19 @@
 		6CFB248624F3D1A800FFCE32 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB248524F3D1A800FFCE32 /* CheckBox.swift */; };
 		6CFB248824F3D8B500FFCE32 /* PosDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB248724F3D8B500FFCE32 /* PosDetailViewModel.swift */; };
 		7619287419F075B180D8B498 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DC294211FEED8914F7F6BB /* LoginPresenter.swift */; };
+		79DF408EA60F2D7582E14385 /* UserProfileModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D166FE3450E036DD9E1551D /* UserProfileModuleInput.swift */; };
 		7ABE07E446755B11CAFD098F /* RouteMapConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E67D240C9B733528FC3339 /* RouteMapConfigurator.swift */; };
 		7D201C95A13CAFE4811DEDB9 /* CalendarChoiseViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF37F05AA61302E240B2CE8 /* CalendarChoiseViewInput.swift */; };
 		89378444D6E5D7A7946E5963 /* Pods_VendRoute.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BD1F8770A458D898DD3409 /* Pods_VendRoute.framework */; };
 		8AB95EBC7FB023784C03045F /* CalendarChoiseInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750E5B733E552B5CC805143E /* CalendarChoiseInitializer.swift */; };
 		8F50EC907EDC013FC5CEDD63 /* CalendarChoiseModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC8B195DBCA8193C6BDC10C /* CalendarChoiseModuleInput.swift */; };
+		91291A952EF8ADB108DDADD7 /* UserProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9074DCF014ACAAA7180B66B1 /* UserProfileConfigurator.swift */; };
+		92CAD37C29750F0FA0DAF47C /* UserProfileViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DF53ACE6DB71835845ED5 /* UserProfileViewOutput.swift */; };
 		94403DE01A7AF5FB4D63FAFD /* StartFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B7B25B42558645184935DA /* StartFlow.storyboard */; };
 		96A0521CE3C27D2B3129F774 /* PointOfSaleListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2F84C87E6C4F87535975B /* PointOfSaleListRouter.swift */; };
 		96B25068241417E994C4FB13 /* PointOfSaleRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A92A2881D65290F5DFDDC0 /* PointOfSaleRouterImpl.swift */; };
 		98FA95E80816523AE1B9C7C8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6E807B7B18F0EE7A490D2E /* Login.storyboard */; };
+		9A7FFAE4FE769A0015232A84 /* UserProfileInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96B08CFE05A3FD8EDDF767E /* UserProfileInitializer.swift */; };
 		9FD06A4BBF01007165A9BF70 /* RouteMapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF7CF89203DBFC8BE5ADDCA /* RouteMapPresenter.swift */; };
 		A0BDD9553C45C340FF136455 /* LoginInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D06E78712E33AA8C40B62F /* LoginInitializer.swift */; };
 		A10D2BBE1587B7B9F93D8AD6 /* PointOfSaleListModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712CEFB3942971B406B37957 /* PointOfSaleListModuleInput.swift */; };
@@ -113,6 +122,7 @@
 		C4501C962D25F5286F33FB8F /* LoginViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE6C03E3BA0C6689676387 /* LoginViewOutput.swift */; };
 		C8B379C3BB776F12DBB211E5 /* PointOfSaleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3B7C65E15B9BDC0462E0A /* PointOfSaleRouter.swift */; };
 		CD3B5D1F5972AEC31F8D574A /* StartFlowRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E0B738DB9684E5DFBC5B2B /* StartFlowRouterImpl.swift */; };
+		D32E3A126872C7D538127303 /* UserProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F15FC0EB26746DE1A0C2DCC /* UserProfilePresenter.swift */; };
 		D672A8DF36AA6992E27F35C3 /* PointOfSaleListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D9C8273D07667EC1640884 /* PointOfSaleListViewInput.swift */; };
 		D97EB03A18B0CCD7E447B799 /* LoginModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C021A49EFFB09A0F2D1F7 /* LoginModuleInput.swift */; };
 		DE813A382E2C53C9D5438CE1 /* PointOfSaleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1FFAA4196672AC14146C28 /* PointOfSaleList.storyboard */; };
@@ -122,6 +132,7 @@
 		F00101E31263F80B810CC9BA /* PointOfSaleViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB160DCA977C3EA40444422 /* PointOfSaleViewInput.swift */; };
 		F36DEE2E83C62249F4B6980F /* RouteMapViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A847588386A221945280 /* RouteMapViewOutput.swift */; };
 		F624E7F8F96F07CF3B955496 /* CalendarChoiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF6FA02E07021567D198C0 /* CalendarChoiseViewController.swift */; };
+		FD21704A860CE4CA4439EC7B /* UserProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2275541AC07208C45C64E2E0 /* UserProfileRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,25 +143,30 @@
 		19B7B25B42558645184935DA /* StartFlow.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = StartFlow.storyboard; sourceTree = "<group>"; };
 		1B5E8EA1F48D877903ED5A3E /* RouteMap.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = RouteMap.storyboard; sourceTree = "<group>"; };
 		1EA040564EF4C090D902B3E2 /* PointOfSaleListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListPresenter.swift; sourceTree = "<group>"; };
+		2275541AC07208C45C64E2E0 /* UserProfileRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserProfileRouter.swift; sourceTree = "<group>"; };
 		2406C4969FC53282675837F2 /* LoginRouterImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouterImpl.swift; sourceTree = "<group>"; };
 		26DC294211FEED8914F7F6BB /* LoginPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		2D166FE3450E036DD9E1551D /* UserProfileModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserProfileModuleInput.swift; sourceTree = "<group>"; };
 		310C021A49EFFB09A0F2D1F7 /* LoginModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginModuleInput.swift; sourceTree = "<group>"; };
 		3466165B88704474C3B42443 /* PointOfSaleListInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListInitializer.swift; sourceTree = "<group>"; };
 		346F7D4CDA427EEF412DA4DA /* LoginRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		35635835F713255F85CA39BA /* LoginConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
 		38C3CAB5197F2CB671A53678 /* RouteMapModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapModuleInput.swift; sourceTree = "<group>"; };
 		38D06E78712E33AA8C40B62F /* LoginInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInitializer.swift; sourceTree = "<group>"; };
+		399551D9F870C9DCC5DD6CF1 /* UserProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		3AE10C3BA31AFE8C01B00416 /* PointOfSaleListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListViewController.swift; sourceTree = "<group>"; };
 		3C1CF860B186A8DDFDCAEE7F /* PointOfSaleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleConfigurator.swift; sourceTree = "<group>"; };
 		3CA1CDE220518F44AACB3350 /* StartFlowViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowViewOutput.swift; sourceTree = "<group>"; };
 		409CE718987C2F2632E52B19 /* CalendarChoiseRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoiseRouter.swift; sourceTree = "<group>"; };
 		40B09732935275DF88872072 /* StartFlowPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowPresenter.swift; sourceTree = "<group>"; };
+		40B7D3C743E0B99BBE6C1B90 /* UserProfileRouterImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserProfileRouterImpl.swift; sourceTree = "<group>"; };
 		438136FA421B752AB7662C7C /* CalendarChoisePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoisePresenter.swift; sourceTree = "<group>"; };
 		467BD5394E90B35B13C015F4 /* StartFlowViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowViewInput.swift; sourceTree = "<group>"; };
 		46D9C8273D07667EC1640884 /* PointOfSaleListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListViewInput.swift; sourceTree = "<group>"; };
 		49BD1F8770A458D898DD3409 /* Pods_VendRoute.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VendRoute.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDE6C03E3BA0C6689676387 /* LoginViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewOutput.swift; sourceTree = "<group>"; };
 		4E6B2ADFAA2BD7B2516E92D1 /* Pods-VendRoute.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VendRoute.release.xcconfig"; path = "Target Support Files/Pods-VendRoute/Pods-VendRoute.release.xcconfig"; sourceTree = "<group>"; };
+		501E292ACE205E75B8F4F888 /* UserProfileViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserProfileViewInput.swift; sourceTree = "<group>"; };
 		5145ADC40089CD77A0CEDB55 /* StartFlowModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowModuleInput.swift; sourceTree = "<group>"; };
 		53A92A2881D65290F5DFDDC0 /* PointOfSaleRouterImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleRouterImpl.swift; sourceTree = "<group>"; };
 		57E0B738DB9684E5DFBC5B2B /* StartFlowRouterImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowRouterImpl.swift; sourceTree = "<group>"; };
@@ -184,6 +200,8 @@
 		6C68079F2544170F002281E4 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		6C6807A025441710002281E4 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
 		6C6807A425441717002281E4 /* amplify.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplify.json; sourceTree = SOURCE_ROOT; };
+		6C6807AD25454DEB002281E4 /* SlideNavigationController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SlideNavigationController.storyboard; sourceTree = "<group>"; };
+		6C68082025455EF7002281E4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = VendRoute/Info.plist; sourceTree = "<group>"; };
 		6C7D433B250F9D26008FFAA9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		6C7D433E250FA18E008FFAA9 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		6C7D4340250FA297008FFAA9 /* DomainAsm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainAsm.swift; sourceTree = "<group>"; };
@@ -206,7 +224,6 @@
 		6CE301E524177ECB0023E5CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6CE301E724177ECF0023E5CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CE301EA24177ECF0023E5CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6CE301EC24177ECF0023E5CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CE301F32417D19C0023E5CE /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		6CE301F52417D8D10023E5CE /* PresentationAsm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAsm.swift; sourceTree = "<group>"; };
 		6CE301F72417D9EF0023E5CE /* PresentationAsmProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAsmProd.swift; sourceTree = "<group>"; };
@@ -217,21 +234,25 @@
 		712CEFB3942971B406B37957 /* PointOfSaleListModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListModuleInput.swift; sourceTree = "<group>"; };
 		750E5B733E552B5CC805143E /* CalendarChoiseInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoiseInitializer.swift; sourceTree = "<group>"; };
 		78EE64B5E538F979E85418FA /* PointOfSaleInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleInitializer.swift; sourceTree = "<group>"; };
+		7F15FC0EB26746DE1A0C2DCC /* UserProfilePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserProfilePresenter.swift; sourceTree = "<group>"; };
 		839E2E5840D837416B26B69F /* RouteMapViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapViewInput.swift; sourceTree = "<group>"; };
 		84F45201E1480B4CC02F5D2D /* RouteMapRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapRouter.swift; sourceTree = "<group>"; };
 		8C0A0A8FA1184653AD1A0556 /* CalendarChoiseRouterImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoiseRouterImpl.swift; sourceTree = "<group>"; };
 		8DAEFE17ED6BC77608DB9248 /* RouteMapInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapInitializer.swift; sourceTree = "<group>"; };
 		8FCA09B6E4FBBB57BA2DB2CE /* PointOfSaleListConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListConfigurator.swift; sourceTree = "<group>"; };
+		9074DCF014ACAAA7180B66B1 /* UserProfileConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserProfileConfigurator.swift; sourceTree = "<group>"; };
 		95694D33B0BAFF3323CC8FAC /* StartFlowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowViewController.swift; sourceTree = "<group>"; };
 		9D7F29DD7968DCC417C7AFF0 /* PointOfSaleModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleModuleInput.swift; sourceTree = "<group>"; };
 		A0DA346988C870C1D43F6700 /* PointOfSale.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = PointOfSale.storyboard; sourceTree = "<group>"; };
 		A1AEC5D99F8137321C20898F /* RouteMapRouterImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapRouterImpl.swift; sourceTree = "<group>"; };
 		A788B5FAEDA120FEE8906A84 /* PointOfSaleListRouterImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListRouterImpl.swift; sourceTree = "<group>"; };
+		A96B08CFE05A3FD8EDDF767E /* UserProfileInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserProfileInitializer.swift; sourceTree = "<group>"; };
 		AF19D589EF95AF71EA017A9E /* Pods-VendRoute.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VendRoute.debug.xcconfig"; path = "Target Support Files/Pods-VendRoute/Pods-VendRoute.debug.xcconfig"; sourceTree = "<group>"; };
 		B2735A1F16D441BE7AF92DDC /* CalendarChoiseViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoiseViewOutput.swift; sourceTree = "<group>"; };
 		B9F2C403952B140483E24BDB /* PointOfSaleListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleListViewOutput.swift; sourceTree = "<group>"; };
 		BE4AA3640BA8D96C59D80140 /* StartFlowRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowRouter.swift; sourceTree = "<group>"; };
 		BFF7CF89203DBFC8BE5ADDCA /* RouteMapPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapPresenter.swift; sourceTree = "<group>"; };
+		C81DF53ACE6DB71835845ED5 /* UserProfileViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserProfileViewOutput.swift; sourceTree = "<group>"; };
 		CAF37F05AA61302E240B2CE8 /* CalendarChoiseViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoiseViewInput.swift; sourceTree = "<group>"; };
 		D074A847588386A221945280 /* RouteMapViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapViewOutput.swift; sourceTree = "<group>"; };
 		D8E67D240C9B733528FC3339 /* RouteMapConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapConfigurator.swift; sourceTree = "<group>"; };
@@ -242,6 +263,7 @@
 		EF0FE77ABF94FA5E13153F1E /* PointOfSalePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSalePresenter.swift; sourceTree = "<group>"; };
 		F8AF6FA02E07021567D198C0 /* CalendarChoiseViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoiseViewController.swift; sourceTree = "<group>"; };
 		FA4C396EC263DEC4BC08D3AF /* CalendarChoiseConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarChoiseConfigurator.swift; sourceTree = "<group>"; };
+		FAA84947414B39E36BBEE5D3 /* UserProfile.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		FB47D4E118593964A4AA4035 /* StartFlowConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartFlowConfigurator.swift; sourceTree = "<group>"; };
 		FFB160DCA977C3EA40444422 /* PointOfSaleViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOfSaleViewInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -274,6 +296,15 @@
 				E419FE4E2C9264E915462D4F /* StartFlowInitializer.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		0B66CA8D0289E68AB2210E9F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2275541AC07208C45C64E2E0 /* UserProfileRouter.swift */,
+				40B7D3C743E0B99BBE6C1B90 /* UserProfileRouterImpl.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		1747AD4F30128C25769DBCE6 /* PointOfSale */ = {
@@ -319,6 +350,7 @@
 		2557F730F5376D89A6660F85 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5E59186EAD9FA71CB9F340D3 /* UserProfile */,
 				ABD28B05BB469B8978669D3E /* StartFlow */,
 				6CE301FA2418F7A00023E5CE /* TransitionAdapter.swift */,
 				9DB27A154E230E3556EE3880 /* CalendarChoise */,
@@ -339,6 +371,24 @@
 				1B5E8EA1F48D877903ED5A3E /* RouteMap.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		38B13C19D69B29AF73A8F9B3 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				9074DCF014ACAAA7180B66B1 /* UserProfileConfigurator.swift */,
+				A96B08CFE05A3FD8EDDF767E /* UserProfileInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		3E4A7863F6A34EFDD66DF800 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2D166FE3450E036DD9E1551D /* UserProfileModuleInput.swift */,
+				7F15FC0EB26746DE1A0C2DCC /* UserProfilePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		4438686A09250E6278C0D61D /* Presenter */ = {
@@ -402,6 +452,17 @@
 				53A92A2881D65290F5DFDDC0 /* PointOfSaleRouterImpl.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		5E59186EAD9FA71CB9F340D3 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				CD2E5E9742F22851CAFC8CA7 /* View */,
+				3E4A7863F6A34EFDD66DF800 /* Presenter */,
+				0B66CA8D0289E68AB2210E9F /* Router */,
+				38B13C19D69B29AF73A8F9B3 /* Configurator */,
+			);
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 		6432F5782F4024795916BB08 /* View */ = {
@@ -510,6 +571,17 @@
 			path = BusinessEntity;
 			sourceTree = "<group>";
 		};
+		6C6807AC25454DCC002281E4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6CE301E424177ECB0023E5CE /* Main.storyboard */,
+				6CE301E724177ECF0023E5CE /* Assets.xcassets */,
+				6C42C34824E314DF0091A9FE /* VendRoute.xcdatamodeld */,
+				6C6807AD25454DEB002281E4 /* SlideNavigationController.storyboard */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
 		6C7D433D250FA16B008FFAA9 /* AuthProvider */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,10 +631,11 @@
 			isa = PBXGroup;
 			children = (
 				6CE301DD24177ECB0023E5CE /* VendRoute */,
+				6CE301E924177ECF0023E5CE /* LaunchScreen.storyboard */,
+				6C68082025455EF7002281E4 /* Info.plist */,
 				6CE301DC24177ECB0023E5CE /* Products */,
 				956CC322F92858E325A28DB7 /* Pods */,
 				F4002AA80C039F30CEFA2E78 /* Frameworks */,
-				773BB94799D3B66659D56625 /* Modules */,
 			);
 			sourceTree = "<group>";
 		};
@@ -589,13 +662,9 @@
 				6CE301E224177ECB0023E5CE /* ViewController.swift */,
 				6CFB248224F3D0EF00FFCE32 /* UI */,
 				6C62FA0524D1B679003CEAEB /* BusinessEntity */,
-				6CE301E424177ECB0023E5CE /* Main.storyboard */,
 				6C42C34724E314A60091A9FE /* Data */,
 				6CC4C048252869B300FA386A /* Services */,
-				6CE301E724177ECF0023E5CE /* Assets.xcassets */,
-				6C42C34824E314DF0091A9FE /* VendRoute.xcdatamodeld */,
-				6CE301E924177ECF0023E5CE /* LaunchScreen.storyboard */,
-				6CE301EC24177ECF0023E5CE /* Info.plist */,
+				6C6807AC25454DCC002281E4 /* Support Files */,
 			);
 			path = VendRoute;
 			sourceTree = "<group>";
@@ -643,13 +712,6 @@
 				1EA040564EF4C090D902B3E2 /* PointOfSaleListPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		773BB94799D3B66659D56625 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Modules;
 			sourceTree = "<group>";
 		};
 		8400DBFCE597DB275ED1E9EC /* Configurator */ = {
@@ -770,6 +832,17 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		CD2E5E9742F22851CAFC8CA7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				501E292ACE205E75B8F4F888 /* UserProfileViewInput.swift */,
+				C81DF53ACE6DB71835845ED5 /* UserProfileViewOutput.swift */,
+				399551D9F870C9DCC5DD6CF1 /* UserProfileViewController.swift */,
+				FAA84947414B39E36BBEE5D3 /* UserProfile.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E30D853A0D430D3A4002DBBB /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -879,7 +952,9 @@
 				B521B4C4A3CF4BFE3D54D6F8 /* RouteMap.storyboard in Resources */,
 				6C6807A525441717002281E4 /* amplify.json in Resources */,
 				EC6DD1D939B7EEFAC75F011E /* CalendarChoise.storyboard in Resources */,
+				6C6807AE25454DEB002281E4 /* SlideNavigationController.storyboard in Resources */,
 				94403DE01A7AF5FB4D63FAFD /* StartFlow.storyboard in Resources */,
+				60119DD7D36CC6A0B8218130 /* UserProfile.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1033,6 +1108,15 @@
 				CD3B5D1F5972AEC31F8D574A /* StartFlowRouterImpl.swift in Sources */,
 				EEF6DFF4FDDC80441FD1E1D1 /* StartFlowConfigurator.swift in Sources */,
 				A2D03C957521518EA8B1959C /* StartFlowInitializer.swift in Sources */,
+				66DAACABB7EA69972D96E694 /* UserProfileViewInput.swift in Sources */,
+				92CAD37C29750F0FA0DAF47C /* UserProfileViewOutput.swift in Sources */,
+				02859D3A7E7FF00C4A7D82DA /* UserProfileViewController.swift in Sources */,
+				79DF408EA60F2D7582E14385 /* UserProfileModuleInput.swift in Sources */,
+				D32E3A126872C7D538127303 /* UserProfilePresenter.swift in Sources */,
+				FD21704A860CE4CA4439EC7B /* UserProfileRouter.swift in Sources */,
+				24B42757F305F76DCA0AC0F5 /* UserProfileRouterImpl.swift in Sources */,
+				91291A952EF8ADB108DDADD7 /* UserProfileConfigurator.swift in Sources */,
+				9A7FFAE4FE769A0015232A84 /* UserProfileInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

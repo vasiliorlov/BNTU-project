@@ -36,7 +36,9 @@ class PointOfSaleListViewController: UIViewController, PointOfSaleListViewInput,
     }
     //MARK: - user action
     @IBAction func didProfileBtnTouchIn(_ sender: Any) {
+        presenter?.requireOpenUserProfile()
     }
+    
     @IBAction func didMapBtnTouchin(_ sender: Any) {
     }
     

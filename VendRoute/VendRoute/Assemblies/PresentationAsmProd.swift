@@ -7,23 +7,37 @@
 //
 
 import UIKit
-import SideNavigationController
+import iOS_Slide_Menu
 
 class PresentationAsmProd: PresentationAsm {
-    lazy var navigationController: SideNavigationController = createNavigationController()
+    lazy var navigationControllerInstance: SlideNavigationController = createNavigationController()
+
     
-    init() {
-        self.navigationController = SideNavigationController()
-    }
-    
-    private func createNavigationController() -> SideNavigationController {
-        let sideNavigationController = SideNavigationController(mainViewController: UINavigationController(rootViewController: ViewController()))
-        sideNavigationController.rightSide(viewController: UIViewController())
-        if let window = UIApplication.shared.windows.first {
-            window.rootViewController = sideNavigationController
-        }
+    private func createNavigationController() -> SlideNavigationController {
+        let storyboard = UIStoryboard(name: "SlideNavigationController", bundle: nil)
+        let slideController = storyboard.instantiateInitialViewController() as! SlideNavigationController
+        let screenSize = UIScreen.main.bounds
+        let width = screenSize.width < screenSize.height ? screenSize.width : screenSize.height
+        let height = screenSize.width < screenSize.height ? screenSize.height : screenSize.width
         
-        return sideNavigationController
+        slideController.avoidSwitchingToSameClassViewController = true
+        slideController.panGestureSideOffset = 50
+        slideController.enableSwipeGesture = true
+        slideController.portraitSlideOffset = width - 280
+        slideController.landscapeSlideOffset = height - 280
+        
+        return slideController
+    }
+ 
+    public var screenWidth: CGFloat {
+        return min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
     }
     
+    public var screenHeight: CGFloat {
+        return max(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+    }
+    
+    var navigationController: SlideNavigationController {
+        return navigationControllerInstance
+    }
 }

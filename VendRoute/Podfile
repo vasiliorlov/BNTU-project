@@ -6,7 +6,7 @@ target 'VendRoute' do
   use_frameworks!
   
   # Pods for VendRoute
-  pod 'SideNavigationController'
+  pod 'iOS-Slide-Menu'
   pod 'CalendarFoundation'
   pod 'Amplify'
   pod 'MBProgressHUD', '~> 1.2.0'
