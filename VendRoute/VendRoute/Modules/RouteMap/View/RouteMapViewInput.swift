@@ -14,4 +14,5 @@ protocol RouteMapViewInput: class {
     */
 
     func setupInitialState()
+    func setData(_ data: [PosMapViewModel])
 }

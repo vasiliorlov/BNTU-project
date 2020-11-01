@@ -79,6 +79,7 @@
 		6CC4C059252870D600FA386A /* ProductApiEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC4C058252870D600FA386A /* ProductApiEntity.swift */; };
 		6CC4C05C25287BFC00FA386A /* VisitItemApiEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC4C05B25287BFC00FA386A /* VisitItemApiEntity.swift */; };
 		6CC4C05F25287D3400FA386A /* VisitApiEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC4C05E25287D3400FA386A /* VisitApiEntity.swift */; };
+		6CC6FB7A254EDA5C00C73B57 /* PosMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6FB79254EDA5C00C73B57 /* PosMapViewModel.swift */; };
 		6CE301DF24177ECB0023E5CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE301DE24177ECB0023E5CE /* AppDelegate.swift */; };
 		6CE301E324177ECB0023E5CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE301E224177ECB0023E5CE /* ViewController.swift */; };
 		6CE301E624177ECB0023E5CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE301E424177ECB0023E5CE /* Main.storyboard */; };
@@ -218,6 +219,7 @@
 		6CC4C058252870D600FA386A /* ProductApiEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductApiEntity.swift; sourceTree = "<group>"; };
 		6CC4C05B25287BFC00FA386A /* VisitItemApiEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitItemApiEntity.swift; sourceTree = "<group>"; };
 		6CC4C05E25287D3400FA386A /* VisitApiEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitApiEntity.swift; sourceTree = "<group>"; };
+		6CC6FB79254EDA5C00C73B57 /* PosMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosMapViewModel.swift; sourceTree = "<group>"; };
 		6CE301DB24177ECB0023E5CE /* VendRoute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VendRoute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE301DE24177ECB0023E5CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CE301E224177ECB0023E5CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				839E2E5840D837416B26B69F /* RouteMapViewInput.swift */,
 				D074A847588386A221945280 /* RouteMapViewOutput.swift */,
 				EEADDEDFDD5BD908AF785E5A /* RouteMapViewController.swift */,
+				6CC6FB79254EDA5C00C73B57 /* PosMapViewModel.swift */,
 				1B5E8EA1F48D877903ED5A3E /* RouteMap.storyboard */,
 			);
 			path = View;
@@ -1089,6 +1092,7 @@
 				ABA9111F3DE7906669D19DA1 /* RouteMapInitializer.swift in Sources */,
 				6C62FA0924D1B772003CEAEB /* Visit.swift in Sources */,
 				7D201C95A13CAFE4811DEDB9 /* CalendarChoiseViewInput.swift in Sources */,
+				6CC6FB7A254EDA5C00C73B57 /* PosMapViewModel.swift in Sources */,
 				A65E14A65372E1576D71299F /* CalendarChoiseViewOutput.swift in Sources */,
 				F624E7F8F96F07CF3B955496 /* CalendarChoiseViewController.swift in Sources */,
 				8F50EC907EDC013FC5CEDD63 /* CalendarChoiseModuleInput.swift in Sources */,

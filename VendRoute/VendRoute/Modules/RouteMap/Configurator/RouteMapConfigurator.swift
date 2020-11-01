@@ -21,8 +21,12 @@ class RouteMapModuleConfigurator {
 
         let router = RouteMapRouterImpl()
         router.transitionAdapter = viewController
+        
+        let dataAsm = Container.shared.dataAsm
 
-        let presenter = RouteMapPresenter(router: router, view: viewController)
+        let presenter = RouteMapPresenter(router: router,
+                                          view: viewController,
+                                          posDao: dataAsm.posDao)
         presenter.view = viewController
         presenter.router = router
 
