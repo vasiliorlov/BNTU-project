@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias PosId = UUID
+typealias PosId = String
 
 struct PointOfSale {
     let id: PosId

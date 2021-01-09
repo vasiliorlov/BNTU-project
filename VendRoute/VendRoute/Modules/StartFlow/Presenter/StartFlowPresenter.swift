@@ -22,9 +22,13 @@ class StartFlowPresenter: StartFlowModuleInput, StartFlowViewOutput {
     //MARK: - StartFlowViewOutput
     func viewIsReady() {
         view?.setupInitialState()
-        
+
         if appSettings.isLogged {
-            router.openPosListScreen()
+            if appSettings.dayIsStarted {
+                router.openPosListScreen()
+            } else {
+                router.openChooseServiceDayScreen()
+            }
         } else {
             router.openLoginScreen()
         }

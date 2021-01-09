@@ -41,8 +41,8 @@ class CoraDataManager: NSObject {
 
     // MARK: - Core Data Saving support
 
-    func saveContext () {
-        let context = persistentContainer.viewContext
+    func saveContext(_ context: NSManagedObjectContext) {
+        context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         if context.hasChanges {
             do {
                 try context.save()
@@ -53,5 +53,9 @@ class CoraDataManager: NSObject {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    func saveContext () {
+        saveContext(persistentContainer.viewContext)
     }
 }

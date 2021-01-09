@@ -14,4 +14,5 @@ protocol RouteMapViewOutput {
     */
 
     func viewIsReady()
+    func requireCloseModule()
 }

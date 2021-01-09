@@ -47,4 +47,11 @@ class PointOfSaleListRouterImpl: PointOfSaleListRouter {
             menuController.open(MenuLeft, withCompletion: {})
         }
     }
+    
+    func openMapScreen() {
+        DispatchQueue.main.async {
+            let mapVC = RouteMapModuleInitializer.createModule { _ in }
+            self.transitionAdapter?.navigationController?.pushViewController(mapVC, animated: true)
+        }
+    }
 }

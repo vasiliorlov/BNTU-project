@@ -8,21 +8,28 @@
 import Foundation
 
 class CalendarChoisePresenter: CalendarChoiseModuleInput, CalendarChoiseViewOutput {
-
+    
     // dependencies
     weak var view: CalendarChoiseViewInput?
     var router: CalendarChoiseRouter
-
-    init(router: CalendarChoiseRouter, view: CalendarChoiseViewInput) {
+    var appSettings: AppSettings
+    
+    init(router: CalendarChoiseRouter, view: CalendarChoiseViewInput, appSettings: AppSettings) {
         self.view = view
         self.router = router
+        self.appSettings = appSettings
     }
-
+    //MARK: - CalendarChoiseViewOutput
     func viewIsReady() {
-	view?.setupInitialState()
+        view?.setupInitialState()
     }
     
     func selectedServiceDate(_ date: Date) {
-        
+        appSettings.serviceDate = date
+        appSettings.dayIsStarted = true
+    }
+    
+    func requireLoadData() {
+        router.openLoadScreen()
     }
 }

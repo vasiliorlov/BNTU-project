@@ -10,7 +10,7 @@ import Foundation
 class PointOfSalePresenter: PointOfSaleModuleInput, PointOfSaleViewOutput {
 
     //data
-     var posId: PosId?
+    var posId: PosId?
     private var pos: PointOfSale?
     private var visit: VisitExt?
     // dependencies
@@ -18,14 +18,15 @@ class PointOfSalePresenter: PointOfSaleModuleInput, PointOfSaleViewOutput {
     var router: PointOfSaleRouter
     var posDao: PosDao
     var visitDao: VisitDao
-
+    var imageDao: ImageDao
     
     //MARK: - life cycle
-    init(router: PointOfSaleRouter, view: PointOfSaleViewInput, posDao: PosDao, visitDao: VisitDao) {
+    init(router: PointOfSaleRouter, view: PointOfSaleViewInput, posDao: PosDao, visitDao: VisitDao, imageDao: ImageDao) {
         self.view = view
         self.router = router
         self.posDao = posDao
         self.visitDao = visitDao
+        self.imageDao = imageDao
     }
 
     //MARK: - PointOfSaleViewOutput
@@ -45,6 +46,7 @@ class PointOfSalePresenter: PointOfSaleModuleInput, PointOfSaleViewOutput {
         DispatchQueue.global().async {
             if let id = self.posId {
                 self.pos = self.posDao.getBy(id: id)
+                self.visit = self.visitDao.getExtendedBy(posId: id)
             }
             completion()
         }
@@ -53,6 +55,11 @@ class PointOfSalePresenter: PointOfSaleModuleInput, PointOfSaleViewOutput {
     private func updateView() {
         if let pos = self.pos {
             view?.setupBy(posModel: map(pos))
+        }
+        
+        if let visit = self.visit {
+            let itemsViewData = visit.items.map{ map(item: $0) }
+            view?.setupBy(posItemModels: itemsViewData)
         }
     }
     
@@ -64,4 +71,15 @@ class PointOfSalePresenter: PointOfSaleModuleInput, PointOfSaleViewOutput {
                                   isService: pos.needService ? pos.isService : nil)
     }
     
+    private func map(item: VisitItem) -> PosItemViewModel {
+        return PosItemViewModel(id: item.id,
+                                productName: "\(item.product.name) [\(item.product.measure.name)]",
+                                row: item.row,
+                                column: item.column,
+                                inv: item.inv,
+                                add: item.add,
+                                remove: item.remove,
+                                spoil: item.spoiled,
+                                image: imageDao.getInageFor(productId: item.product.id))
+    }
 }

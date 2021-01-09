@@ -13,4 +13,7 @@ protocol DataAsm {
     var productDao: ProductDao { get }
     var posDao: PosDao { get }
     var visitDao: VisitDao { get }
+    var imageDao: ImageDao { get }
+    
+    var dbCleaner: DataBaseCleaner { get }
 }

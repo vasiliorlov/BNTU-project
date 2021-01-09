@@ -15,4 +15,9 @@ struct POSViewModel {
     var collected: Bool
     var inventoried: Bool
     var servised: Bool
+    
+    var needCollected: Bool
+    var needInventoried: Bool
+    var needServised: Bool
+    
 }

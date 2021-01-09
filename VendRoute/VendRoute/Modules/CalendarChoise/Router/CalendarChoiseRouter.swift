@@ -11,4 +11,5 @@ import Foundation
 protocol CalendarChoiseRouter {
 
     func openPreviousScreen()
+    func openLoadScreen()
 }

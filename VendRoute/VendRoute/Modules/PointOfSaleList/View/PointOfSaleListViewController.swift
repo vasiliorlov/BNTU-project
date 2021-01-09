@@ -40,6 +40,7 @@ class PointOfSaleListViewController: UIViewController, PointOfSaleListViewInput,
     }
     
     @IBAction func didMapBtnTouchin(_ sender: Any) {
+        presenter?.requireOpenMap()
     }
     
 }

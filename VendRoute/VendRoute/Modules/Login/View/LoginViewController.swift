@@ -29,6 +29,8 @@ class LoginViewController: UIViewController, LoginViewInput, TransitionAdapter {
     func setupInitialState() {
         txtEmail.layer.cornerRadius = 8.0
         txtPswd.layer.cornerRadius = 8.0
+        txtEmail.layer.borderColor = #colorLiteral(red: 0, green: 0.827958703, blue: 0.7647097707, alpha: 1)
+        txtPswd.layer.borderColor = #colorLiteral(red: 0, green: 0.827958703, blue: 0.7647097707, alpha: 1)
         btnSignIn.layer.cornerRadius = 8.0
     }
     

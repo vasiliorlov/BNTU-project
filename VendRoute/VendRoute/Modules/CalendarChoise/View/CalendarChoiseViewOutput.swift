@@ -16,4 +16,5 @@ protocol CalendarChoiseViewOutput {
 
     func viewIsReady()
     func selectedServiceDate(_ date: Date)
+    func requireLoadData()
 }

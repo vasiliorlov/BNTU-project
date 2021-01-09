@@ -13,4 +13,5 @@ protocol StartFlowRouter {
     func openPreviousScreen()
     func openLoginScreen()
     func openPosListScreen()
+    func openChooseServiceDayScreen()
 }

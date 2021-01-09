@@ -30,4 +30,11 @@ class StartFlowRouterImpl: StartFlowRouter {
             self.transitionAdapter?.navigationController?.pushViewController(posListVC, animated: true)
         }
     }
+    
+    func openChooseServiceDayScreen() {
+        let chooseServiceDayVC = CalendarChoiseModuleInitializer.createModule { _ in }
+        DispatchQueue.main.async {
+            self.transitionAdapter?.navigationController?.pushViewController(chooseServiceDayVC, animated: true)
+        }
+    }
 }

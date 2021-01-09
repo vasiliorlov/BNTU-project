@@ -30,6 +30,10 @@ class RouteMapPresenter: RouteMapModuleInput, RouteMapViewOutput {
         }
     }
     
+    func requireCloseModule() {
+        router.openPreviousScreen()
+    }
+    
     //MARK: - private methods
     private func loadData(_ completion: () -> Void) {
         self.poses = posDao.getAll()

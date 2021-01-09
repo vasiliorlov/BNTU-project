@@ -9,5 +9,6 @@
 import UIKit
 
 protocol DomainAsm {
-   var authManager: AuthManager { get }
+    var authManager: AuthManager { get }
+    var downloadManager: DownloadManager { get }
 }

@@ -27,7 +27,8 @@ class PointOfSaleModuleConfigurator {
         let presenter = PointOfSalePresenter(router: router,
                                              view: viewController,
                                              posDao: dataAsm.posDao,
-                                             visitDao: dataAsm.visitDao)
+                                             visitDao: dataAsm.visitDao,
+                                             imageDao: dataAsm.imageDao)
         presenter.view = viewController
         presenter.router = router
 

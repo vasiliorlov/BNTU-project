@@ -27,11 +27,16 @@ class PosItemCollectionCell: UICollectionViewCell {
     func updateView() {
         guard let data = viewData else { return }
         lblProductName.text = data.productName
-        lblInv.text = "\(data.inv)"
-        lblAdd.text = "\(data.add)"
-        lblRem.text = "\(data.remove)"
-        lblSpoil.text = "\(data.spoil)"
+        lblInv.text = data.inv.map { "\($0)"}
+        lblAdd.text = data.inv.map { "\($0)"}
+        lblRem.text = data.inv.map { "\($0)"}
+        lblSpoil.text = data.inv.map { "\($0)"}
         
+        self.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        self.layer.borderWidth = 1.0
+        self.layer.cornerRadius = 4.0
+        
+        self.imageView.image = data.image
         self.setNeedsLayout()
     }
 }

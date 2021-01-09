@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Ex-Mm-EWm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Ex-Mm-EWm">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tz3-qT-ovK">
-                                <rect key="frame" x="0.0" y="-11" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLq-2R-UYB">
                                         <rect key="frame" x="16" y="14" width="32" height="32"/>
@@ -29,6 +28,7 @@
                                             <constraint firstAttribute="height" constant="32" id="edE-KG-hfo"/>
                                             <constraint firstAttribute="width" constant="32" id="wC5-ln-U1C"/>
                                         </constraints>
+                                        <color key="tintColor" red="0.0" green="0.77969986199999997" blue="0.67063355449999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="arrowshape.turn.up.left" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                         </state>
@@ -36,10 +36,10 @@
                                             <action selector="didBtnBackTouchIn:" destination="2Ex-Mm-EWm" eventType="touchUpInside" id="mcG-Cp-rfh"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pos name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcG-la-nKV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcG-la-nKV">
                                         <rect key="frame" x="64" y="18" width="295" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" systemColor="systemBlueColor"/>
+                                        <color key="textColor" red="0.0" green="0.77969986199999997" blue="0.67063355449999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -53,14 +53,14 @@
                                     <constraint firstItem="RLq-2R-UYB" firstAttribute="centerY" secondItem="Tz3-qT-ovK" secondAttribute="centerY" id="s1B-Wj-TJS"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TVj-bD-mRb">
-                                <rect key="frame" x="0.0" y="57" width="375" height="610"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TVj-bD-mRb">
+                                <rect key="frame" x="16" y="60" width="343" height="607"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TVj-bD-mRb" firstAttribute="leading" secondItem="Iba-JR-swW" secondAttribute="leadingMargin" id="DDb-vH-wIW"/>
-                            <constraint firstItem="Tz3-qT-ovK" firstAttribute="top" secondItem="Iba-JR-swW" secondAttribute="top" id="SSA-DT-3id"/>
+                            <constraint firstItem="Tz3-qT-ovK" firstAttribute="top" secondItem="hkP-Sp-j82" secondAttribute="bottom" id="SSA-DT-3id"/>
                             <constraint firstAttribute="trailing" secondItem="Tz3-qT-ovK" secondAttribute="trailing" id="gND-Tk-hVh"/>
                             <constraint firstItem="y5f-fy-VIh" firstAttribute="top" secondItem="TVj-bD-mRb" secondAttribute="bottom" id="lGp-4G-CTA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TVj-bD-mRb" secondAttribute="trailing" id="px4-xb-uAE"/>
@@ -81,8 +81,5 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

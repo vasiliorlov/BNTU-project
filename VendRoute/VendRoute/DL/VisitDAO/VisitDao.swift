@@ -11,6 +11,7 @@ import UIKit
 protocol VisitDao {
     func getAll() -> [VisitExt]
     func getExtendedBy(id: VisitId) -> VisitExt?
+    func getExtendedBy(posId: PosId) -> VisitExt?
     func save(_ visits: [VisitExt])
     func removeBy(ids: [VisitId])
 }

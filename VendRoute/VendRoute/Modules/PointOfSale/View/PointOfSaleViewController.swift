@@ -45,6 +45,7 @@ class PointOfSaleViewController: UIViewController, PointOfSaleViewInput, Transit
     
     func setupBy(posModel: PosDetailViewModel) {
         DispatchQueue.main.async {
+            self.posModel = posModel
             self.lblPosName.text = posModel.name
             let checkImage = UIImage(systemName: "checkmark.square")?.withRenderingMode(.alwaysTemplate)
             let uncheckImage = UIImage(systemName: "app")?.withRenderingMode(.alwaysTemplate)
@@ -81,11 +82,13 @@ class PointOfSaleViewController: UIViewController, PointOfSaleViewInput, Transit
     func setupBy(posItemModels: [PosItemViewModel]) {
         DispatchQueue.main.async {
             self.itemModels = posItemModels
+            self.collectionView.reloadData()
         }
     }
     
     //MARK: - user action
     @IBAction func didBtnBackTouchIn(_ sender: Any) {
+        presenter?.requireCloseScreen()
     }
     @IBAction func didBtnCollectTouchIn(_ sender: Any) {
     }
@@ -97,25 +100,43 @@ class PointOfSaleViewController: UIViewController, PointOfSaleViewInput, Transit
 
 //MARK: -  UICollectionViewDelegate, UICollectionViewDataSource
 extension PointOfSaleViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        itemModels.count
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        let rowCount = itemModels.map { $0.row }.max()
+        if rowCount != nil {
+            return rowCount! + 1
+        } else {
+            return 0
+        }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let columnCount = itemModels.filter{ $0.row == section }.map { $0.column }.max()
+        if columnCount != nil {
+            return columnCount! + 1
+        } else {
+            return 0
+        }
+    }
+ 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let item = collectionView.dequeueReusableCell(withReuseIdentifier: "posItemCellId", for: indexPath)  as? PosItemCollectionCell {
-            item.viewData = itemModels[indexPath.row]
+            if let viewData = itemModels.first(where: { $0.row == indexPath.section && $0.column == indexPath.row }) {
+                item.viewData = viewData
+            }
+            
             return item
         }
         return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let posData = posModel {
+        if let posData = self.posModel {
             let item = itemModels[indexPath.row]
             editItemView.viewData = item
             editItemView.isInventoried = posData.isInventory != nil
-            editItemView.fadeIn()
-            shadowView.fadeIn()
+            editItemView.isHidden = false
+            shadowView.isHidden = false
         }
     }
 }
@@ -147,7 +168,7 @@ extension PointOfSaleViewController: EditPosItemViewOutput {
     }
     
     func requireCloseView() {
-        editItemView.fadeOut()
-        shadowView.fadeOut()
+        editItemView.isHidden = true
+        shadowView.isHidden = true
     }
 }

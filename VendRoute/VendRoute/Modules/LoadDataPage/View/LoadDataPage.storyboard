@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Ex-Mm-EWm">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Load Data Page View Controller-->
+        <scene sceneID="Rdm-iv-Goe">
+            <objects>
+                <viewController storyboardIdentifier="LoadDataPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Ex-Mm-EWm" customClass="LoadDataPageViewController" customModule="VendRoute" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hkP-Sp-j82"/>
+                        <viewControllerLayoutGuide type="bottom" id="y5f-fy-VIh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iba-JR-swW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Loading:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTr-ou-33r">
+                                <rect key="frame" x="32" y="32" width="311" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="sTr-ou-33r" secondAttribute="trailing" constant="16" id="Lok-oo-ixm"/>
+                            <constraint firstItem="sTr-ou-33r" firstAttribute="leading" secondItem="Iba-JR-swW" secondAttribute="leadingMargin" constant="16" id="PtF-OO-aiI"/>
+                            <constraint firstItem="sTr-ou-33r" firstAttribute="top" secondItem="hkP-Sp-j82" secondAttribute="bottom" constant="32" id="iR6-et-ESg"/>
+                            <constraint firstItem="y5f-fy-VIh" firstAttribute="top" secondItem="sTr-ou-33r" secondAttribute="bottom" constant="32" id="m3r-Ly-9E7"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="txtView" destination="sTr-ou-33r" id="asF-E8-1HR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kc4-3N-yTn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="17"/>
+        </scene>
+    </scenes>
+</document>

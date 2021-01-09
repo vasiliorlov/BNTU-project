@@ -23,13 +23,14 @@ class PosDaoImpl: PosDao {
     //MARK: - PosDao
     func getAll() -> [PointOfSale] {
         do {
-            let results = try context.fetch(CoraPOS.fetchRequest()) as! [CoraPOS]
+            let fetchRequest = NSFetchRequest<CorePOS>(entityName: "CorePOS")
+            let results = try context.fetch(fetchRequest)
             return results.compactMap{ mapper.map($0) }
         } catch { return [] }
     }
     
     func getBy(id: PosId) -> PointOfSale? {
-        let fetchRequest = NSFetchRequest<CoraPOS>(entityName: "POS")
+        let fetchRequest = NSFetchRequest<CorePOS>(entityName: "CorePOS")
         fetchRequest.predicate = NSPredicate(format: "id = %@", id as CVarArg)
         do {
             let results = try context.fetch(fetchRequest)
@@ -41,7 +42,7 @@ class PosDaoImpl: PosDao {
     
     func save(_ poses: [PointOfSale]) {
         let _ = poses.map { mapper.map($0) }
-        coraDataManager.saveContext()
+        coraDataManager.saveContext(mapper.context)
     }
     
     func removeBy(ids: [PosId]) {

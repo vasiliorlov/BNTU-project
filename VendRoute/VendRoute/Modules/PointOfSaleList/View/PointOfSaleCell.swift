@@ -39,31 +39,19 @@ class PointOfSaleCell: UITableViewCell {
             return
         }
         
-        if viewData.collected {
-            collectView.backgroundColor = #colorLiteral(red: 0.1579934061, green: 0.7870589495, blue: 0.3260317743, alpha: 1)
-        } else {
-            collectView.backgroundColor = .clear
-            collectView.layer.borderWidth = 2.0
-            collectView.layer.borderColor = #colorLiteral(red: 0.1579934061, green: 0.7870589495, blue: 0.3260317743, alpha: 1)
-        }
+        collectView.backgroundColor = viewData.collected ? #colorLiteral(red: 0.1579934061, green: 0.7870589495, blue: 0.3260317743, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        collectView.layer.borderWidth = 2.0
+        collectView.layer.borderColor = viewData.needCollected ? #colorLiteral(red: 0.1579934061, green: 0.7870589495, blue: 0.3260317743, alpha: 1) : #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         collectView.layer.cornerRadius = collectView.frame.height / 2.0
         
-        if viewData.inventoried {
-            invView.backgroundColor = #colorLiteral(red: 0.3289328516, green: 0.781253159, blue: 0.9897740483, alpha: 1)
-        } else {
-            invView.backgroundColor = .clear
-            invView.layer.borderWidth = 2.0
-            invView.layer.borderColor = #colorLiteral(red: 0.3289328516, green: 0.781253159, blue: 0.9897740483, alpha: 1)
-        }
+        invView.backgroundColor = viewData.inventoried ? #colorLiteral(red: 0.3289328516, green: 0.781253159, blue: 0.9897740483, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        invView.layer.borderWidth = 2.0
+        invView.layer.borderColor = viewData.needInventoried ? #colorLiteral(red: 0.3289328516, green: 0.781253159, blue: 0.9897740483, alpha: 1) : #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         invView.layer.cornerRadius = invView.frame.height / 2.0
         
-        if viewData.servised {
-            serviceView.backgroundColor = #colorLiteral(red: 1, green: 0.8057073951, blue: 0, alpha: 1)
-        } else {
-            serviceView.backgroundColor = .clear
-            serviceView.layer.borderWidth = 2.0
-            serviceView.layer.borderColor = #colorLiteral(red: 1, green: 0.8057073951, blue: 0, alpha: 1)
-        }
+        serviceView.backgroundColor = viewData.servised ? #colorLiteral(red: 1, green: 0.8057073951, blue: 0, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        serviceView.layer.borderWidth = 2.0
+        serviceView.layer.borderColor = viewData.needServised ? #colorLiteral(red: 1, green: 0.8057073951, blue: 0, alpha: 1) : #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         serviceView.layer.cornerRadius = serviceView.frame.height / 2.0
     }
 }

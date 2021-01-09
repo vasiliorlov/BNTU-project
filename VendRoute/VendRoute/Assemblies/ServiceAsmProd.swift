@@ -9,5 +9,9 @@
 import UIKit
 
 class ServiceAsmProd: ServiceAsm {
-
+    lazy private var downloadServiceInstance: DownloadService = DownloadServiceImpl()
+    
+    var downloadService: DownloadService {
+        return downloadServiceInstance
+    }
 }

@@ -10,8 +10,7 @@ import UIKit
 
 class DataAsmProd: DataAsm {
     lazy private var coraDataManagerInstance: CoraDataManager = CoraDataManager()
-    lazy private var mapper = CoraMapper(context: coraDataManagerInstance.persistentContainer.viewContext)
-    
+    lazy private var mapper = CoraMapper(context: coraDataManagerInstance.persistentContainer.newBackgroundContext())
     var appSettings: AppSettings = UserDefaultsAppSettingsImpl()
     
     var productDao: ProductDao {
@@ -24,5 +23,13 @@ class DataAsmProd: DataAsm {
     
     var visitDao: VisitDao {
         return VisitDaoImpl(coraDataManager: coraDataManagerInstance, mapper: mapper)
+    }
+    
+    var dbCleaner: DataBaseCleaner {
+        return DataBaseCleanerImpl(coreDataManager: coraDataManagerInstance)
+    }
+    
+    var imageDao: ImageDao {
+        return ImageMockDao()
     }
 }

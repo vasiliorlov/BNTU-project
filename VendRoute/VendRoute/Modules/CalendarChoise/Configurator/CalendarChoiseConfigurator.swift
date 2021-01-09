@@ -21,8 +21,12 @@ class CalendarChoiseModuleConfigurator {
 
         let router = CalendarChoiseRouterImpl()
         router.transitionAdapter = viewController
+        
+        let dataAsm = Container.shared.dataAsm
 
-        let presenter = CalendarChoisePresenter(router: router, view: viewController)
+        let presenter = CalendarChoisePresenter(router: router,
+                                                view: viewController,
+                                                appSettings: dataAsm.appSettings)
         presenter.view = viewController
         presenter.router = router
 

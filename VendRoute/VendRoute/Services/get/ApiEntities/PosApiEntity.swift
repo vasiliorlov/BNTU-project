@@ -70,7 +70,7 @@ class AdressApiEntity: NSObject, Codable {
     let city: String
     let street: String
     let gps: GpsApiEntity
-    let postCode: Int
+    let postCode: String
     
     private enum CodingKeys: String, CodingKey {
         case city
@@ -84,7 +84,7 @@ class AdressApiEntity: NSObject, Codable {
         city = try container.decode(String.self, forKey: .city)
         street = try container.decode(String.self, forKey: .street)
         gps = try container.decode(GpsApiEntity.self, forKey: .gps)
-        postCode = try container.decode(Int.self, forKey: .postCode)
+        postCode = try container.decode(String.self, forKey: .postCode)
     }
     
     func encode(to encoder: Encoder) throws {

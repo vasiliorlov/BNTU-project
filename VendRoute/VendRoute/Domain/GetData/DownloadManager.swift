@@ -8,8 +8,25 @@
 
 import UIKit
 
-typealias DownloadPosCallback = (Result<[Visit], Error>) -> Void
+enum LoadingDataStep {
+    case measure
+    case product
+    case pos
+    case visit
+    
+    var descr: String {
+        switch self {
+        case .measure: return "Measure"
+        case .product: return "Products"
+        case .pos: return "Poses"
+        case .visit: return "Visits"
+        }
+        
+    }
+}
+
+typealias DownloadCallback = (Result<LoadingDataStep, Error>) -> Void
 
 protocol DownloadManager {
-    func loadVisits(for serviceDate: Date, completion: DownloadPosCallback )
+    func loadData(for serviceDate: Date, stepCallBack: @escaping DownloadCallback, completion: @escaping () -> Void)
 }

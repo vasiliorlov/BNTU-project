@@ -23,7 +23,8 @@ class ProductDaoImpl: ProductDao {
     //MARK: - ProductDao
     func getAll() -> [Product] {
         do {
-            let results = try context.fetch(CoraProduct.fetchRequest()) as! [CoraProduct]
+            let fetchRequest = NSFetchRequest<CoreProduct>(entityName: "CoreProduct")
+            let results = try context.fetch(fetchRequest)
             return results.compactMap{ mapper.map($0) }
         } catch {
             return []
@@ -31,12 +32,16 @@ class ProductDaoImpl: ProductDao {
     }
     
     func save(_ products: [Product]) {
-        let _ = products.map { mapper.map($0) }
-        coraDataManager.saveContext()
+        let _ = products.uniqued(\.id).map { mapper.map($0) }
+        coraDataManager.saveContext(mapper.context)
     }
     
     func removeBy(ids: [ProductId]) {
-        
+        let context = coraDataManager.persistentContainer.viewContext
+        getCoreEntitiesBy(ids: ids).forEach {
+            context.delete($0)
+        }
+        coraDataManager.saveContext()
     }
     
     //MARK: - Measure methods
@@ -44,4 +49,18 @@ class ProductDaoImpl: ProductDao {
         
     }
 
+    
+    //MARK: - private methods
+    func getCoreEntitiesBy(ids: [ProductId]) -> [CoreProduct] {
+        let context = coraDataManager.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CoreProduct")
+        let predicate = NSPredicate(format: "id IN %@", ids)
+        
+        fetchRequest.predicate = predicate
+        do {
+            return try context.fetch(fetchRequest) as! [CoreProduct]
+        } catch {
+            return []
+        }
+    }
 }

@@ -70,6 +70,7 @@ class RouteMapViewController: UIViewController, RouteMapViewInput, TransitionAda
     
     //MArk: - user actions
     @IBAction func didBtnBackTouchIn(_ sender: Any) {
+        presenter?.requireCloseModule()
     }
     
     //MARK: - private methods

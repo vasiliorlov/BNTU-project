@@ -23,11 +23,23 @@ class VisitDaoImpl: VisitDao {
      //MARK: - VisitDao
     func getAll() -> [VisitExt] {
         do {
-            let results = try context.fetch(CoraVisit.fetchRequest()) as! [CoraVisit]
+            let fetchRequest = NSFetchRequest<CoreVisit>(entityName: "CoreVisit")
+            let results = try context.fetch(fetchRequest)
             return results.compactMap{ mapper.map($0) }
         } catch {
             return []
         }
+    }
+    
+    func getExtendedBy(posId: PosId) -> VisitExt? {
+        let fetchRequest = NSFetchRequest<CoreVisit>(entityName: "CoreVisit")
+        fetchRequest.predicate = NSPredicate(format: "posId = %@", posId as CVarArg)
+        do {
+            let results = try context.fetch(fetchRequest)
+            if let coreResult = results.first {
+                return mapper.map(coreResult)
+            } else { return nil }
+        } catch { return nil }
     }
     
     func getExtendedBy(id: VisitId) -> VisitExt? {
@@ -36,7 +48,7 @@ class VisitDaoImpl: VisitDao {
     
     func save(_ visits: [VisitExt]) {
         let _ = visits.map { mapper.map($0) }
-        coraDataManager.saveContext()
+        coraDataManager.saveContext(mapper.context)
     }
     
     func removeBy(ids: [VisitId]) {

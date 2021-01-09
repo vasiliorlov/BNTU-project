@@ -17,13 +17,13 @@ protocol EditPosItemViewOutput: class {
     func requireCloseView()
 }
 
-class EditPosItemView: UIView {
+class EditPosItemView: UIView, NibLoadable {
     @IBOutlet weak var imgProduct: UIImageView!
     @IBOutlet weak var lblProductName: UILabel!
-    @IBOutlet weak var txtInvField: UnderlinedTextField!
-    @IBOutlet weak var txtAddedField: UnderlinedTextField!
-    @IBOutlet weak var txtRemField: UnderlinedTextField!
-    @IBOutlet weak var txtSpoilField: UnderlinedTextField!
+    @IBOutlet weak var txtInvField: NoPastedTextField!
+    @IBOutlet weak var txtAddedField: NoPastedTextField!
+    @IBOutlet weak var txtRemField: NoPastedTextField!
+    @IBOutlet weak var txtSpoilField: NoPastedTextField!
     
     weak var output: EditPosItemViewOutput?
     var viewData: PosItemViewModel? {
@@ -37,18 +37,34 @@ class EditPosItemView: UIView {
             updateView()
         }
     }
+    // MARK: - UI Setup
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupFromNib()
+        updateView()
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupFromNib()
+        updateView()
+    }
     
     func updateView() {
         guard let viewData = viewData else {
             return
         }
         lblProductName.text = viewData.productName
-        txtInvField.text = "\(viewData.inv)"
+        imgProduct.image = viewData.image
+        txtInvField.text = viewData.inv.map { "\($0)" }
         txtInvField.isEnabled = isInventoried
-        txtAddedField.text = "\(viewData.add)"
-        txtRemField.text = "\(viewData.remove)"
-        txtSpoilField.text = "\(viewData.spoil)"
+        txtAddedField.text = viewData.add.map { "\($0)" }
+        txtRemField.text = viewData.remove.map { "\($0)" }
+        txtSpoilField.text = viewData.spoil.map { "\($0)" }
         
+        self.layer.borderWidth = 2.0
+        self.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+
         self.setNeedsLayout()
     }
     
@@ -56,6 +72,7 @@ class EditPosItemView: UIView {
     
     @IBAction func didCloseBtnTouchIn(_ sender: Any) {
         output?.requireCloseView()
+        self.endEditing(true)
     }
 }
 

@@ -17,4 +17,5 @@ protocol PointOfSaleListViewOutput {
     func didSelectModel(with id: PosId)
     
     func requireOpenUserProfile()
+    func requireOpenMap()
 }

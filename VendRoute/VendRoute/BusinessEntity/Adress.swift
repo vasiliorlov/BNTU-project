@@ -17,7 +17,7 @@ struct Adress {
     let city: String
     let street: String
     let gps: GpsCoordinate
-    let postCode: Int
+    let postCode: String
     
     var text: String {
         return "\(postCode), \(city),  \(street)"

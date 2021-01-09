@@ -10,18 +10,24 @@ import UIKit
 
 class PosItemViewModel {
     let id: VisitItemId
+    let image: UIImage?
     let productName: String
-    var inv: Int
-    var add: Int
-    var remove: Int
-    var spoil: Int
+    let row: Int
+    let column: Int
+    var inv: Int?
+    var add: Int?
+    var remove: Int?
+    var spoil: Int?
     
-    init(id: VisitItemId, productName: String, inv: Int, add: Int, remove: Int, spoil: Int ) {
+    init(id: VisitItemId, productName: String, row: Int, column: Int, inv: Int?, add: Int?, remove: Int?, spoil: Int?, image: UIImage?) {
         self.id = id
         self.productName = productName
+        self.row = row
+        self.column = column
         self.inv = inv
         self.add = add
         self.remove = remove
         self.spoil = spoil
+        self.image = image
     }
 }

@@ -13,4 +13,5 @@ protocol PointOfSaleListRouter {
     func openPreviousScreen()
     func openVisitScreen(for posId: PosId)
     func openUserProfileScreen(output: UserProfileModuleOutput)
+    func openMapScreen()
 }

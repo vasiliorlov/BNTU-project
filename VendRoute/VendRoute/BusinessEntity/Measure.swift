@@ -8,10 +8,12 @@
 
 import Foundation
 
-typealias MeasureId = UUID
+typealias MeasureId = String
 
 struct Measure {
     let id: MeasureId
     let measureFactor: Int
     let name: String
 }
+
+extension Measure: Equatable {}
