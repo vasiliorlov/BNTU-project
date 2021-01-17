@@ -57,8 +57,11 @@ class EditPosItemView: UIView, NibLoadable {
         lblProductName.text = viewData.productName
         imgProduct.image = viewData.image
         txtInvField.text = viewData.inv.map { "\($0)" }
-        txtInvField.isEnabled = isInventoried
+        txtInvField.delegate = self
+        
+        txtInvField.isHidden = !isInventoried
         txtAddedField.text = viewData.add.map { "\($0)" }
+        
         txtRemField.text = viewData.remove.map { "\($0)" }
         txtSpoilField.text = viewData.spoil.map { "\($0)" }
         
@@ -77,16 +80,31 @@ class EditPosItemView: UIView, NibLoadable {
 }
 
 //MARK: - UITextViewDelegate
-extension EditPosItemView: UITextViewDelegate {
-    func textViewDidEndEditing(_ textView: UITextView) {
-        guard let invValue = Int(textView.text), let id = viewData?.id else { return }
-        switch textView {
-        case txtInvField: output?.didUpdateInv(invValue, for: id)
-        case txtAddedField: output?.didUpdateAdd(invValue, for: id)
-        case txtRemField: output?.didUpdateRem(invValue, for: id)
-        case txtSpoilField: output?.didUpdateSpoil(invValue, for: id)
+extension EditPosItemView: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let txt = textField.text,
+              let invValue = Int(txt),
+              let id = viewData?.id else { return }
+        
+        switch textField {
+        case txtInvField: output?.didUpdateInv(invValue > 99 ? 99 : invValue, for: id)
+        case txtAddedField: output?.didUpdateAdd(invValue > 99 ? 99 : invValue, for: id)
+        case txtRemField: output?.didUpdateRem(invValue > 99 ? 99 : invValue, for: id)
+        case txtSpoilField: output?.didUpdateSpoil(invValue > 99 ? 99 : invValue, for: id)
             
         default: return
         }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string.count == 0 { //we always allow to remove character
+            return true
+        }
+        let currentText = textField.text as NSString?
+        let supposedString = currentText?.replacingCharacters(in: range, with: string)
+        let predicate = NSPredicate(format: "SELF MATCHES %@", "^[0-9]{0,2}$")
+        let shouldChangeValue = predicate.evaluate(with: supposedString)
+        return shouldChangeValue
+        
     }
 }

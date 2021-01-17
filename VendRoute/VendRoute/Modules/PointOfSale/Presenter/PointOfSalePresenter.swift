@@ -38,9 +38,21 @@ class PointOfSalePresenter: PointOfSaleModuleInput, PointOfSaleViewOutput {
     }
     
     func requireCloseScreen() {
+        if let visit = self.visit {
+            visitDao.removeBy(ids: [visit.id])
+            visitDao.save([visit])
+        }
         router.openPreviousScreen()
     }
     
+    func didUpdateModel(_ model: PosItemViewModel) {
+        if let visitItem = visit?.items.first(where: {$0.id == model.id }) {
+            visitItem.add = model.add
+            visitItem.inv = model.inv
+            visitItem.remove = model.remove
+            visitItem.spoiled = model.spoil
+        }
+    }
     //MARK: - private methods
     private func loadData(_ completion: @escaping () -> ()) {
         DispatchQueue.global().async {

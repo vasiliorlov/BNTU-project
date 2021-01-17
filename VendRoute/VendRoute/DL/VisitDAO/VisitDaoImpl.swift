@@ -52,6 +52,20 @@ class VisitDaoImpl: VisitDao {
     }
     
     func removeBy(ids: [VisitId]) {
+        getCoraEntitiesBy(visitIds: ids).forEach {
+            context.delete($0)
+        }
+        coraDataManager.saveContext()
+    }
+    
+    //MARK: - private
+    private func getCoraEntitiesBy(visitIds: [VisitId]) -> [CoreVisit] {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CoreVisit")
+        let predicate = NSPredicate(format: "id IN %@", visitIds)
         
+        fetchRequest.predicate = predicate
+        do {
+            return try context.fetch(fetchRequest) as! [CoreVisit]
+        } catch { return [] }
     }
 }

@@ -28,9 +28,9 @@ class PosItemCollectionCell: UICollectionViewCell {
         guard let data = viewData else { return }
         lblProductName.text = data.productName
         lblInv.text = data.inv.map { "\($0)"}
-        lblAdd.text = data.inv.map { "\($0)"}
-        lblRem.text = data.inv.map { "\($0)"}
-        lblSpoil.text = data.inv.map { "\($0)"}
+        lblAdd.text = data.add.map { "\($0)"}
+        lblRem.text = data.remove.map { "\($0)"}
+        lblSpoil.text = data.spoil.map { "\($0)"}
         
         self.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         self.layer.borderWidth = 1.0

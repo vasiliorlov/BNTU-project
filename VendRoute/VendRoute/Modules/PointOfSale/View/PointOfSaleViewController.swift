@@ -28,6 +28,9 @@ class PointOfSaleViewController: UIViewController, PointOfSaleViewInput, Transit
     //data
     private var posModel: PosDetailViewModel?
     private var itemModels: [PosItemViewModel] = []
+    //const
+    let checkImage = UIImage(systemName: "checkmark.square")?.withRenderingMode(.alwaysTemplate)
+    let uncheckImage = UIImage(systemName: "app")?.withRenderingMode(.alwaysTemplate)
     
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -47,12 +50,10 @@ class PointOfSaleViewController: UIViewController, PointOfSaleViewInput, Transit
         DispatchQueue.main.async {
             self.posModel = posModel
             self.lblPosName.text = posModel.name
-            let checkImage = UIImage(systemName: "checkmark.square")?.withRenderingMode(.alwaysTemplate)
-            let uncheckImage = UIImage(systemName: "app")?.withRenderingMode(.alwaysTemplate)
             
             if let isCollect = posModel.isCollect {
                 self.btnCollect.isEnabled = true
-                self.btnCollect.setImage(isCollect ? checkImage : uncheckImage, for: .normal)
+                self.btnCollect.setImage(isCollect ? self.checkImage : self.uncheckImage, for: .normal)
                 self.btnCollect.imageEdgeInsets.left = -20.0
                 self.btnCollect.tintColor = #colorLiteral(red: 0.1442646384, green: 0.7079803348, blue: 0.2932031453, alpha: 1)
             } else {
@@ -61,7 +62,7 @@ class PointOfSaleViewController: UIViewController, PointOfSaleViewInput, Transit
             
             if let isInventory = posModel.isInventory {
                 self.btnInventoty.isEnabled = true
-                self.btnInventoty.setImage(isInventory ? checkImage : uncheckImage, for: .normal)
+                self.btnInventoty.setImage(isInventory ? self.checkImage : self.uncheckImage, for: .normal)
                 self.btnInventoty.imageEdgeInsets.left = -20.0
                 self.btnInventoty.tintColor = #colorLiteral(red: 0.2962264717, green: 0.7031357884, blue: 0.8908132911, alpha: 1)
             } else {
@@ -70,7 +71,7 @@ class PointOfSaleViewController: UIViewController, PointOfSaleViewInput, Transit
             
             if let isService = posModel.isService {
                 self.btnService.isEnabled = false
-                self.btnService.setImage(isService ? checkImage : uncheckImage, for: .normal)
+                self.btnService.setImage(isService ? self.checkImage : self.uncheckImage, for: .normal)
                 self.btnService.imageEdgeInsets.left = -20.0
                 self.btnService.tintColor = #colorLiteral(red: 0.9028488994, green: 0.7228065729, blue: 0, alpha: 1)
             } else {
@@ -91,6 +92,7 @@ class PointOfSaleViewController: UIViewController, PointOfSaleViewInput, Transit
         presenter?.requireCloseScreen()
     }
     @IBAction func didBtnCollectTouchIn(_ sender: Any) {
+        
     }
     @IBAction func didBtnInventoryTouchIn(_ sender: Any) {
     }
@@ -131,9 +133,9 @@ extension PointOfSaleViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let posData = self.posModel {
-            let item = itemModels[indexPath.row]
-            editItemView.viewData = item
+        if let posData = self.posModel,
+           let viewData = itemModels.first(where: { $0.row == indexPath.section && $0.column == indexPath.row }) {
+            editItemView.viewData = viewData
             editItemView.isInventoried = posData.isInventory != nil
             editItemView.isHidden = false
             shadowView.isHidden = false
@@ -144,27 +146,35 @@ extension PointOfSaleViewController: UICollectionViewDelegate, UICollectionViewD
 //MARK: - EditPosItemViewOutput
 extension PointOfSaleViewController: EditPosItemViewOutput {
     func didUpdateInv(_ value: Int, for id: VisitItemId) {
-        let item = itemModels.first(where: { $0.id == id})
-        item?.inv = value
-        collectionView.reloadData()
+        if let item = itemModels.first(where: { $0.id == id}) {
+            item.inv = value
+            presenter?.didUpdateModel(item)
+            collectionView.reloadData()
+        }
     }
     
     func didUpdateAdd(_ value: Int, for id: VisitItemId) {
-        let item = itemModels.first(where: { $0.id == id})
-        item?.add = value
-        collectionView.reloadData()
+        if let item = itemModels.first(where: { $0.id == id}) {
+            item.add = value
+            presenter?.didUpdateModel(item)
+            collectionView.reloadData()
+        }
     }
     
     func didUpdateRem(_ value: Int, for id: VisitItemId) {
-        let item = itemModels.first(where: { $0.id == id})
-        item?.remove = value
-        collectionView.reloadData()
+        if let item = itemModels.first(where: { $0.id == id}) {
+            item.remove = value
+            presenter?.didUpdateModel(item)
+            collectionView.reloadData()
+        }
     }
     
     func didUpdateSpoil(_ value: Int, for id: VisitItemId) {
-        let item = itemModels.first(where: { $0.id == id})
-        item?.spoil = value
-        collectionView.reloadData()
+        if let item = itemModels.first(where: { $0.id == id}) {
+            item.spoil = value
+            presenter?.didUpdateModel(item)
+            collectionView.reloadData()
+        }
     }
     
     func requireCloseView() {

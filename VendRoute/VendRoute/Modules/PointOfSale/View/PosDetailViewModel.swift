@@ -8,10 +8,16 @@
 
 import UIKit
 
-struct PosDetailViewModel {
+class PosDetailViewModel {
     let name: String    
     var isCollect: Bool?
     var isInventory: Bool?
     var isService: Bool?
     
+    init(name: String, isCollect: Bool?, isInventory: Bool?, isService: Bool?) {
+        self.name = name
+        self.isCollect = isCollect
+        self.isInventory = isInventory
+        self.isService = isService
+    }
 }

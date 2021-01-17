@@ -18,7 +18,7 @@ protocol Serving {
     var inv: Int? { get set }
 }
 
-struct VisitItem: Serving {
+class VisitItem: Serving {
     let id: VisitItemId
     let column: Int
     let row: Int
@@ -27,6 +27,17 @@ struct VisitItem: Serving {
     var remove: Int?
     var spoiled: Int?
     var inv: Int?
+    
+    init(id: VisitItemId, column: Int, row: Int, product: Product, add: Int?, remove: Int?, spoiled: Int?, inv: Int?) {
+        self.id = id
+        self.column = column
+        self.row = row
+        self.product = product
+        self.add = add
+        self.remove = remove
+        self.spoiled = spoiled
+        self.inv = inv
+    }
 }
 
 class Visit {

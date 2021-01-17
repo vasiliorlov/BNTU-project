@@ -50,6 +50,9 @@
                                     <rect key="frame" x="88" y="0.0" width="88" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="JZ5-5n-A5r"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                         </stackView>
@@ -66,6 +69,9 @@
                                     <rect key="frame" x="88" y="0.0" width="88" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="MpB-WZ-Rfi"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                         </stackView>
@@ -82,6 +88,9 @@
                                     <rect key="frame" x="88" y="0.0" width="88" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="MhJ-gc-5P3"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                         </stackView>
@@ -98,6 +107,9 @@
                                     <rect key="frame" x="88" y="0.0" width="88" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="1wz-vf-fxA"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                         </stackView>
@@ -119,6 +131,7 @@
                         <constraint firstAttribute="height" constant="32" id="W31-Yb-ePu"/>
                         <constraint firstAttribute="width" constant="32" id="ZYW-ZZ-9iL"/>
                     </constraints>
+                    <color key="tintColor" red="0.0" green="0.77969986199999997" blue="0.67063355449999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" image="multiply" catalog="system"/>
                     <connections>
                         <action selector="didCloseBtnTouchIn:" destination="-1" eventType="touchUpInside" id="Nwr-Bn-Tls"/>
