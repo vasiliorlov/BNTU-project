@@ -9,10 +9,9 @@
 import UIKit
 
 class DomainAsmProd: DomainAsm {
-    lazy private var authAmolifyManagerInstance: AuthManager = AmplifyAuthManager()
     
     var authManager: AuthManager {
-        return authAmolifyManagerInstance
+        return AmplifyAuthManager()
     }
     
     var downloadManager: DownloadManager {
@@ -25,5 +24,14 @@ class DomainAsmProd: DomainAsm {
                                    visitDao: dataAsm.visitDao,
                                    mapper: DownloadMapper(),
                                    dbCleaner: dataAsm.dbCleaner)
+    }
+    
+    var endOfDayInteractor: EndOfDayInteractor {
+        let dataAsm = Container.shared.dataAsm
+        let serviceAsm = Container.shared.serviceAsm
+        
+        return EndOfDayInteractorImpl(uploadService: serviceAsm.uploadService,
+                                      dbCleaner: dataAsm.dbCleaner,
+                                      visitsDao: dataAsm.visitDao)
     }
 }

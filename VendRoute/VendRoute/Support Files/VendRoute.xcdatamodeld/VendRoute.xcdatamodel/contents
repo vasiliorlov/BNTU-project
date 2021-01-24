@@ -17,13 +17,7 @@
     <entity name="CorePOS" representedClassName="CorePOS" syncable="YES" codeGenerationType="class">
         <attribute name="comment" optional="YES" attributeType="String"/>
         <attribute name="id" attributeType="String"/>
-        <attribute name="isCollect" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="isInventory" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="isService" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
-        <attribute name="needCollect" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="needInventory" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="needService" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <relationship name="adress" maxCount="1" deletionRule="Cascade" destinationEntity="CoreAdress" inverseName="pos" inverseEntity="CoreAdress"/>
     </entity>
     <entity name="CoreProduct" representedClassName="CoreProduct" syncable="YES" codeGenerationType="class">
@@ -36,6 +30,12 @@
         <attribute name="cash" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
         <attribute name="comment" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isCollect" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isInventory" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isService" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="needCollect" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="needInventory" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="needService" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="posId" optional="YES" attributeType="String"/>
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CoreVisitItem" inverseName="visit" inverseEntity="CoreVisitItem"/>
     </entity>
@@ -53,9 +53,9 @@
     <elements>
         <element name="CoreAdress" positionX="-18" positionY="36" width="128" height="119"/>
         <element name="CoreMeasure" positionX="0" positionY="45" width="128" height="89"/>
-        <element name="CorePOS" positionX="-9" positionY="27" width="128" height="179"/>
+        <element name="CorePOS" positionX="-9" positionY="27" width="128" height="89"/>
         <element name="CoreProduct" positionX="-36" positionY="9" width="128" height="89"/>
-        <element name="CoreVisit" positionX="-54" positionY="-9" width="128" height="104"/>
+        <element name="CoreVisit" positionX="-54" positionY="-9" width="128" height="194"/>
         <element name="CoreVisitItem" positionX="18" positionY="63" width="128" height="164"/>
     </elements>
 </model>

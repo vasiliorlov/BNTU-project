@@ -45,12 +45,27 @@ class Visit {
     let posId: PosId
     var cash: Double
     var comment: String?
+    
+    var isCollect: Bool
+    var isInventory: Bool
+    var isService: Bool
+    
+    let needCollect: Bool
+    let needInventory: Bool
+    let needService: Bool
+    
     var itemIds: [VisitItemId]
     
-    init(id: VisitId, posId: PosId, cash: Double, comment: String?, itemIds: [VisitItemId]) {
+    init(id: VisitId, posId: PosId, cash: Double, comment: String?, isCollect: Bool, isInventory: Bool, isService: Bool, needCollect: Bool, needInventory: Bool, needService: Bool, itemIds: [VisitItemId]) {
         self.id = id
         self.posId = posId
         self.cash = cash
+        self.isCollect = isCollect
+        self.isInventory = isInventory
+        self.isService = isService
+        self.needCollect = needCollect
+        self.needInventory = needInventory
+        self.needService = needService
         self.comment = comment
         self.itemIds = itemIds
     }

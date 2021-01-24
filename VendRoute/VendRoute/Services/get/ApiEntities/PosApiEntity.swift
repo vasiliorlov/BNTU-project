@@ -14,26 +14,13 @@ class PosApiEntity: NSObject, Codable {
     let adress: AdressApiEntity
     
     let comment: String?
-    
-    var isCollect: Bool
-    var isInventory: Bool
-    var isService: Bool
-    
-    let needCollect: Bool
-    let needInventory: Bool
-    let needService: Bool
+
     
     private enum CodingKeys: String, CodingKey {
         case id
         case name
         case adress
         case comment
-        case isCollect
-        case isInventory
-        case isService
-        case needCollect
-        case needInventory
-        case needService
     }
     
     required init(from decoder: Decoder) throws {
@@ -42,12 +29,6 @@ class PosApiEntity: NSObject, Codable {
         name = try container.decode(String.self, forKey: .name)
         adress = try container.decode(AdressApiEntity.self, forKey: .adress)
         comment = try container.decode(String?.self, forKey: .comment)
-        isCollect = try container.decode(Bool.self, forKey: .isCollect)
-        isInventory = try container.decode(Bool.self, forKey: .isInventory)
-        isService = try container.decode(Bool.self, forKey: .isService)
-        needCollect = try container.decode(Bool.self, forKey: .needCollect)
-        needInventory = try container.decode(Bool.self, forKey: .needInventory)
-        needService = try container.decode(Bool.self, forKey: .needService)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -56,12 +37,6 @@ class PosApiEntity: NSObject, Codable {
         try container.encode(name, forKey: .name)
         try container.encode(adress, forKey: .adress)
         try container.encode(comment, forKey: .comment)
-        try container.encode(isCollect, forKey: .isCollect)
-        try container.encode(isInventory, forKey: .isInventory)
-        try container.encode(isService, forKey: .isService)
-        try container.encode(needCollect, forKey: .needCollect)
-        try container.encode(needInventory, forKey: .needInventory)
-        try container.encode(needService, forKey: .needService)
     }
 
 }

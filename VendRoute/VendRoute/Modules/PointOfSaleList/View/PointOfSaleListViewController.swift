@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class PointOfSaleListViewController: UIViewController, PointOfSaleListViewInput, TransitionAdapter {
     //UI
     @IBOutlet weak var tableView: UITableView!
+    var menuView: UIAlertController?
     //dependency
     var presenter: PointOfSaleListViewOutput?
     
@@ -23,9 +25,41 @@ class PointOfSaleListViewController: UIViewController, PointOfSaleListViewInput,
         presenter?.viewIsReady()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter?.didViewAppear()
+        
+    }
+    
+    func showLoading(_ isActive: Bool) {
+        DispatchQueue.main.async {
+            if isActive {
+                let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+            } else {
+                MBProgressHUD.hide(for: self.view, animated: true)
+            }
+        }
+    }
+    
+    func showMessage(title: String, message: String) {
+        DispatchQueue.main.async {
+            if let _ = self.presentedViewController {
+                return
+            }
+            
+            let alert = UIAlertController(title: title,
+                                          message: message,
+                                          preferredStyle: .alert)
+            let actionOk = UIAlertAction(title: NSLocalizedString("OK", comment: ""),
+                                         style: .cancel) { (action: UIAlertAction) in }
+            alert.addAction(actionOk)
+            self.present(alert, animated: true) { }
+        }
+    }
     
     //MARK: PointOfSaleListViewInput
     func setupInitialState() {
+        setupMenu()
     }
     
     func setup(by data: [POSViewModel]) {
@@ -34,15 +68,28 @@ class PointOfSaleListViewController: UIViewController, PointOfSaleListViewInput,
             self.tableView.reloadData()
         }
     }
+    //MARK: - private methods
+    
+    private func setupMenu() {
+        menuView = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        menuView?.addAction(UIAlertAction(title: "End Of Day", style: .default) { _ in
+            self.presenter?.requireEndOfDay()
+        })
+        menuView?.addAction(UIAlertAction(title: "Log Out", style: .default) { _ in
+            
+        })
+        menuView?.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in}))
+    }
+    
     //MARK: - user action
-    @IBAction func didProfileBtnTouchIn(_ sender: Any) {
-        presenter?.requireOpenUserProfile()
+    @IBAction func didMenuBtnTouchIn(_ sender: Any) {
+        present(menuView!, animated: true)
+        //presenter?.requireOpenUserProfile()
     }
     
     @IBAction func didMapBtnTouchin(_ sender: Any) {
         presenter?.requireOpenMap()
     }
-    
 }
 
 //MARK: - UITableViewDelegate, UITableViewDataSourc

@@ -52,7 +52,7 @@ class DownloadMapper {
                     }
                 }
                 
-                let visit = VisitExt(id: visitApiEntity.id, posId: visitApiEntity.posId, cash: visitApiEntity.cash, comment: visitApiEntity.comment, itemIds: items.map{ $0.id })
+                let visit = VisitExt(id: visitApiEntity.id, posId: visitApiEntity.posId, cash: visitApiEntity.cash, comment: visitApiEntity.comment, isCollect: visitApiEntity.isCollect, isInventory: visitApiEntity.isInventory, isService: visitApiEntity.isService, needCollect: visitApiEntity.needCollect, needInventory: visitApiEntity.needInventory, needService: visitApiEntity.needService, itemIds: items.map{ $0.id })
                 visit.items = items
                 
                 visits.append(visit)
@@ -78,6 +78,6 @@ class DownloadMapper {
     
     private func map(posApiEntity: PosApiEntity) -> PointOfSale {
         let adress = map(adressApiEntity: posApiEntity.adress)
-        return PointOfSale(id: posApiEntity.id , name: posApiEntity.name, adress: adress, comment: posApiEntity.comment, isCollect: posApiEntity.isCollect, isInventory: posApiEntity.isInventory, isService: posApiEntity.isService, needCollect: posApiEntity.needCollect, needInventory: posApiEntity.needInventory, needService: posApiEntity.needService)
+        return PointOfSale(id: posApiEntity.id , name: posApiEntity.name, adress: adress, comment: posApiEntity.comment)
     }
 }

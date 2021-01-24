@@ -15,4 +15,6 @@ protocol PointOfSaleListViewInput: class {
 
     func setupInitialState()
     func setup(by data: [POSViewModel])
+    func showLoading(_ isActive: Bool)
+    func showMessage(title: String, message: String)
 }

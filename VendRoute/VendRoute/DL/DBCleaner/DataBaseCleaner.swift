@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Amplify
 import CoreData
 
 protocol DataBaseCleaner {

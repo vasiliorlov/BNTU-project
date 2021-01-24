@@ -11,4 +11,5 @@ import UIKit
 protocol DomainAsm {
     var authManager: AuthManager { get }
     var downloadManager: DownloadManager { get }
+    var endOfDayInteractor: EndOfDayInteractor { get }
 }

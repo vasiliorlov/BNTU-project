@@ -23,10 +23,14 @@ class PointOfSaleListModuleConfigurator {
         router.transitionAdapter = viewController
         
         let daoAsm = Container.shared.dataAsm
+        let domainAsm = Container.shared.domainAsm
 
         let presenter = PointOfSaleListPresenter(router: router,
                                                  view: viewController,
-                                                 posDao: daoAsm.posDao)
+                                                 posDao: daoAsm.posDao,
+                                                 visitDao: daoAsm.visitDao,
+                                                 eodInteractor: domainAsm.endOfDayInteractor,
+                                                 autProvider: domainAsm.authManager)
         presenter.view = viewController
         presenter.router = router
 

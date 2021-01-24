@@ -14,8 +14,11 @@ protocol PointOfSaleListViewOutput {
     */
 
     func viewIsReady()
+    func didViewAppear()
     func didSelectModel(with id: PosId)
     
     func requireOpenUserProfile()
+    func requireEndOfDay()
+    func requireLogOut()
     func requireOpenMap()
 }

@@ -45,13 +45,19 @@ class PointOfSalePresenter: PointOfSaleModuleInput, PointOfSaleViewOutput {
         router.openPreviousScreen()
     }
     
-    func didUpdateModel(_ model: PosItemViewModel) {
+    func didUpdateItem(_ model: PosItemViewModel) {
         if let visitItem = visit?.items.first(where: {$0.id == model.id }) {
             visitItem.add = model.add
             visitItem.inv = model.inv
             visitItem.remove = model.remove
             visitItem.spoiled = model.spoil
         }
+    }
+    
+    func didUpdateVisit(_ model: PosDetailViewModel) {
+        visit?.isService = model.isService ?? false
+        visit?.isInventory = model.isInventory ?? false
+        visit?.isCollect = model.isCollect ?? false
     }
     //MARK: - private methods
     private func loadData(_ completion: @escaping () -> ()) {
@@ -65,8 +71,8 @@ class PointOfSalePresenter: PointOfSaleModuleInput, PointOfSaleViewOutput {
     }
     
     private func updateView() {
-        if let pos = self.pos {
-            view?.setupBy(posModel: map(pos))
+        if let pos = self.pos, let visit = self.visit {
+            view?.setupBy(posModel: map(pos, visit: visit))
         }
         
         if let visit = self.visit {
@@ -76,11 +82,11 @@ class PointOfSalePresenter: PointOfSaleModuleInput, PointOfSaleViewOutput {
     }
     
     //MARK: - mapper methods
-    private func map(_ pos: PointOfSale) -> PosDetailViewModel {
+    private func map(_ pos: PointOfSale, visit: VisitExt) -> PosDetailViewModel {
         return PosDetailViewModel(name: pos.name,
-                                  isCollect: pos.needCollect ? pos.isCollect : nil,
-                                  isInventory: pos.needInventory ? pos.isInventory : nil,
-                                  isService: pos.needService ? pos.isService : nil)
+                                  isCollect: visit.needCollect ? visit.isCollect : nil,
+                                  isInventory: visit.needInventory ? visit.isInventory : nil,
+                                  isService: visit.needService ? visit.isService : nil)
     }
     
     private func map(item: VisitItem) -> PosItemViewModel {

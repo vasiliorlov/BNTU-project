@@ -15,5 +15,6 @@ protocol PointOfSaleViewOutput {
 
     func viewIsReady()
     func requireCloseScreen()
-    func didUpdateModel(_ model: PosItemViewModel)
+    func didUpdateItem(_ model: PosItemViewModel)
+    func didUpdateVisit(_ model: PosDetailViewModel)
 }

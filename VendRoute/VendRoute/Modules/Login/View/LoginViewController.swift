@@ -35,30 +35,30 @@ class LoginViewController: UIViewController, LoginViewInput, TransitionAdapter {
     }
     
     func showLoading(_ isActive: Bool) {
-           DispatchQueue.main.async {
-               if isActive {
-                   let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-               } else {
-                   MBProgressHUD.hide(for: self.view, animated: true)
-               }
-           }
-       }
-       
-       func showMessage(title: String, message: String) {
-           DispatchQueue.main.async {
-               if let _ = self.presentedViewController {
-                   return
-               }
-               
-               let alert = UIAlertController(title: title,
-                                             message: message,
-                                             preferredStyle: .alert)
-               let actionOk = UIAlertAction(title: NSLocalizedString("OK", comment: ""),
-                                            style: .cancel) { (action: UIAlertAction) in }
-               alert.addAction(actionOk)
-               self.present(alert, animated: true) { }
-           }
-       }
+        DispatchQueue.main.async {
+            if isActive {
+                let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+            } else {
+                MBProgressHUD.hide(for: self.view, animated: true)
+            }
+        }
+    }
+    
+    func showMessage(title: String, message: String) {
+        DispatchQueue.main.async {
+            if let _ = self.presentedViewController {
+                return
+            }
+            
+            let alert = UIAlertController(title: title,
+                                          message: message,
+                                          preferredStyle: .alert)
+            let actionOk = UIAlertAction(title: NSLocalizedString("OK", comment: ""),
+                                         style: .cancel) { (action: UIAlertAction) in }
+            alert.addAction(actionOk)
+            self.present(alert, animated: true) { }
+        }
+    }
     // MARK: - user Action
     
     @IBAction func tapOnScreen(_ sender: Any) {

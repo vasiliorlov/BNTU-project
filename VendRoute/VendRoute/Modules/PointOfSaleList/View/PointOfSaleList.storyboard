@@ -29,9 +29,12 @@
                                             <constraint firstAttribute="width" constant="32" id="Jkk-Cf-gRD"/>
                                             <constraint firstAttribute="height" constant="32" id="jGc-xF-LWK"/>
                                         </constraints>
-                                        <state key="normal" image="icUser"/>
+                                        <color key="tintColor" red="0.0" green="0.77969986199999997" blue="0.67063355449999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="icUser">
+                                            <color key="titleColor" red="0.0" green="0.77969986199999997" blue="0.67063355449999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
-                                            <action selector="didProfileBtnTouchIn:" destination="2Ex-Mm-EWm" eventType="touchUpInside" id="GRG-3g-gFd"/>
+                                            <action selector="didMenuBtnTouchIn:" destination="2Ex-Mm-EWm" eventType="touchUpInside" id="r45-jH-uXF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeG-Xb-CJ2">

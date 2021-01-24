@@ -59,7 +59,8 @@ class EditPosItemView: UIView, NibLoadable {
         txtInvField.text = viewData.inv.map { "\($0)" }
         txtInvField.delegate = self
         
-        txtInvField.isHidden = !isInventoried
+        txtInvField.isEnabled = isInventoried
+        txtInvField.borderStyle = isInventoried ? .roundedRect : .none
         txtAddedField.text = viewData.add.map { "\($0)" }
         
         txtRemField.text = viewData.remove.map { "\($0)" }

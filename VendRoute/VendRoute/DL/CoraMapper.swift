@@ -47,19 +47,12 @@ class CoraMapper {
         coraObject.name = pos.name
         coraObject.comment = pos.comment
         coraObject.adress = map(pos.adress)
-        coraObject.isCollect = pos.isCollect
-        coraObject.isInventory = pos.isInventory
-        coraObject.isService = pos.isService
-        
-        coraObject.needCollect = pos.needCollect
-        coraObject.needInventory = pos.needInventory
-        coraObject.needService = pos.needService
         return coraObject
     }
     
     func map(_ coraPos: CorePOS) -> PointOfSale? {
         if let coraAdress = coraPos.adress, let adress = map(coraAdress), let id  = coraPos.id, let name = coraPos.name {
-            return PointOfSale(id: id, name: name, adress: adress, comment: coraPos.comment, isCollect: coraPos.isCollect, isInventory: coraPos.isInventory, isService: coraPos.isService, needCollect: coraPos.needCollect, needInventory: coraPos.needInventory, needService: coraPos.needService)
+            return PointOfSale(id: id, name: name, adress: adress, comment: coraPos.comment)
         } else {
             return nil
         }
@@ -132,6 +125,14 @@ class CoraMapper {
         coraObject.comment = visit.comment
         coraObject.posId = visit.posId
         coraObject.id = visit.id
+        coraObject.isCollect = visit.isCollect
+        coraObject.isInventory = visit.isInventory
+        coraObject.isService = visit.isService
+        
+        coraObject.needCollect = visit.needCollect
+        coraObject.needInventory = visit.needInventory
+        coraObject.needService = visit.needService
+        
         coraObject.items = NSSet(array: items)
         return coraObject
     }
@@ -141,7 +142,7 @@ class CoraMapper {
             let items = coraItems.compactMap{ map($0) }
             let cash = coraVisit.cash
             let comment = coraVisit.comment
-            let visit = VisitExt(id: id, posId: posId, cash: cash, comment: comment, itemIds: items.map{ $0.id })
+            let visit = VisitExt(id: id, posId: posId, cash: cash, comment: comment, isCollect: coraVisit.isCollect, isInventory: coraVisit.isInventory, isService: coraVisit.isService, needCollect: coraVisit.needService, needInventory: coraVisit.needInventory, needService: coraVisit.needService, itemIds: items.map{ $0.id })
             visit.items = items
             return visit
         } else {

@@ -15,12 +15,4 @@ struct PointOfSale {
     let name: String
     let adress: Adress
     let comment: String?
-    
-    var isCollect: Bool
-    var isInventory: Bool
-    var isService: Bool
-    
-    let needCollect: Bool
-    let needInventory: Bool
-    let needService: Bool
 }

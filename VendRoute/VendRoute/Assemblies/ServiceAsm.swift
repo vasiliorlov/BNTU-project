@@ -10,4 +10,5 @@ import UIKit
 
 protocol ServiceAsm {
     var downloadService: DownloadService { get }
+    var uploadService: UploadService { get }
 }

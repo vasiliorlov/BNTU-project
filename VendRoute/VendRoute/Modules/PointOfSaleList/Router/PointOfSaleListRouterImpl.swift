@@ -28,6 +28,40 @@ class PointOfSaleListRouterImpl: PointOfSaleListRouter {
         }
     }
     
+    func openChooseServiceDayScreen() {
+        DispatchQueue.main.async {
+            let chooseServiceDayVC = CalendarChoiseModuleInitializer.createModule { _ in }
+            if let navVC = self.transitionAdapter?.navigationController {
+                let viewcontrollers = navVC.viewControllers
+                for viewcontroller in viewcontrollers.reversed() {
+                    if viewcontroller is StartFlowViewController {
+                        break
+                    } else {
+                        navVC.popViewController(animated: false)
+                    }
+                }
+                navVC.pushViewController(chooseServiceDayVC, animated: true)
+            }
+        }
+    }
+    
+    func openLoginScreen() {
+        DispatchQueue.main.async {
+            let loginVC = LoginModuleInitializer.createModule { _ in }
+            if let navVC = self.transitionAdapter?.navigationController {
+                let viewcontrollers = navVC.viewControllers
+                for viewcontroller in viewcontrollers.reversed() {
+                    if viewcontroller is StartFlowViewController {
+                        break
+                    } else {
+                        navVC.popViewController(animated: false)
+                    }
+                }
+                navVC.pushViewController(loginVC, animated: true)
+            }
+        }
+    }
+    
     func openUserProfileScreen(output: UserProfileModuleOutput) {
         DispatchQueue.main.async {
             let menuController = Container.shared.presentationAsm.navigationController

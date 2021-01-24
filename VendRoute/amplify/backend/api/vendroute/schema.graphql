@@ -1,0 +1,55 @@
+type DynVisit @model {
+    id: ID!
+    posID: ID!
+    cash: Float
+    comment: String
+    isCollect: Boolean!
+    isInventory: Boolean!
+    isService: Boolean!
+    needCollect: Boolean!
+    needInventory: Boolean!
+    needService: Boolean!
+    items: [DynVisitItem]!
+}
+
+type DynVisitItem {
+    id: ID!
+    column: Int!
+    row: Int!
+    productId: String!
+    add: Int
+    remove: Int
+    spoiled: Int
+    inv: Int
+}
+
+type DynProduct @model {
+    id: ID!
+    name: String!
+    measureId: String!
+}
+
+type DynMeasure @model {
+    id: ID!
+    measureFactor: Int!
+    name: String!
+}
+
+type DynPointOfSale @model {
+    id: ID!
+    name: String!
+    adreess: DynAdress!
+    comment: String!
+}
+
+type DynAdress {
+    city: String!
+    street: String!
+    gps: DynGpsCoordinate!
+    postCode: String!
+}
+
+type DynGpsCoordinate {
+    longitude: Float!
+    latitude: Float!
+}

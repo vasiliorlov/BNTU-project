@@ -18,6 +18,17 @@ class VisitItemApiEntity: NSObject, Codable {
     var spoiled: Int?
     var inv: Int?
     
+    init(id: String, column: Int, row: Int, productId: String, add: Int?, remove: Int?, spoiled: Int?, inv: Int?) {
+        self.id = id
+        self.column = column
+        self.row = row
+        self.productId = productId
+        self.add = add
+        self.remove = remove
+        self.spoiled = spoiled
+        self.inv = inv
+    }
+    
     private enum CodingKeys: String, CodingKey {
         case id
         case column
