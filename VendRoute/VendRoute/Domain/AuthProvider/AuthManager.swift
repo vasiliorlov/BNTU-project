@@ -12,6 +12,11 @@ import UIKit
 struct AuthSession {
     let isSignedIn: Bool
 }
+
+struct AuthUser {
+    let name: String?
+}
+
 struct SignInRequest {
     let username: String
     let password: String
@@ -49,18 +54,22 @@ enum AuthOperation {
     case confirm
     case signOut
 }
+
 protocol AuthManagerOutput: class {
-    
     func didSFetchSession(_ session: AuthSession)
-    
     func didSuccessfully(_ operation: AuthOperation)
     func didErrorOccuredOnOperation(_ operation:AuthOperation, error: AmplifyError)
 }
 
 class AmplifyAuthManager: AuthManager {
+    private let userDao: UserDao
     weak var output: AuthManagerOutput?
     var userState: UserState {
         return getUserState()
+    }
+    //MARK: - init
+    init(userDao: UserDao) {
+        self.userDao = userDao
     }
     
     //MARK: - AuthManager
@@ -98,11 +107,11 @@ class AmplifyAuthManager: AuthManager {
         Amplify.Auth.signIn(username: request.username, password: request.password) { result in
             switch result {
             case .success:
-                self.output?.didSuccessfully(.signIn)
                 print("Sign in succeeded")
+                self.output?.didSuccessfully(.signIn)
             case .failure(let error):
-                self.output?.didErrorOccuredOnOperation(.signIn, error: error)
                 print("Sign in failed \(error)")
+                self.output?.didErrorOccuredOnOperation(.signIn, error: error)
             }
         }
     }
@@ -111,11 +120,11 @@ class AmplifyAuthManager: AuthManager {
         Amplify.Auth.signInWithWebUI(for: provider, presentationAnchor: window) { result in
             switch result {
             case .success:
-                self.output?.didSuccessfully(.signIn)
                 print("Sign in succeeded")
+                self.output?.didSuccessfully(.signIn)
             case .failure(let error):
-                self.output?.didErrorOccuredOnOperation(.signIn, error: error)
                 print("Sign in failed \(error)")
+                self.output?.didErrorOccuredOnOperation(.signIn, error: error)
             }
         }
     }
@@ -165,5 +174,6 @@ class AmplifyAuthManager: AuthManager {
             }
         }
     }
+
 }
 

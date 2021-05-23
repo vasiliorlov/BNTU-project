@@ -18,12 +18,15 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput {
     var router: LoginRouter
     private var authManager: AuthManager
     private var appSettings: AppSettings
+    private let userDao: UserDao
+    private var userName: String?
     
-    init(router: LoginRouter, view: LoginViewInput, authManager: AuthManager, appSettings: AppSettings) {
+    init(router: LoginRouter, view: LoginViewInput, authManager: AuthManager, appSettings: AppSettings, userDao: UserDao) {
         self.view = view
         self.router = router
         self.authManager = authManager
         self.appSettings = appSettings
+        self.userDao = userDao
         self.authManager.output = self
     }
     
@@ -37,6 +40,7 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput {
     }
     
     func requireSignIn(user: UserModel) {
+        self.userName = user.email
         let request = SignInRequest(username: user.email, password: user.password)
         authManager.signIn(request)
     }
@@ -47,10 +51,12 @@ extension LoginPresenter: AuthManagerOutput {
     func didSFetchSession(_ session: AuthSession) {}
     
     func didSuccessfully(_ operation: AuthOperation) {
-        view?.showLoading(false)
         switch operation {
         case .signIn :
+            view?.showLoading(false)
             appSettings.isLogged = true
+            let user = AuthUser(name: self.userName)
+            userDao.save(user)
             router.openCalendarScreen()
         default: return
         }
@@ -59,9 +65,8 @@ extension LoginPresenter: AuthManagerOutput {
     func didErrorOccuredOnOperation(_ operation: AuthOperation, error: AmplifyError) {
         view?.showLoading(false)
         switch operation {
-        case .fetchSession: view?.showMessage(title: fetchSessionText, message: "Error: \(error.errorDescription). \(error.recoverySuggestion)")
         case .signIn : view?.showMessage(title: signInText, message: "Error: \(error.errorDescription). \(error.recoverySuggestion)"
-            )
+        )
         default: return
         }
     }

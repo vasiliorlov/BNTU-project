@@ -11,6 +11,7 @@ import UIKit
 class ServiceAsmProd: ServiceAsm {
     lazy private var downloadServiceInstance: DownloadService = DownloadServiceImpl()
     lazy private var uploadServiceInstance: UploadService = UploadServiceImpl()
+    lazy private var uploadS3ServiceInstance: UploadService = UploadS3Service(userDao: Container.shared.dataAsm.userDao)
     
     var downloadService: DownloadService {
         return downloadServiceInstance
@@ -18,5 +19,9 @@ class ServiceAsmProd: ServiceAsm {
     
     var uploadService: UploadService {
         return uploadServiceInstance
+    }
+    
+    var uploadS3Service: UploadService {
+        return uploadS3ServiceInstance
     }
 }

@@ -23,6 +23,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTJ-lX-neW">
                                 <rect key="frame" x="48" y="293.5" width="279" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.8300849199" blue="0.76669114829999996" alpha="0.30084137569200126" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="yuA-am-wnF"/>
                                 </constraints>
@@ -38,7 +39,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="f2N-2l-OkC">
                                 <rect key="frame" x="48" y="349.5" width="279" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.77969986199999997" blue="0.67063355449999995" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="0.68967765569999995" green="0.95027607680000004" blue="0.93100708720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="MLZ-oi-1MG"/>
                                 </constraints>

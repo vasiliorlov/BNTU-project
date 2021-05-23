@@ -27,7 +27,7 @@ class LoadDataPageModuleConfigurator {
 
         let presenter = LoadDataPagePresenter(router: router,
                                               view: viewController,
-                                              downloadManager: domainAsm.downloadManager,
+                                              downloadManager: domainAsm.downloadS3Manager,
                                               appSettings: dataAsm.appSettings)
         presenter.view = viewController
         presenter.router = router

@@ -12,16 +12,18 @@ class DownloadManagerImpl: DownloadManager {
     let downloadService: DownloadService
     let posDao: PosDao
     let productDao: ProductDao
+    let routeDao: RouteDao
     let visitDao: VisitDao
     let mapper: DownloadMapper
     let dbCleaner: DataBaseCleaner
     
     
-    init(downloadService: DownloadService, posDao: PosDao, productDao: ProductDao, visitDao: VisitDao, mapper: DownloadMapper, dbCleaner: DataBaseCleaner) {
+    init(downloadService: DownloadService, posDao: PosDao, productDao: ProductDao, visitDao: VisitDao, routeDao: RouteDao, mapper: DownloadMapper, dbCleaner: DataBaseCleaner) {
         self.downloadService = downloadService
         self.posDao = posDao
         self.productDao = productDao
         self.visitDao = visitDao
+        self.routeDao = routeDao
         self.mapper = mapper
         self.dbCleaner = dbCleaner
     }
@@ -63,6 +65,17 @@ class DownloadManagerImpl: DownloadManager {
                 stepCallBack(.success(.visit))
                 let visits = self.mapper.getVisits()
                 self.visitDao.save(visits)
+                completion()
+            case .failure(let error):
+                stepCallBack(.failure(error))
+            }
+        } routeCallBack: { (result) in
+            switch result {
+            case .success(let routeEntities):
+                self.mapper.routeApiEntities = routeEntities
+                stepCallBack(.success(.route))
+                let routes = self.mapper.getRoutes()
+                self.routeDao.save(routes)
                 completion()
             case .failure(let error):
                 stepCallBack(.failure(error))

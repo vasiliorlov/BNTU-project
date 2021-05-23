@@ -12,7 +12,7 @@ class DataAsmProd: DataAsm {
     lazy private var coraDataManagerInstance: CoraDataManager = CoraDataManager()
     lazy private var mapper = CoraMapper(context: coraDataManagerInstance.persistentContainer.newBackgroundContext())
     var appSettings: AppSettings = UserDefaultsAppSettingsImpl()
-    
+    lazy private var userDaoInstance: UserDao = UserDefaultsDao()
     var productDao: ProductDao {
         return ProductDaoImpl(coraDataManager: coraDataManagerInstance, mapper: mapper)
     }
@@ -32,4 +32,13 @@ class DataAsmProd: DataAsm {
     var imageDao: ImageDao {
         return ImageMockDao()
     }
+    
+    var userDao: UserDao {
+        return userDaoInstance
+    }
+    
+    var routeDao: RouteDao {
+        return RouteDaoImpl(coraDataManager: coraDataManagerInstance, mapper: mapper)
+    }
+    
 }

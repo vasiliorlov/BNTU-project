@@ -13,6 +13,7 @@ class DownloadMapper {
     var productApiEntities: [ProductApiEntity] = []
     var posApiEntities: [PosApiEntity] = []
     var visitApiEnties: [VisitApiEntity] = []
+    var routeApiEntities: [RouteApiEntity] = []
     
     func getProduct() -> [Product] {
         let measureItems = measureApiEntities.compactMap{ map(measureApiEntity: $0) }
@@ -62,6 +63,9 @@ class DownloadMapper {
         return visits
     }
     
+    func getRoutes() -> [Route] {
+        return self.routeApiEntities.map{ Route(fromPosId: $0.fromPosId, toPosId: $0.toPosId, dist: $0.dist)}
+    }
     //MARK: - mapper methods
     private func map(measureApiEntity: MeasureApiEntity) -> Measure {
         return Measure(id: measureApiEntity.id , measureFactor: measureApiEntity.measureFactor, name: measureApiEntity.name)

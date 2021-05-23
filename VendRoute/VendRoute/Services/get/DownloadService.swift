@@ -12,6 +12,7 @@ typealias ServiceMeasureCallBack = (Result<[MeasureApiEntity], Error>) -> Void
 typealias ServiceProductCallBack = (Result<[ProductApiEntity], Error>) -> Void
 typealias ServicePosCallBack = (Result<[PosApiEntity], Error>) -> Void
 typealias ServiceVisitCallBack = (Result<[VisitApiEntity], Error>) -> Void
+typealias ServiceRouteCallBack = (Result<[RouteApiEntity], Error>) -> Void
 
 
 
@@ -19,5 +20,6 @@ protocol DownloadService {
     func load(measureCallBack: @escaping ServiceMeasureCallBack,
                productCallBack: @escaping ServiceProductCallBack,
                posCallBack: @escaping ServicePosCallBack,
-               visitCallBack: @escaping ServiceVisitCallBack)
+               visitCallBack: @escaping ServiceVisitCallBack,
+               routeCallBack: @escaping ServiceRouteCallBack)
 }

@@ -15,19 +15,23 @@ class DownloadServiceImpl: DownloadService {
         static let product = "/products"
         static let pos = "/pos"
         static let visit = "/vendvisit"
+        static let route = "/route"
     }
     
     
     func load(measureCallBack: @escaping ServiceMeasureCallBack,
               productCallBack: @escaping ServiceProductCallBack,
               posCallBack: @escaping ServicePosCallBack,
-              visitCallBack: @escaping ServiceVisitCallBack) {
+              visitCallBack: @escaping ServiceVisitCallBack,
+              routeCallBack: @escaping ServiceRouteCallBack) {
         
         loadMeasure(callBack: measureCallBack) {
             self.loadProducts(callBack: productCallBack) {
                 self.loadPoses(callBack: posCallBack) {
                     self.loadVisits(callBack: visitCallBack) {
-                        
+                        self.loadRoutes(callBack: routeCallBack) {
+                            
+                        }
                     }
                 }
             }
@@ -126,4 +130,26 @@ class DownloadServiceImpl: DownloadService {
         }
     }
     
+    private func loadRoutes(callBack: @escaping ServiceRouteCallBack, continueCallBack: @escaping () -> Void) {
+        let request = RESTRequest(path: ServicePath.route)
+        Amplify.API.get(request: request) { result in
+            switch result {
+            case .success(let data):
+                let str = String(decoding: data, as: UTF8.self)
+                print("Routes: \(str)")
+                
+                do {
+                    let routes = try JSONDecoder().decode([RouteApiEntity].self, from: data)
+                    callBack(.success(routes))
+                    continueCallBack()
+                    
+                } catch let error {
+                    callBack(.failure(error))
+                }
+            case .failure(let apiError):
+                print("Visits failed", apiError)
+                callBack(.failure(apiError))
+            }
+        }
+    }
 }

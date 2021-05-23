@@ -17,7 +17,9 @@ class RouteMapViewController: UIViewController, RouteMapViewInput, TransitionAda
     var presenter: RouteMapViewOutput?
     
     //data
+    private var allMapRect: MKMapRect = MKMapRect()
     private var posData: [PosMapViewModel] = []
+    private var requestQueue = DispatchQueue(label: "by.vendroute.bntu.RouteMapViewController", qos: .userInteractive, attributes: .concurrent)
     
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -36,37 +38,48 @@ class RouteMapViewController: UIViewController, RouteMapViewInput, TransitionAda
             self.posData = data
             let annotations = data.map{ self.map(model: $0) }
             self.mapView.showAnnotations(annotations, animated: true )
+            
+            let mkPoints = data.map{ self.map(pos: $0) }
+            guard mkPoints.count > 1 else { return }
+            for i in 0..<(mkPoints.count - 1) {
+                self.requestQueue.async {
+                    let directionRequest = MKDirections.Request()
+                    directionRequest.source = mkPoints[i]
+                    directionRequest.destination = mkPoints[i + 1]
+                    directionRequest.transportType = .automobile
+                    
+                    let directions = MKDirections(request: directionRequest)
+                    directions.calculate {
+                        (response, error) -> Void in
+                        
+                        guard let response = response else {
+                            if let error = error {
+                                print("Error: \(error)")
+                            }
+                            return
+                        }
+                        
+                        let route = response.routes[0]
+                        DispatchQueue.main.async {
+                            self.mapView.addOverlay((route.polyline), level: MKOverlayLevel.aboveRoads)
+                            
+                            let rect = route.polyline.boundingMapRect
+                            if self.allMapRect.isEmpty {
+                                self.allMapRect = rect
+                            } else {
+                                self.allMapRect = self.allMapRect.union(rect)
+                            }
+                           
+                            print("allMapRect = \(self.allMapRect)")
+                            self.mapView.setRegion(MKCoordinateRegion(self.allMapRect), animated: true)
+                        }
+                    }
+                }
+            }
+            
         }
     }
-    /*
-     // 7.
-       let directionRequest = MKDirectionsRequest()
-       directionRequest.source = sourceMapItem
-       directionRequest.destination = destinationMapItem
-       directionRequest.transportType = .Automobile
-       
-       // Calculate the direction
-       let directions = MKDirections(request: directionRequest)
-       
-       // 8.
-       directions.calculateDirectionsWithCompletionHandler {
-         (response, error) -> Void in
-         
-         guard let response = response else {
-           if let error = error {
-             print("Error: \(error)")
-           }
-           
-           return
-         }
-         
-         let route = response.routes[0]
-         self.mapView.addOverlay((route.polyline), level: MKOverlayLevel.AboveRoads)
-         
-         let rect = route.polyline.boundingMapRect
-         self.mapView.setRegion(MKCoordinateRegionForMapRect(rect), animated: true)
-       }
-     */
+    
     
     //MArk: - user actions
     @IBAction func didBtnBackTouchIn(_ sender: Any) {

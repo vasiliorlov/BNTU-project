@@ -110,6 +110,7 @@
                                                     <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="xok-Nx-Yf5" secondAttribute="bottom" constant="4" id="0CO-1v-ZUd"/>
                                                 <constraint firstAttribute="bottom" secondItem="YsE-Zn-czD" secondAttribute="bottom" constant="4" id="2B4-Vc-Mdo"/>

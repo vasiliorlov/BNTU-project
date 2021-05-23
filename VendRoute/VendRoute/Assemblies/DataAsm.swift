@@ -10,10 +10,12 @@ import UIKit
 
 protocol DataAsm {
     var appSettings: AppSettings { get }
+    var userDao: UserDao { get }
     var productDao: ProductDao { get }
     var posDao: PosDao { get }
     var visitDao: VisitDao { get }
     var imageDao: ImageDao { get }
+    var routeDao: RouteDao { get }
     
     var dbCleaner: DataBaseCleaner { get }
 }

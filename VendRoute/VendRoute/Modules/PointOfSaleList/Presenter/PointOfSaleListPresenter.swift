@@ -21,6 +21,7 @@ class PointOfSaleListPresenter: PointOfSaleListModuleInput, PointOfSaleListViewO
     //data
     var editedPoses: [PointOfSale] = []
     var mappedVisits: [PosId: Visit] = [:]
+    var openFirstTime: Bool = true
     
     //MARK: - life cycle
     init(router: PointOfSaleListRouter, view: PointOfSaleListViewInput, posDao: PosDao, visitDao: VisitDao, eodInteractor: EndOfDayInteractor, autProvider: AuthManager) {
@@ -43,6 +44,11 @@ class PointOfSaleListPresenter: PointOfSaleListModuleInput, PointOfSaleListViewO
             let data = self.editedPoses.compactMap { self.map($0) }
                 .sorted(by: { $0.posName < $1.posName })
             self.view?.setup(by: data)
+            if self.openFirstTime {
+                self.view?.showMessage(title: "The optimal route",
+                                       message: "Poses have been sorted for optimal route.")
+                self.openFirstTime.toggle()
+            }
         }
     }
     

@@ -8,11 +8,6 @@
 
 protocol RouteMapViewInput: class {
 
-    /**
-        @author Vasili Orlov
-        Setup initial state of the view
-    */
-
     func setupInitialState()
     func setData(_ data: [PosMapViewModel])
 }

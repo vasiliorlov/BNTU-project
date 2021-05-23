@@ -41,6 +41,25 @@ class CoraMapper {
         }
     }
     //MARK: - PointOfSale
+    func map(_ route: Route) -> CoreRoute {
+        let coraObject = CoreRoute(context: context)
+        coraObject.toPosId = route.toPosId
+        coraObject.fromPosId = route.fromPosId
+        coraObject.dist = route.dist
+        return coraObject
+    }
+    
+    func map(_ coraRoute: CoreRoute) -> Route? {
+        if let toPosId = coraRoute.toPosId,
+           let fromPosId = coraRoute.fromPosId {
+            return Route(fromPosId: fromPosId, toPosId: toPosId, dist: coraRoute.dist)
+        } else {
+            return nil
+        }
+    }
+    
+    
+    //MARK: - PointOfSale
     func map(_ pos: PointOfSale) -> CorePOS {
         let coraObject = CorePOS(context: context)
         coraObject.id = pos.id

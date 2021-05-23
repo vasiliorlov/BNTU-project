@@ -28,7 +28,8 @@ class LoginModuleConfigurator {
         let presenter = LoginPresenter(router: router,
                                        view: viewController,
                                        authManager: domainAsm.authManager,
-                                       appSettings: dataAsm.appSettings)
+                                       appSettings: dataAsm.appSettings,
+                                       userDao: dataAsm.userDao)
         presenter.view = viewController
         presenter.router = router
 

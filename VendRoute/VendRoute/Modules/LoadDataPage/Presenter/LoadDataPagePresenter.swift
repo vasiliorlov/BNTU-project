@@ -56,7 +56,8 @@ class LoadDataPagePresenter: LoadDataPageModuleInput, LoadDataPageViewOutput {
         return [ LoadingTitleViewData(id: LoadingDataStep.measure.descr, title: LoadingDataStep.measure.descr, state: .loading),
                  LoadingTitleViewData(id: LoadingDataStep.product.descr, title: LoadingDataStep.product.descr, state: .loading),
                  LoadingTitleViewData(id: LoadingDataStep.pos.descr, title: LoadingDataStep.pos.descr, state: .loading),
-                 LoadingTitleViewData(id: LoadingDataStep.visit.descr, title: LoadingDataStep.visit.descr, state: .loading)]
+                 LoadingTitleViewData(id: LoadingDataStep.visit.descr, title: LoadingDataStep.visit.descr, state: .loading),
+                 LoadingTitleViewData(id: LoadingDataStep.route.descr, title: LoadingDataStep.route.descr, state: .loading)]
     }
     
 }

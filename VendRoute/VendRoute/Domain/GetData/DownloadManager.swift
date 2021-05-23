@@ -13,6 +13,7 @@ enum LoadingDataStep {
     case product
     case pos
     case visit
+    case route
     
     var descr: String {
         switch self {
@@ -20,8 +21,8 @@ enum LoadingDataStep {
         case .product: return "Products"
         case .pos: return "Poses"
         case .visit: return "Visits"
+        case .route: return "Route"
         }
-        
     }
 }
 

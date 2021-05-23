@@ -28,6 +28,7 @@ class DataBaseCleanerImpl: DataBaseCleaner {
         deleteEntity(for: CorePOS.self)
         deleteEntity(for: CoreProduct.self)
         deleteEntity(for: CoreMeasure.self)
+        deleteEntity(for: CoreRoute.self)
         coreDataManager.saveContext(context)
     }
     

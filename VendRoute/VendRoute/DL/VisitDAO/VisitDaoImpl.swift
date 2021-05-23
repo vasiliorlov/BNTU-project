@@ -17,7 +17,7 @@ class VisitDaoImpl: VisitDao {
     init(coraDataManager: CoraDataManager, mapper: CoraMapper) {
         self.coraDataManager = coraDataManager
         self.mapper = mapper
-        self.context = coraDataManager.persistentContainer.viewContext
+        self.context = mapper.context
     }
     
      //MARK: - VisitDao
@@ -48,14 +48,14 @@ class VisitDaoImpl: VisitDao {
     
     func save(_ visits: [VisitExt]) {
         let _ = visits.map { mapper.map($0) }
-        coraDataManager.saveContext(mapper.context)
+        coraDataManager.saveContext(context)
     }
     
     func removeBy(ids: [VisitId]) {
         getCoraEntitiesBy(visitIds: ids).forEach {
             context.delete($0)
         }
-        coraDataManager.saveContext()
+        coraDataManager.saveContext(context)
     }
     
     //MARK: - private
